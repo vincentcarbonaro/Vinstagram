@@ -27,9 +27,16 @@ follower_id | integer   | not null, foreign key (references users)
 column name | data type | details
 ------------|-----------|-----------------------
 id          | integer   | not null, primary key
-post_id  | integer   | not null, foreign key (references posts)
+post_id     | integer   | not null, foreign key (references posts)
 author_id   | integer   | not null, foreign key (references users)
 body        | string    | not null
+
+## likes
+column name | data type | details
+------------------------------------------------
+id          | integer   | not null, primary key
+user_id     | integer   | not null, foreign key (references users)
+post_id     | integer   | not null, foreign key (references posts)
 
 ## user_tags
 column name | data type | details
@@ -41,7 +48,5 @@ label       | string    | not null, unique
 column name | data type | details
 ------------|-----------|-----------------------
 id          | integer   | not null, primary key
-post_id     | integer   | 
+post_id     | integer   |
 label       | string    | not null, unique
-
-
