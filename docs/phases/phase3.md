@@ -1,11 +1,11 @@
-# Phase 3: Editing and Displaying Posts
+# Phase 3: Editing and Displaying Comments
 
 ## Rails
 ### Models
 * Comments
 
 ### Controllers
-* API::CommentssController (create, destroy, index, show)
+* API::CommentssController (create, destroy)
 
 ### Views
 
@@ -15,7 +15,6 @@
 ### Collections
 
 ### Views
-* PostForm
 
 ## Gems/Libraries
 * Markdown-js

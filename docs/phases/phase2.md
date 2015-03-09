@@ -5,7 +5,7 @@
 * Post
 
 ### Controllers
-API::BlogsController (index, show)
+API::BlogsController (show)
 Api::PostsController (create, destroy, index, show)
 
 ### Views
@@ -14,14 +14,12 @@ Api::PostsController (create, destroy, index, show)
 ## Backbone
 ### Models
 * Post
-* 
 
 ### Collections
 * Posts
 
 ### Views
 * BlogShow
-* BlogsIndex
 * PostShow
 * PostsIndex
 
