@@ -13,7 +13,8 @@ column name | data type | details
 ------------|-----------|-----------------------
 id          | integer   | not null, primary key
 author_id   | integer   | not null, foreign key (references users)
-body        | string    |
+img         | binary    | not null
+text        | string    |
 
 ## followings
 column name | data type | details
