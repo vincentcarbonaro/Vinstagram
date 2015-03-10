@@ -1,0 +1,28 @@
+<title>Sign In! Vinstagram</title>
+
+<h1>Sign In!</h1>
+
+<% if flash.now[:errors] %>
+  <%= flash.now[:errors] %>
+  <br><br>
+<% end %>
+
+<form action="<%= session_url %>" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+
+  <label> Username <br>
+    <input type="text" name="user[username]" value="">
+  </label>
+
+  <br>
+  <br>
+
+  <label> Password <br>
+  <input type="text" name="user[password]" value="">
+
+  <br>
+  <br>
+
+  <input type="submit" name="name" value="Sign Up!">
+
+</form>

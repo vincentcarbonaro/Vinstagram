@@ -1,14 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Vinstagram</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <!-- <title>Vinstagram</title> -->
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
 <%= yield %>
+
+<br><br><br>
+
+<% if signed_in? %>
+
+  Signed In As: <%= current_user.username %>
+  <%= button_to "Sign Out", session_url, :method => :delete %>
+
+<% else %>
+
+  no one is signed in
+
+<% end %>
 
 </body>
 </html>

@@ -1,0 +1,35 @@
+<title>Sign Up! Vinstagram</title>
+
+<h1>Sign Up!</h1>
+
+<% if flash[:errors] %>
+  <%= flash[:errors].join("<br>").html_safe %>
+  <br><br><br>
+<% end %>
+
+<form action="<%= users_url %>" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+
+  <label> Username <br>
+    <input type="text" name="user[username]" value="">
+  </label>
+
+  <br>
+  <br>
+
+  <label> Email <br>
+  <input type="text" name="user[email]" value="">
+  </label>
+
+  <br>
+  <br>
+
+  <label> Password <br>
+  <input type="text" name="user[password]" value="">
+
+  <br>
+  <br>
+
+  <input type="submit" name="name" value="Sign Up!">
+
+</form>
