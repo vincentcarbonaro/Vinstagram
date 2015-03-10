@@ -4,7 +4,7 @@
 
 <% if flash[:errors] %>
   <%= flash[:errors].join("<br>").html_safe %>
-  <br><br><br>
+  <br><br>
 <% end %>
 
 <form action="<%= users_url %>" method="post">

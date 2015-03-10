@@ -3,7 +3,7 @@
 <h1>Sign In!</h1>
 
 <% if flash.now[:errors] %>
-  <%= flash.now[:errors] %>
+  <%= flash.now[:errors][0] %>
   <br><br>
 <% end %>
 
@@ -26,3 +26,10 @@
   <input type="submit" name="name" value="Sign Up!">
 
 </form>
+
+<br>
+<br>
+<br>
+
+Don't Have An Account Yet? <br>
+<%= link_to "Sign Up!", new_user_url %>

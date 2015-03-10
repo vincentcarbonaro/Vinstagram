@@ -1,8 +1,8 @@
 # Vinstagram
 
-<!-- [Heroku link][heroku]
+ [Heroku link][heroku]
 
-<!-- [heroku]: http://flux-capacitr.herokuapp.com-->
+ [heroku]: https://vinstagram.herokuapp.com/session/new
 
 ## Minimum Viable Product
 Vinstagram is a clone of Instagram built on Rails and Backbone. Users can:
@@ -11,7 +11,7 @@ Vinstagram is a clone of Instagram built on Rails and Backbone. Users can:
 - [x] Create sessions (log in)
 - [ ] Upload Pictures
 - [ ] View Pictures
-- [ ] Follow Users
+- [ ] Follow Usersc
 - [ ] View a feed of subscribed Users' Photos
 - [ ] Like Pictures
 - [ ] Comment on Pictures
