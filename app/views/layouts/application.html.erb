@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <!-- <title>Vinstagram</title> -->
   <%= stylesheet_link_tag    'application', media: 'all' %>
@@ -10,18 +11,13 @@
 
 <%= yield %>
 
-<br><br><br>
-
 <% if signed_in? %>
 
   Signed In As: <%= current_user.username %>
   <%= button_to "Sign Out", session_url, :method => :delete %>
 
-<% else %>
-
-  no one is signed in
-
 <% end %>
 
 </body>
+
 </html>
