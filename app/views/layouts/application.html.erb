@@ -14,13 +14,7 @@
 
     <%= yield %>
 
-    <% if signed_in? %>
-      Signed In As: <%= current_user.username %>
-      <%= button_to "Sign Out", session_url, :method => :delete %>
-    <% end %>
-
   </main>
-
 
 </body>
 

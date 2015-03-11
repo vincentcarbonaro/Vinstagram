@@ -88,3 +88,10 @@ div.main-form {
   position: relative;
 
 }
+
+#main > li  {
+  text-align: center;
+  width: 510px;
+  display: block;
+  margin: auto;
+}
