@@ -2,22 +2,25 @@
 <html>
 
 <head>
-  <!-- <title>Vinstagram</title> -->
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
-  Vinstagram
 </head>
 <body>
 
-<%= yield %>
 
-<% if signed_in? %>
 
-  Signed In As: <%= current_user.username %>
-  <%= button_to "Sign Out", session_url, :method => :delete %>
+  <main class="content">
 
-<% end %>
+    <%= yield %>
+
+    <% if signed_in? %>
+      Signed In As: <%= current_user.username %>
+      <%= button_to "Sign Out", session_url, :method => :delete %>
+    <% end %>
+
+  </main>
+
 
 </body>
 

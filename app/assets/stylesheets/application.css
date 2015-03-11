@@ -14,11 +14,77 @@
  *= require_self
  */
 
-header {
+ /* PHASE 0: Reset */
+
+html, head, body, header,
+nav, h1, a, ul, li, main,
+section, p, footer, small {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font: inherit;
+  /*color: inherit;*/
+  text-align: inherit;
+  /*text-decoration: inherit;*/
+  vertical-align: inherit;
+  box-sizing: inherit;
+  background: transparent;
+}
+
+header, nav, main, section,
+footer, small {
+  display: block;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Clearfix */
+
+.group:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/*------------------------------------*/
+
+header.nav {
   background: #1c5380;
+  display: block;
+  padding: 10px 20px;
+}
+
+header.nav .home {
+  text-align: center;
+  margin: 0 left;
+  width: 100px;
+  color: white;
+  font-family: sans-serif;
+  display: block;
+}
+
+header.nav .logo {
+  text-align: center;
+  margin: 0 auto;
+  width: 100px;
+  color: white;
+  font-family: sans-serif;
+  display: block;
 }
 
 body {
-  background: #999;
-  font-family: sans-serif;
+  background: #B2B2B2;
+}
+
+div.main-form {
+  background: white;
+  padding: 20px;
+  margin: auto;
+  height: 235px;
+  width: 402px;
+  position: relative;
+
 }

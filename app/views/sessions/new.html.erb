@@ -1,35 +1,37 @@
-<title>Sign In! Vinstagram</title>
+<div class="main-form">
 
-<h1>Sign In!</h1>
+  <title>Sign In! Vinstagram</title>
 
-<% if flash.now[:errors] %>
-  <%= flash.now[:errors][0] %>
-  <br><br>
-<% end %>
+  <% if flash.now[:errors] %>
+    <%= flash.now[:errors][0] %>
+    <br><br>
+  <% end %>
 
-<form action="<%= session_url %>" method="post">
-  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <form action="<%= session_url %>" method="post">
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
 
-  <label> Username <br>
-    <input type="text" name="user[username]" value="">
-  </label>
+    <label> Username:
+      <input type="text" name="user[username]" value="">
+    </label>
+
+    <br>
+    <br>
+
+    <label> Password:
+    <input type="text" name="user[password]" value="">
+
+    <br>
+    <br>
+
+    <input type="submit" name="name" value="Sign Up!">
+
+  </form>
 
   <br>
   <br>
-
-  <label> Password <br>
-  <input type="text" name="user[password]" value="">
-
-  <br>
   <br>
 
-  <input type="submit" name="name" value="Sign Up!">
+  Don't Have An Account Yet? <br>
+  <%= link_to "Sign Up!", new_user_url %>
 
-</form>
-
-<br>
-<br>
-<br>
-
-Don't Have An Account Yet? <br>
-<%= link_to "Sign Up!", new_user_url %>
+</div>

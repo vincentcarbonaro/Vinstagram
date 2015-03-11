@@ -4,7 +4,8 @@ window.Vinstagram = {
   Views: {},
   Routers: {},
   initialize: function() {
-
+    new Vinstagram.Routers.Router({})
+    Backbone.history.start()
   }
 };
 
