@@ -3,10 +3,29 @@ class User < ActiveRecord::Base
   validates :username, :email, :password_digest, :session_token, presence: true
   validates :password, length: { minimum: 6, allow_nil: true }
   validates :username, :email, uniqueness: true
-
-  has_many(
-  :posts
-  )
+  # 
+  # has_many(
+  #   :follows
+  # )
+  #
+  # has_many(
+  #   :followings
+  # )
+  #
+  # has_many(
+  #   :followed_users,
+  # #   class_name: "Follows",
+  # #   foreign_key: :followee_id,
+  # #   primary_key: :id
+  # )
+  #
+  # has_many(
+  #   :followers
+  # )
+  #
+  # has_many(
+  #   :posts
+  # )
 
   attr_reader :password
 

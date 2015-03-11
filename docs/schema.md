@@ -17,11 +17,11 @@ author_id   | integer   | not null, foreign key (references users)
 img         | binary    | not null
 text        | string    |
 
-## followings
+## follows
 column name | data type | details
 ------------|-----------|-----------------------
 id          | integer   | not null, primary key
-following_id     | integer   | not null, foreign key (references blogs)
+following_id| integer   | not null, foreign key (references blogs)
 follower_id | integer   | not null, foreign key (references users)
 
 ## comments

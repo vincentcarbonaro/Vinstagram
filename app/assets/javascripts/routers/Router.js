@@ -7,12 +7,12 @@ Vinstagram.Routers.Router = Backbone.Router.extend({
   routes: {
     '': 'feed',
     'users/:id': 'userShow'
-
   },
 
   feed: function () {
+    var users = Vinstagram.users;
     var view = new Vinstagram.Views.Feed({
-      
+
     });
     this._swapView(view);
   },
