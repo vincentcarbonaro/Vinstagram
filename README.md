@@ -9,16 +9,16 @@ Vinstagram is a clone of Instagram built on Rails and Backbone. Users can:
 
 - [x] Create accounts
 - [x] Create sessions (log in)
-- [ ] Upload Pictures
-- [ ] View Pictures
+- [ ] Upload Posts
+- [ ] View Posts
 - [ ] Follow Users
 - [ ] View a feed of subscribed Users' Photos
-- [ ] Like Pictures
-- [ ] Comment on Pictures
+- [ ] Like Posts
+- [ ] Comment on Posts
 - [ ] Create Tags for topics in Comments
 - [ ] Create Tags for Users in Comments
 - [ ] Search for Users
-- [ ] Search for Pictures by tag
+- [ ] Search for Posts by tag
 
 ## Design Docs
 * [View Wireframes][views]
@@ -30,12 +30,12 @@ Vinstagram is a clone of Instagram built on Rails and Backbone. Users can:
 ## Implementation Timeline
 
 ### Phase 1: User Authentication (~1 day)
-I will implement user authentication in Rails. By the end of this phase, users will be able to create blogs and log in using a text form. The most important part of this phase will be pushing the app to Heroku and ensuring that everything works before moving on to phase 2.
+I will implement user authentication in Rails. By the end of this phase, users will be able to create users and log in using a text form. The most important part of this phase will be pushing the app to Heroku and ensuring that everything works before moving on to phase 2.
 
 [Details][phase-one]
 
-### Phase 2: Viewing Accounts and Pictures (~2 days)
-I will add API routes to serve blog and post data, then add Backbone models and collections that fetch data from those routes. I will need to integrate filePicker for picture uploads.  By the end of this phase, users will be able to upload and view pictures and blogs.
+### Phase 2: Viewing Accounts and Posts (~2 days)
+I will add API routes to serve user and post data, then add Backbone models and collections that fetch data from those routes. I will need to integrate filePicker for picture uploads.  By the end of this phase, users will be able to upload and view pictures and users.
 
 [Details][phase-two]
 
