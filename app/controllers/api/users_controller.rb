@@ -3,8 +3,17 @@ module Api
 
     def index
       @users = User.all
-      fail
       render json: @users
+    end
+
+    def show
+      @user = User.find(params[:id])
+      render :show
+    end
+
+    private
+    def user_params
+      params.require(:user)
     end
 
   end

@@ -5,15 +5,23 @@
 
 <div class="backdrop">
 
+  <a href="#">Feed</a>
+  <br>
+  <a href="#user/<%= current_user.id %>">My Profile</a>
+  <br>
+  Signed In As: <%= current_user.username %>
+  <%= button_to "Sign Out", session_url, :method => :delete %>
+
+  <br><br>
+
   <div id="main">
     <!-- this is where were rendering backbone -->
   </div>
 
 </div>
 
-<% if signed_in? %>
-  Signed In As: <%= current_user.username %>
-  <%= button_to "Sign Out", session_url, :method => :delete %>
-<% end %>
-
-<script></script>
+<script>
+  $(document).ready(function(){
+    Vinstagram.initialize();
+  });
+</script>

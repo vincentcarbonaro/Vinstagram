@@ -9,8 +9,9 @@ Vinstagram is a clone of Instagram built on Rails and Backbone. Users can:
 
 - [x] Create accounts
 - [x] Create sessions (log in)
-- [ ] Upload Posts
-- [ ] View Posts
+- [x] Upload Posts
+- [x] View Posts
+- [ ] Posts are Images
 - [ ] Follow Users
 - [ ] View a feed of subscribed Users' Photos
 - [ ] Like Posts

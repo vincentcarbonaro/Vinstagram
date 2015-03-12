@@ -3,29 +3,50 @@ class User < ActiveRecord::Base
   validates :username, :email, :password_digest, :session_token, presence: true
   validates :password, length: { minimum: 6, allow_nil: true }
   validates :username, :email, uniqueness: true
-  # 
-  # has_many(
-  #   :follows
-  # )
-  #
-  # has_many(
-  #   :followings
-  # )
-  #
-  # has_many(
-  #   :followed_users,
-  # #   class_name: "Follows",
-  # #   foreign_key: :followee_id,
-  # #   primary_key: :id
-  # )
-  #
-  # has_many(
-  #   :followers
-  # )
-  #
-  # has_many(
-  #   :posts
-  # )
+
+  # People That I follow
+  has_many(
+    :follows,
+    class_name: "Follow",
+    foreign_key: :follower_id,
+    primary_key: :id
+  )
+
+  has_many(
+    :followed_users,
+    through: :follows,
+    source: :followee
+  )
+
+  ################################################
+
+  # People that Follow Me
+  has_many(
+    :followings,
+    class_name: "Follow",
+    foreign_key: :followee_id,
+    primary_key: :id
+  )
+
+  has_many(
+    :followers,
+    through: :followings,
+    source: :follower
+  )
+
+  # create_table "follows", force: :cascade do |t|
+  #   t.integer  "follower_id", null: false
+  #   t.integer  "followee_id", null: false
+  #   t.datetime "created_at"
+  #   t.datetime "updated_at"
+  # end
+
+  has_many(
+    :posts,
+    class_name: "Post",
+    foreign_key: :author_id,
+    primary_key: :id
+  )
 
   attr_reader :password
 

@@ -1,5 +1,22 @@
-Vinstagram.Models.User = Backbone.Collection.extend({
+Vinstagram.Models.User = Backbone.Model.extend({
 
-  urlRoot: 'api/users'
+  urlRoot: 'api/users',
+
+  posts: function () {
+    if (!this._posts) {
+      this._posts = new Vinstagram.Collections.Posts([], { user: this })
+    }
+    return this._posts;
+  },
+
+  parse: function (response) {
+
+    this.set(response.post);
+
+    if (response.posts) {
+      this.posts().set(response.posts, { parse: true });
+      delete response.posts;
+    }
+  },
 
 })

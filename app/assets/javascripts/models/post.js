@@ -1,5 +1,5 @@
 Vinstagram.Models.Post = Backbone.Model.extend({
 
-  urlRoot: '',
+  urlRoot: 'api/posts',
 
 });

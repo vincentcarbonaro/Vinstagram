@@ -1,0 +1,21 @@
+<title> Show</title>
+
+<h1><strong><%= user.escape('username') %>'s Profile</strong></h1>
+
+<br><br>
+
+<button class="open_upload">New Post</button>
+
+<br><br>
+<strong>Your Posts!</strong>
+<br><br>
+
+<% user.posts().each( function (post) { %>
+
+  <%= post.escape('created_at') %>
+  <br>
+  <a href="#post/<%= post.escape('id') %>"><%= post.escape('text') %></a>
+
+  <br><br>
+
+<% }) %>

@@ -6,19 +6,45 @@ Vinstagram.Routers.Router = Backbone.Router.extend({
 
   routes: {
     '': 'feed',
-    'users/:id': 'userShow'
+
+    'user/:id': 'userShow',
+
+    'postForm': 'postForm',
+    'post/:id': 'postShow',
   },
 
   feed: function () {
-    var users = Vinstagram.users;
+    Vinstagram.users.fetch()
+    console.log(Vinstagram.feed);
     var view = new Vinstagram.Views.Feed({
 
     });
     this._swapView(view);
   },
 
-  user_show: function () {
-    this._swapView("USER SHOW")
+  userShow: function (id) {
+    var user = Vinstagram.users.getOrFetch(id);
+    var view = new Vinstagram.Views.UserShow({
+      model: user
+    });
+    this._swapView(view)
+  },
+
+  postForm: function () {
+    var post = new Vinstagram.Models.Post();
+    var view = new Vinstagram.Views.PostForm({
+      model: post
+    });
+    this._swapView(view);
+  },
+
+  postShow: function (id) {
+    var post = Vinstagram.posts.getOrFetch(id);
+    var view = new Vinstagram.Views.PostShow({
+      model: post,
+      collection: Vinstagram.posts,
+    });
+    this._swapView(view);
   },
 
   _swapView: function (view) {
