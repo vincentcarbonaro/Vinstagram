@@ -6,6 +6,10 @@ Vinstagram.Views.PostShow = Backbone.View.extend({
     this.listenTo(this.model, 'sync', this.render);
   },
 
+  events: {
+    'click button': 'destroyPost'
+  },
+
   render: function () {
     var content = this.template({
       post: this.model
@@ -13,5 +17,10 @@ Vinstagram.Views.PostShow = Backbone.View.extend({
     this.$el.html(content);
     return this;
   },
-  
+
+  destroyPost: function (event) {
+    this.model.destroy();
+    Backbone.history.navigate('', {trigger :true})
+  }
+
 });

@@ -13,9 +13,8 @@ module Api
 
     # will always be used to show all the posts of one user
     def index
-      @user = User.find(params[:id])
-      @posts = current_user.posts
-      render json: @posts
+      @users = User.all
+      render json: @users
     end
 
     # will always be used to show a SINGLE post

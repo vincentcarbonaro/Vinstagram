@@ -6,7 +6,7 @@ class Post < ActiveRecord::Base
   validates :author_id, :text, presence: true
 
   belongs_to(
-    :user,
+    :author,
     class_name: "User",
     foreign_key: "author_id",
     primary_key: "id"

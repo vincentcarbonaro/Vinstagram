@@ -14,9 +14,9 @@ Vinstagram.Routers.Router = Backbone.Router.extend({
   },
 
   feed: function () {
-    Vinstagram.feed.fetch()
+    Vinstagram.posts.fetch()
     var view = new Vinstagram.Views.Feed({
-      collection: Vinstagram.feed
+      collection: Vinstagram.posts
     });
     this._swapView(view);
   },
