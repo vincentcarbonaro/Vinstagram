@@ -17,8 +17,10 @@ Vinstagram.Views.PostForm = Backbone.View.extend({
     submitForm: function (event) {
       event.preventDefault();
 
-      var attrs = $(event.currentTarget).serializeJSON();
-      this.model.set(attrs);
+      var formData = $(event.currentTarget).serializeJSON();
+      var that = this;
+
+      this.model.set(formData);
       this.model.save({}, {
         success: function () {
           console.log('successful save!');

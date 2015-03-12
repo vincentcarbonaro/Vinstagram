@@ -6,9 +6,13 @@ gem 'uglifier', '>= 1.3.0'
 gem 'jquery-rails'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
-gem 'bcrypt-ruby', require: 'bcrypt'
+gem 'bcrypt', require: 'bcrypt'
 gem 'rails_12factor'
 gem 'backbone-on-rails'
+
+gem "paperclip", "~> 4.2"
+gem "aws-sdk"
+gem "figaro"
 
 group :test do
   gem 'factory_girl_rails'

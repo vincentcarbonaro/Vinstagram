@@ -42,6 +42,15 @@ GEM
       tzinfo (~> 1.1)
     addressable (2.3.7)
     arel (6.0.0)
+    aws-sdk (2.0.29)
+      aws-sdk-resources (= 2.0.29)
+    aws-sdk-core (2.0.29)
+      builder (~> 3.0)
+      jmespath (~> 1.0)
+      multi_json (~> 1.0)
+      multi_xml (~> 0.5)
+    aws-sdk-resources (2.0.29)
+      aws-sdk-core (= 2.0.29)
     backbone-on-rails (1.1.1.0)
       actionmailer
       actionpack
@@ -52,8 +61,6 @@ GEM
       jquery-rails
       railties
     bcrypt (3.1.10)
-    bcrypt-ruby (3.1.5)
-      bcrypt (>= 3.1.3)
     better_errors (2.1.1)
       coderay (>= 1.0.0)
       erubis (>= 2.6.6)
@@ -73,6 +80,10 @@ GEM
       xpath (~> 2.0)
     celluloid (0.16.0)
       timers (~> 4.0.0)
+    climate_control (0.0.3)
+      activesupport (>= 3.0)
+    cocaine (0.5.7)
+      climate_control (>= 0.0.3, < 1.0)
     coderay (1.1.0)
     coffee-script (2.3.0)
       coffee-script-source
@@ -98,6 +109,8 @@ GEM
     faker (1.4.3)
       i18n (~> 0.5)
     ffi (1.9.6)
+    figaro (1.1.0)
+      thor (~> 0.14)
     formatador (0.2.5)
     globalid (0.3.3)
       activesupport (>= 4.1.0)
@@ -121,6 +134,8 @@ GEM
     jbuilder (2.2.11)
       activesupport (>= 3.0.0, < 5)
       multi_json (~> 1.2)
+    jmespath (1.0.2)
+      multi_json (~> 1.0)
     jquery-rails (4.0.3)
       rails-dom-testing (~> 1.0)
       railties (>= 4.2.0)
@@ -142,12 +157,18 @@ GEM
     mini_portile (0.6.2)
     minitest (5.5.1)
     multi_json (1.11.0)
+    multi_xml (0.5.5)
     nenv (0.2.0)
     nokogiri (1.6.6.2)
       mini_portile (~> 0.6.0)
     notiffany (0.0.5)
       nenv (~> 0.1)
       shellany (~> 0.0)
+    paperclip (4.2.1)
+      activemodel (>= 3.0.0)
+      activesupport (>= 3.0.0)
+      cocaine (~> 0.5.3)
+      mime-types
     pg (0.18.1)
     pry (0.10.1)
       coderay (~> 1.1.0)
@@ -261,18 +282,21 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  aws-sdk
   backbone-on-rails
-  bcrypt-ruby
+  bcrypt
   better_errors
   binding_of_caller
   byebug
   capybara
   factory_girl_rails
   faker
+  figaro
   guard-rspec
   jbuilder (~> 2.0)
   jquery-rails
   launchy
+  paperclip (~> 4.2)
   pg
   pry-rails
   rails (= 4.2.0)

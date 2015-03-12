@@ -5,7 +5,7 @@ Vinstagram.Views.PostShow = Backbone.View.extend({
   initialize: function () {
     this.listenTo(this.model, 'sync', this.render);
   },
-  
+
   render: function () {
     var content = this.template({
       post: this.model
@@ -13,5 +13,5 @@ Vinstagram.Views.PostShow = Backbone.View.extend({
     this.$el.html(content);
     return this;
   },
-
+  
 });

@@ -1,21 +1,39 @@
-<title> Show</title>
+<title><%= user.escape('username') %>'s' Profile</title>
 
 <h1><strong><%= user.escape('username') %>'s Profile</strong></h1>
 
+<br>
+<label>
+  Upload Profile Picture <br>
+  <input id='input-picture-file' type='file' name='picture'>
+</label>
+<br><Br>
+<input type="submit" value="Save!">
+
+<!-- <img src="" id="picture-preview"> -->
+
 <br><br>
+Posts:
+<br>
+Followers:
+<br>
+Following:
+<br>
 
-<button class="open_upload">New Post</button>
 
-<br><br>
-<strong>Your Posts!</strong>
-<br><br>
 
-<% user.posts().each( function (post) { %>
 
-  <%= post.escape('created_at') %>
-  <br>
-  <a href="#post/<%= post.escape('id') %>"><%= post.escape('text') %></a>
 
+
+<div class=open_upload>
   <br><br>
+  <button>Create New Post!</button>
+</div>
+<div class="upload_form">
+</div>
 
-<% }) %>
+
+
+<h2>Your Posts!</h2>
+<ul class="user_posts">
+</ul>

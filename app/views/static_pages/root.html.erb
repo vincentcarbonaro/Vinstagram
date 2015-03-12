@@ -5,10 +5,11 @@
 
 <div class="backdrop">
 
+  <br>
   <a href="#">Feed</a>
-  <br>
+  <br><br>
   <a href="#user/<%= current_user.id %>">My Profile</a>
-  <br>
+  <br><br>
   Signed In As: <%= current_user.username %>
   <%= button_to "Sign Out", session_url, :method => :delete %>
 

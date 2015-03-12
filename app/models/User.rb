@@ -4,6 +4,8 @@ class User < ActiveRecord::Base
   validates :password, length: { minimum: 6, allow_nil: true }
   validates :username, :email, uniqueness: true
 
+  ################################################
+
   # People That I follow
   has_many(
     :follows,
@@ -13,7 +15,7 @@ class User < ActiveRecord::Base
   )
 
   has_many(
-    :followed_users,
+    :followees,
     through: :follows,
     source: :followee
   )
@@ -34,12 +36,7 @@ class User < ActiveRecord::Base
     source: :follower
   )
 
-  # create_table "follows", force: :cascade do |t|
-  #   t.integer  "follower_id", null: false
-  #   t.integer  "followee_id", null: false
-  #   t.datetime "created_at"
-  #   t.datetime "updated_at"
-  # end
+  ################################################
 
   has_many(
     :posts,
@@ -47,6 +44,11 @@ class User < ActiveRecord::Base
     foreign_key: :author_id,
     primary_key: :id
   )
+
+  ################################################
+
+  has_attached_file :picture
+  validates_attachment_content_type :picture, :content_type => /\Aimage\/.*\Z/
 
   attr_reader :password
 

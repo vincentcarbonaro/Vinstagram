@@ -10,13 +10,11 @@ Vinstagram.Models.User = Backbone.Model.extend({
   },
 
   parse: function (response) {
-
-    this.set(response.post);
-
     if (response.posts) {
       this.posts().set(response.posts, { parse: true });
       delete response.posts;
     }
+    return response
   },
 
 })

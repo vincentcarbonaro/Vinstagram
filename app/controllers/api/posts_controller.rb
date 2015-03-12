@@ -19,9 +19,16 @@ module Api
     end
 
     # will always be used to show a SINGLE post
+    # but you also need to fetch the user (jbuilder)
     def show
       @post = Post.find(params[:id]);
-      render json: @post
+      render :show
+    end
+
+    def destroy
+      @post = Post.find(params[:id])
+      @post.destroy if @post
+      render :json => {}
     end
 
     private

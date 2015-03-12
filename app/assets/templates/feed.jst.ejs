@@ -1,5 +1,20 @@
 <title>My Feed</title>
 
-Posts Feed!
+<h2>Posts Feed!</h2>
 
+-- Currently Displays All Users --
 <br><br>
+
+<% users.each( function (user) { %>
+
+  <a href="#/user/<%= user.id %>"><%= user.escape('username') %></a>
+  <br><br>
+
+  <% }) %>
+
+
+
+
+
+  <br><br>
+  
