@@ -6,13 +6,11 @@
 <div class="backdrop">
 
   <br>
-  <a href="#">Feed</a>
-  <br><br>
-  <a href="#user/<%= current_user.id %>">My Profile</a>
-  <br><br>
   Signed In As: <%= current_user.username %>
   <%= button_to "Sign Out", session_url, :method => :delete %>
 
+  <br>
+  <a href="#">Feed</a> - <a href="#user/<%= current_user.id %>">My Profile</a>
   <br><br>
 
   <div id="main">
@@ -20,6 +18,8 @@
   </div>
 
 </div>
+
+<footer class="footer"></footer>
 
 <script>
   $(document).ready(function(){

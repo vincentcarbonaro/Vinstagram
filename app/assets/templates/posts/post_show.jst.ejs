@@ -3,12 +3,11 @@
 <h2>Post Show</h2>
 
 <a href="#/user/<%= post.author().escape('id') %>"><%= post.author().escape('username') %></a>
-<br>
-Posted <%= post.escape('Time_Ago') %>
+<%= post.escape('Time_Ago') %>
 
-<br>
+<br><br>
 <%= post.escape('text') %>
 
-<br>
+<br><br>
 <button name="button">Delete Post</button>
 <br><br>

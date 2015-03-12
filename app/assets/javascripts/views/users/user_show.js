@@ -7,7 +7,7 @@ Vinstagram.Views.UserShow = Backbone.View.extend({
   },
 
   events: {
-    'click .open_upload button' : 'uploadPostPage'
+    'click .open_upload' : 'uploadPostPage'
   },
 
   render: function () {
