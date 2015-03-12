@@ -1,6 +1,6 @@
 Vinstagram.Views.PostForm = Backbone.View.extend({
 
-    template: JST['post_form'],
+    template: JST['posts/post_form'],
 
     events: {
       'submit form': 'submitForm'
@@ -23,11 +23,10 @@ Vinstagram.Views.PostForm = Backbone.View.extend({
       this.model.set(formData);
       this.model.save({}, {
         success: function () {
-          console.log('successful save!');
           Backbone.history.navigate('', {trigger: true});
         },
         error: function () {
-          console.log('failed save');
+          alert("lol no. you need text bruh");
         }
       });
     }

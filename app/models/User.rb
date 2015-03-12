@@ -45,6 +45,14 @@ class User < ActiveRecord::Base
     primary_key: :id
   )
 
+  def num_followers
+    followers.count
+  end
+
+  def num_followees
+    followees.count
+  end
+
   ################################################
 
   # has_attached_file :picture

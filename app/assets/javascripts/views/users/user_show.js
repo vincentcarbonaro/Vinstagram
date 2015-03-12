@@ -1,6 +1,6 @@
 Vinstagram.Views.UserShow = Backbone.View.extend({
 
-  template: JST['user_show'],
+  template: JST['users/user_show'],
 
   initialize: function () {
     this.listenTo(this.model, 'sync', this.render)
@@ -22,8 +22,6 @@ Vinstagram.Views.UserShow = Backbone.View.extend({
       });
       this.$el.find('.user_posts').append(view.render().$el)
     }.bind(this))
-
-    this.$el.append();
 
     return this;
   },

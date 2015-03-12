@@ -6,10 +6,7 @@ Vinstagram.Routers.Router = Backbone.Router.extend({
 
   routes: {
     '': 'feed',
-
     'user/:id': 'userShow',
-
-    'postForm': 'postForm',
     'post/:id': 'postShow',
   },
 
@@ -27,14 +24,6 @@ Vinstagram.Routers.Router = Backbone.Router.extend({
       model: user
     });
     this._swapView(view)
-  },
-
-  postForm: function () {
-    var post = new Vinstagram.Models.Post();
-    var view = new Vinstagram.Views.PostForm({
-      model: post
-    });
-    this._swapView(view);
   },
 
   postShow: function (id) {

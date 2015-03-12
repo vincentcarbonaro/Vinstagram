@@ -1,6 +1,6 @@
 Vinstagram.Views.PostShow = Backbone.View.extend({
 
-  template: JST['post_show'],
+  template: JST['posts/post_show'],
 
   initialize: function () {
     this.listenTo(this.model, 'sync', this.render);

@@ -1,6 +1,11 @@
 module Api
   class PostsController < ApiController
 
+    def index
+      @posts = Post.all
+      render :index
+    end
+
     def create
       @post = current_user.posts.new(post_params)
 
@@ -11,14 +16,6 @@ module Api
       end
     end
 
-    # will always be used to show all the posts of one user
-    def index
-      @users = User.all
-      render json: @users
-    end
-
-    # will always be used to show a SINGLE post
-    # but you also need to fetch the user (jbuilder)
     def show
       @post = Post.find(params[:id]);
       render :show

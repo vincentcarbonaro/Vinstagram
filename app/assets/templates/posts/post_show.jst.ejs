@@ -2,7 +2,8 @@
 
 <h2>Post Show</h2>
 
-<%= post %>
+<a href="#/user/<%= post.author().escape('id') %>"><%= post.author().escape('username') %></a>
+<br>
 Posted <%= post.escape('Time_Ago') %>
 
 <br>

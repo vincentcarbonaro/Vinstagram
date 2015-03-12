@@ -13,11 +13,11 @@
 <!-- <img src="" id="picture-preview"> -->
 
 <br><br>
-Posts:
+Posts: <%= this.model.posts().length %>
 <br>
-Followers:
+Followers: <%= this.model.escape('num_followers') %>
 <br>
-Following:
+Following: <%= this.model.escape('num_followees') %>
 <br>
 
 
@@ -32,8 +32,7 @@ Following:
 <div class="upload_form">
 </div>
 
+<br><br>
 
-
-<h2>Your Posts!</h2>
 <ul class="user_posts">
 </ul>

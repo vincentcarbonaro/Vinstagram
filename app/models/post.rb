@@ -16,6 +16,10 @@ class Post < ActiveRecord::Base
     time_ago_in_words(self.created_at)
   end
 
+  # def followees_posts
+  #   followees = self.author.followees
+  # end
+
 end
 
 
