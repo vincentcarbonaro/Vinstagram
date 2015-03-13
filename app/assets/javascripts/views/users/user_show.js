@@ -16,6 +16,11 @@ Vinstagram.Views.UserShow = Backbone.View.extend({
     });
     this.$el.html(content);
 
+    if (this.model.get('is_current_user')) {
+      var view = new Vinstagram.Views.CurrentUserOptions({});
+      this.$el.find('.user_options').append(view.render().$el);
+    }
+
     this.model.posts().each( function (post) {
       var view = new Vinstagram.Views.UserShowItem({
         model: post
@@ -24,6 +29,10 @@ Vinstagram.Views.UserShow = Backbone.View.extend({
     }.bind(this))
 
     return this;
+  },
+
+  show_user_options: function () {
+
   },
 
   uploadPostPage: function (event) {

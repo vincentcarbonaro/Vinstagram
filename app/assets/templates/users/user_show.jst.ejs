@@ -1,20 +1,6 @@
 <title><%= user.escape('username') %>'s' Profile</title>
 
 <h2><strong><%= user.escape('username') %>'s Profile</strong></h2>
-
-<label>
-  Upload Profile Picture <br>
-  <input id='input-picture-file' type='file' name='picture'>
-</label>
-<br><Br>
-<input type="submit" value="Save!">
-
-<!-- <img src="" id="picture-preview"> -->
-
-
-
-
-<br><br><br>
 Posts: <%= this.model.posts().length %>
 <br>
 Followers: <%= this.model.escape('num_followers') %>
@@ -23,13 +9,9 @@ Following: <%= this.model.escape('num_followees') %>
 <br>
 
 
-
-
-<button class=open_upload>Create New Post!</button>
-<div class="upload_form">
+<div class="user_options">
 </div>
 
 <br><br>
-
 <ul class="user_posts">
 </ul>
