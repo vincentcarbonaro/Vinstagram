@@ -16,23 +16,22 @@ Vinstagram.Views.UserShow = Backbone.View.extend({
     });
     this.$el.html(content);
 
-    if (this.model.get('is_current_user')) {
-      var view = new Vinstagram.Views.CurrentUserOptions({});
-      this.$el.find('.user_options').append(view.render().$el);
-    }
+    // if user is the current user, display post create and profile pic upload
+    if (this.model.get('is_current_user')) { this.currentUserOptionsUserShow() }
 
-    this.model.posts().each( function (post) {
-      var view = new Vinstagram.Views.UserShowItem({
-        model: post
-      });
-      this.$el.find('.user_posts').append(view.render().$el)
-    }.bind(this))
+    //if user is following or is current user, display all posts
+    if (this.model.get('is_following') || this.model.get('is_current_user')) {
+      this.displayPosts();
+    } else {
+      this.unfollowedUserOptions();
+    }
 
     return this;
   },
 
-  show_user_options: function () {
-
+  currentUserOptionsUserShow: function () {
+    var view = new Vinstagram.Views.currentUserOptionsUserShow();
+    this.$el.find('.user_options').append(view.render().$el);
   },
 
   uploadPostPage: function (event) {
@@ -43,6 +42,21 @@ Vinstagram.Views.UserShow = Backbone.View.extend({
       model: post
     });
     this.$el.find('.upload_form').html(view.render().$el);
+  },
+
+  displayPosts: function () {
+    this.model.posts().each( function (post) {
+      var view = new Vinstagram.Views.UserShowItem({
+        model: post
+      });
+      this.$el.find('.user_posts').append(view.render().$el)
+    }.bind(this))
+
+  },
+
+  unfollowedUserOptions: function () {
+    var view = new Vinstagram.Views.UnfollowedUserOptions();
+    this.$el.find('.user_posts').append(view.render().$el)
   }
 
 })

@@ -8,7 +8,7 @@ class ApplicationController < ActionController::Base
   end
 
   def is_following?(user)
-    
+    current_user.followees.include?(user)
   end
 
   private

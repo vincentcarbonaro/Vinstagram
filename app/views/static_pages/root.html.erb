@@ -1,31 +1,35 @@
-<header class="nav">
-  <!-- <a class="home" href="#">Home</a> -->
-  <a class="logo" href="#">Vinstagram</a>
-</header>
+<div id="wrapper">
+
+  <header class="nav">
+    <!-- <a class="home" href="#">Home</a> -->
+    <a class="logo" href="#">Vinstagram</a>
+  </header>
 
 
 
 
-<div class="backdrop">
+  <div class="backdrop">
 
-  <br>
-  Signed In As: <%= current_user.username %>
-  <%= button_to "Sign Out", session_url, :method => :delete %>
+    <br>
+    Signed In As: <%= current_user.username %>
+    <%= button_to "Sign Out", session_url, :method => :delete %>
 
-  <br>
-  <a href="#">Feed</a> - <a href="#user/<%= current_user.id %>">My Profile</a>
-  <br><br>
+    <br>
+    <a href="#">Feed</a> - <a href="#user/<%= current_user.id %>">My Profile</a>
+    <br><br>
 
-  <div id="main">
-    <!-- this is where were rendering backbone -->
+    <div id="main">
+      <!-- this is where were rendering backbone -->
+    </div>
+
   </div>
 
+
+
+
+  <footer class="footer"></footer>
+
 </div>
-
-
-
-
-<footer class="footer"></footer>
 
 <script>
   $(document).ready(function(){

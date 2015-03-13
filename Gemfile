@@ -7,12 +7,15 @@ gem 'jquery-rails'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'bcrypt', require: 'bcrypt'
-gem 'rails_12factor'
 gem 'backbone-on-rails'
 
 gem "paperclip", "~> 4.2"
 gem "aws-sdk"
 gem "figaro"
+
+group :production do
+  gem 'rails_12factor'
+end
 
 group :test do
   gem 'factory_girl_rails'

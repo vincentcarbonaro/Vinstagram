@@ -15,7 +15,15 @@ Vinstagram.Views.PostShow = Backbone.View.extend({
       post: this.model
     });
     this.$el.html(content);
+
+    if (this.model.get('is_current_user')) { this.currentUserOptionsPostShow() }
+
     return this;
+  },
+
+  currentUserOptionsPostShow: function () {
+    var view = new Vinstagram.Views.currentUserOptionsPostShow();
+    this.$el.find('.user_options').append(view.render().$el);
   },
 
   destroyPost: function (event) {
