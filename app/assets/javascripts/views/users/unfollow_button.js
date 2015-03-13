@@ -13,16 +13,19 @@ Vinstagram.Views.UnfollowButton = Backbone.View.extend({
   },
 
   unfollowUser: function () {
+    var follow = new Vinstagram.Models.Follow({
+      followee_id: this.model.id
+    })
+
+
+    follow.fetch({
+      success: function () {
+
+      }.bind(this)
+    });
     this.model.fetch();
-    console.log('cant delete yet bruh');
+
+    console.log('cant delete yet');
   }
 
 })
-
-//
-// var follow = new Vinstagram.Models.Follow({followee_id: this.model.id})
-// follow.save({},{
-//   success: function () {
-//     this.model.fetch();
-//   }.bind(this)
-// })

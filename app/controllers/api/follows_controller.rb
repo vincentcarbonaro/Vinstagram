@@ -11,7 +11,18 @@ module Api
       end
     end
 
-    def destroy
+    def index
+
+      @follow = current_user.follows.where(follow_params)
+
+      if(@follow)
+        @follow.destroy
+        render json: @follow
+      else
+        @follow = current_user.follows.new(follow_param)
+        render json: @follow
+      end
+
     end
 
     private
