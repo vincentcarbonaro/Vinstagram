@@ -1,5 +1,4 @@
-<a href="#/user/<%= post.author().escape('id') %>"><%= post.author().escape('username') %></a>
-<br>
+<a href="#/user/<%= post.author().escape('id') %>"><%= post.author().escape('username') %></a> - 
 <%= post.escape('Time_Ago') %>
 <br>
 <a href="#/post/<%= post.id %>"><%= post.escape('text') %></a>
