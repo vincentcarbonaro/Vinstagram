@@ -11,7 +11,7 @@ module Api
       end
     end
 
-    def index
+    def show
 
       @follow = current_user.follows.where(follow_params)
 
@@ -19,7 +19,7 @@ module Api
         @follow.destroy
         render json: @follow
       else
-        @follow = current_user.follows.new(follow_param)
+        @follow = current_user.follows.new(follow_params)
         render json: @follow
       end
 
