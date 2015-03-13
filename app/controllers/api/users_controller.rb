@@ -16,9 +16,9 @@ module Api
     end
 
     private
-    def user_params
-      params.require(:user).permit(:picture)
-    end
+    # def user_params
+    #   params.require(:user).permit(:picture)
+    # end
 
   end
 end
