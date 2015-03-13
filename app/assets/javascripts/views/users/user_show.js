@@ -45,6 +45,15 @@ Vinstagram.Views.UserShow = Backbone.View.extend({
   },
 
   displayPosts: function () {
+
+    if (!this.model.get('is_current_user')) {
+      var view = new Vinstagram.Views.UnfollowButton({
+        model: this.model
+      });
+      this.$el.find('.user_options').append(view.render().$el);
+    }
+
+
     this.model.posts().each( function (post) {
       var view = new Vinstagram.Views.UserShowItem({
         model: post
