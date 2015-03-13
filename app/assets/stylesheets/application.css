@@ -55,8 +55,10 @@ header.nav {
   background: #1c5380;
   display: block;
   padding: 10px 20px;
+  border-bottom: 1px solid black;
 }
 
+/*commented out for now*/
 header.nav .home {
   text-align: center;
   margin: 0 left;
@@ -86,7 +88,8 @@ div.main-form {
   height: 235px;
   width: 402px;
   position: relative;
-
+  width: 900px;
+  margin: 0 auto;
 }
 
 #main > li  {
@@ -94,4 +97,8 @@ div.main-form {
   width: 510px;
   display: block;
   margin: auto;
+}
+
+footer {
+  background: #1c5380;
 }
