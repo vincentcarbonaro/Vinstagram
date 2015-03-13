@@ -10,6 +10,16 @@ Vinstagram.Views.UserShow = Backbone.View.extend({
     'click .open_upload' : 'uploadPostPage'
   },
 
+  uploadPostPage: function (event) {
+    this.$el.find('.upload').html();
+    this.$el.find('.open_upload').remove();
+    var post = new Vinstagram.Models.Post();
+    var view = new Vinstagram.Views.PostForm({
+      model: post
+    });
+    this.$el.find('.upload_form').html(view.render().$el);
+  },
+
   render: function () {
     var content = this.template({
       user: this.model
@@ -34,16 +44,6 @@ Vinstagram.Views.UserShow = Backbone.View.extend({
     this.$el.find('.user_options').append(view.render().$el);
   },
 
-  uploadPostPage: function (event) {
-    this.$el.find('.upload').html();
-    this.$el.find('.open_upload').remove();
-    var post = new Vinstagram.Models.Post();
-    var view = new Vinstagram.Views.PostForm({
-      model: post
-    });
-    this.$el.find('.upload_form').html(view.render().$el);
-  },
-
   displayPosts: function () {
     this.model.posts().each( function (post) {
       var view = new Vinstagram.Views.UserShowItem({
@@ -55,7 +55,9 @@ Vinstagram.Views.UserShow = Backbone.View.extend({
   },
 
   unfollowedUserOptions: function () {
-    var view = new Vinstagram.Views.UnfollowedUserOptions();
+    var view = new Vinstagram.Views.UnfollowedUserOptions({
+      model: this.model
+    });
     this.$el.find('.user_posts').append(view.render().$el)
   }
 

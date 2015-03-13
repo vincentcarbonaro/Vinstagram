@@ -11,6 +11,10 @@ module Api
       render :show
     end
 
+    def update
+      render :json => {}
+    end
+
     private
     def user_params
       params.require(:user).permit(:picture)

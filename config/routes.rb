@@ -9,6 +9,7 @@ Rails.application.routes.draw do
     resources :posts
     resource :feed
     resources :users
+    resources :follows
   end
 
 end
