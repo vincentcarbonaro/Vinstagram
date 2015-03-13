@@ -53,7 +53,6 @@ Vinstagram.Views.UserShow = Backbone.View.extend({
       this.$el.find('.user_options').append(view.render().$el);
     }
 
-
     this.model.posts().each( function (post) {
       var view = new Vinstagram.Views.UserShowItem({
         model: post
