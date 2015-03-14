@@ -13,13 +13,18 @@ Vinstagram.Views.UnfollowedUserOptions = Backbone.View.extend({
   },
 
   followUser: function () {
-    var follow = new Vinstagram.Models.Follow({
-      followee_id: this.model.id
-    });
-    follow.save({},{
+
+    var that = this;
+
+    $.ajax({
+      url: "api/follows",
+      type: "POST",
+      data: {
+        followee_id: this.model.id
+      },
       success: function () {
-        this.model.fetch();
-      }.bind(this)
+        that.model.fetch();
+      }
     });
   }
 
