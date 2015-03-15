@@ -10,6 +10,7 @@ Rails.application.routes.draw do
     resource :feed
     resources :users
     resources :follows
+    get "search", to: "searches#index"
   end
 
 end
