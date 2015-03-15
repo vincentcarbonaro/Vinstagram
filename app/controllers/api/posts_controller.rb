@@ -2,7 +2,7 @@ module Api
   class PostsController < ApiController
 
     def index
-      @posts = Post.all
+      @posts = Post.get_posts(current_user)
       render :index
     end
 

@@ -16,6 +16,19 @@ class Post < ActiveRecord::Base
     time_ago_in_words(self.created_at)
   end
 
+  def self.get_posts(current_user)
+    followees = current_user.followees.includes(:posts)
+    followees << current_user
+
+    posts = []
+
+    followees.each do |followee|
+      followee.posts.each do |post|
+        posts << post
+      end
+    end
+    posts
+  end
 end
 
 

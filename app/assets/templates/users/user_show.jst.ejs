@@ -1,6 +1,7 @@
-<title><%= user.escape('username') %>'s' Profile</title>
+<title><%= user.escape('username') %>s' Profile</title>
 
-<h2><strong><%= user.escape('username') %>'s Profile</strong></h2>
+<strong><%= user.escape('username') %></strong>
+<br>
 Posts: <%= this.model.posts().length %>
 <br>
 Followers: <%= this.model.escape('num_followers') %>
