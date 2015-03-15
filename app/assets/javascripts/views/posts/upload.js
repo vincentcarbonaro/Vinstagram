@@ -1,6 +1,6 @@
-Vinstagram.Views.PostForm = Backbone.View.extend({
+Vinstagram.Views.Upload = Backbone.View.extend({
 
-    template: JST['posts/post_form'],
+    template: JST['posts/upload'],
 
     events: {
       'submit form': 'submitForm'

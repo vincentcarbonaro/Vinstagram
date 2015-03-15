@@ -6,8 +6,6 @@
   </header>
 
 
-
-
   <div class="backdrop">
 
     <br>
@@ -15,7 +13,10 @@
     <%= button_to "Sign Out", session_url, :method => :delete %>
 
     <br>
-    <a href="#">Feed</a> - <a href="#user/<%= current_user.id %>">My Profile</a>
+    <a href="#">Feed</a>
+     - <a href="#search">Search</a>
+     - <a href="#upload">Upload</a>
+     - <a href="#user/<%= current_user.id %>">My Profile</a>
     <br><br>
 
     <div id="main">
@@ -23,8 +24,6 @@
     </div>
 
   </div>
-
-
 
 
   <footer class="footer"></footer>

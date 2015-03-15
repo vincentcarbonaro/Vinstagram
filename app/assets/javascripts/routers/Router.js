@@ -8,6 +8,7 @@ Vinstagram.Routers.Router = Backbone.Router.extend({
     '': 'feed',
     'user/:id': 'userShow',
     'post/:id': 'postShow',
+    'upload': 'upload',
     'search': "search",
   },
 
@@ -38,7 +39,15 @@ Vinstagram.Routers.Router = Backbone.Router.extend({
 
   search: function () {
     var view = new Vinstagram.Views.Search();
-    this._swapView(view)
+    this._swapView(view);
+  },
+
+  upload: function () {
+    var post = new Vinstagram.Models.Post();
+    var view = new Vinstagram.Views.Upload({
+      model: post
+    });
+    this._swapView(view);
   },
 
   _swapView: function (view) {
