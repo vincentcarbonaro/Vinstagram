@@ -1,33 +1,21 @@
-<div id="wrapper">
+<header class="header">
+  <nav class="header-nav group">
 
-  <header class="nav">
-    <!-- <a class="home" href="#">Home</a> -->
-    <a class="logo" href="#">Vinstagram</a>
-  </header>
+    <ul class="header-list group">
+      <li><a href="#" class="header-home">Feed</a></li>
+      <li><a href="#search">Search</a></li>
+      <li><a href="#upload">Upload</a></li>
+      <li><a href="#user/<%= current_user.id %>">My Profile</a></li>
+    </ul>
 
+    <a href="#" class="header-logo">
+      <%= button_to "Sign Out", session_url, :method => :delete %></a>
 
-  <div class="backdrop">
+  </nav>
+</header>
 
-    <br>
-    Signed In As: <%= current_user.username %>
-    <%= button_to "Sign Out", session_url, :method => :delete %>
-
-    <br>
-    <a href="#">Feed</a>
-     - <a href="#search">Search</a>
-     - <a href="#upload">Upload</a>
-     - <a href="#user/<%= current_user.id %>">My Profile</a>
-    <br><br>
-
-    <div id="main">
-      <!-- this is where were rendering backbone -->
-    </div>
-
-  </div>
-
-
-  <footer class="footer"></footer>
-
+<div id="main">
+  <!-- this is where were rendering backbone -->
 </div>
 
 <script>

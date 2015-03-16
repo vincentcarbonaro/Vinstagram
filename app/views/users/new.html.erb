@@ -1,42 +1,48 @@
-<div class="main-form">
+<title>Sign Up! Vinstagram</title>
 
-  <title>Sign Up! Vinstagram</title>
+<div class="welcome">
 
-  <% if flash[:errors] %>
-    <%= flash[:errors].join("<br>").html_safe %>
-    <br><br>
-  <% end %>
+  <div class="form-header">
+    <div class="logo">Vinstagram</div>
+  </div>  
+  <div class="form">
 
-  <form action="<%= users_url %>" method="post">
-    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+    <% if flash[:errors] %>
+      <%= flash[:errors].join("<br>").html_safe %>
+      <br><br>
+    <% end %>
 
-    <label> Username:
-      <input type="text" name="user[username]" value="">
-    </label>
+    <form action="<%= users_url %>" method="post">
+      <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
 
-    <br>
-    <br>
+      <label> Username:
+        <input type="text" name="user[username]" value="">
+      </label>
 
-    <label> Email:
-    <input type="text" name="user[email]" value="">
-    </label>
+      <br>
+      <br>
 
-    <br>
-    <br>
+      <label> Email:
+      <input type="text" name="user[email]" value="">
+      </label>
 
-    <label> Password:
-    <input type="password" name="user[password]" value="">
+      <br>
+      <br>
 
-    <br>
-    <br>
+      <label> Password:
+      <input type="password" name="user[password]" value="">
 
-    <input type="submit" name="name" value="Sign Up!">
+      <br>
+      <br>
 
-  </form>
+      <input type="submit" name="name" value="Sign Up!">
 
-  <br><br><br>
+    </form>
 
-  Already Registered? <br>
-  <%= link_to "Sign In!", new_user_url %>
+    <br><br><br>
 
+    Already Registered? <br>
+    <%= link_to "Sign In!", new_user_url %>
+
+  </div>
 </div>

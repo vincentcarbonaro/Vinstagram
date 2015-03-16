@@ -1,3 +1,31 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.welcome{
+  border: 1px solid black;
+  border-radius: 1%;
+  top: 100px;
+  background: white;
+  margin: auto;
+  position: relative;
+  width: 402px;
+  margin: 0 auto;
+}
+
+.welcome .form-header{
+  background: #517fa4;
+  color: white;
+  height: 45px;
+}
+
+.welcome .logo {
+  height: 33px;
+  left: 50%;
+  margin: 14px 0 0 -48px;
+  position: absolute;
+}
+
+.welcome .form {
+  padding: 20px;
+}

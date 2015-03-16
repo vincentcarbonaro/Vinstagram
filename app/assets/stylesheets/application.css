@@ -14,113 +14,93 @@
  *= require_self
  */
 
- /* PHASE 0: Reset */
 
-html, head, body, header,
-nav, h1, a, ul, li, main,
-section, p, footer, small {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  outline: 0;
-  font: inherit;
-  /*color: inherit;*/
-  text-align: inherit;
-  /*text-decoration: inherit;*/
-  vertical-align: inherit;
-  box-sizing: inherit;
-  background: transparent;
-}
+ html, head, body, header,
+ nav, h1, a, ul, li, main,
+ section, p, footer, small {
+   margin: 0;
+   padding: 0;
+   border: 0;
+   outline: 0;
+   font: inherit;
+   color: inherit;
+   text-align: inherit;
+   /*text-decoration: inherit;*/
+   vertical-align: inherit;
+   box-sizing: inherit;
+   background: transparent;
+ }
 
-header, nav, main, section,
-footer, small {
-  display: block;
-}
+ header, nav, main, section,
+ footer, small {
+   display: block;
+ }
 
-ul {
-  list-style: none;
-}
+ ul {
+   list-style: none;
+ }
 
-/* Clearfix */
+ /* Clearfix */
 
-.group:after {
-  content: "";
-  display: block;
-  clear: both;
-}
+ .group:after {
+   content: "";
+   display: block;
+   clear: both;
+ }
 
-/*------------------------------------*/
+ /*------------------------------------*/
 
-body {
-  background: #B2B2B2;
-  min-height: 100%;
-}
+ .header {
+   background: #517fa4;
+   color: white;
+   border-bottom: 1px solid black;
+ }
 
-/*------------------------------------*/
+ .header a {
+   display: block;
+   padding: 10px 20px;
+   border-right: 1px solid black;
+ }
 
-#wrapped {
-  min-height:100%;
-  position:relative;
-}
+ .header-nav {
+   margin: auto;
+   width: 900px;
+   border-left: 1px solid black;
+ }
 
-header {
-  background: #1c5380;
-  display: block;
-  padding: 10px 20px;
-  border-bottom: 1px solid black;
-}
+ .header-list {
+   float: left;
+ }
 
-body .backdrop {
-  margin: auto;
-  padding-top: 25px;
-  padding-left: 50px;
-  padding-bottom: 35px;
-}
+ .header-list > li {
+   float: left;
+ }
 
-footer {
-  background: #1c5380;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 35px;   /* Height of the footer */
-}
+ .header-logo {
+   float: right;
+   border-left: 1px solid black;
+ }
 
-/**************************************/
+ /*------------------------------------*/
 
-/*commented out for now*/
-header.nav .home {
-  text-align: center;
-  margin: 0 left;
-  width: 100px;
-  color: white;
-  font-family: sans-serif;
-  display: block;
-}
+ body {
+   background: #B2B2B2;
+   min-height: 100%;
+ }
 
-header.nav .logo {
-  text-align: center;
-  margin: 0 auto;
-  width: 100px;
-  color: white;
-  font-family: sans-serif;
-  display: block;
-}
+ body .backdrop {
+   margin: auto;
+   padding-top: 25px;
+   padding-left: 50px;
+   padding-bottom: 35px;
+ }
 
-div.main-form {
-  background: white;
-  padding: 20px;
-  margin: auto;
-  height: 235px;
-  width: 402px;
-  position: relative;
-  width: 900px;
-  margin: 0 auto;
-}
 
-#main > li  {
-  text-align: center;
-  width: 510px;
-  display: block;
-  margin: auto;
-}
+ #main  {
+   margin: auto;
+   width: 600px;
+   padding: 20px;
+   border-left: 1px solid black;
+   border-right: 1px solid black;
+   border-bottom: 1px solid black;
+ }
