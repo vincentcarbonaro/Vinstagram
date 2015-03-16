@@ -2,27 +2,27 @@
 
 <h2>Post Show</h2>
 
-<a href="#/user/<%= post.author().escape('id') %>"><%= post.author().escape('username') %></a>
+<a href="#/user/<%= post.author().escape('id') %>"><%= post.author().escape('username') %></a> -
 <%= post.escape('Time_Ago') %>
 <br>
-<%= post.escape('text') %>
+<a href="#/post/<%= post.id %>"><%= post.escape('text') %></a>
 <br>
-&hearts; <%= post.escape('num_likes') %>
-
+&hearts; <%= post.escape('num_likes') %> Likes
 <br>
 
 <% post.comments().each( function (comment) { %>
   <strong><%= comment.escape('author_name') %></strong> <%= comment.escape('body') %>
   <br>
-<%  }) %>
+  <%  }) %>
 
-<br>
 <% if(post.escape('is_liked') === "true") { %>
   <button class="toggle_like"><strong> &hearts; Liked</strong></button>
 <%  } else { %>
   <button class="toggle_like">Like</button>
 <% } %>
 
+<button class="add_comment">Comment</button><br>
+<div class="comment"><br></div>
 
 <div class="user_options">
 </div>

@@ -8,8 +8,8 @@ Vinstagram.Views.PostShow = Backbone.View.extend({
 
   events: {
     'click .destroy': 'destroyPost',
-    'click .toggle_like': 'toggleLike'
-
+    'click .toggle_like': 'toggleLike',
+    'click .add_comment': 'addComment'
   },
 
   render: function () {
@@ -46,5 +46,14 @@ Vinstagram.Views.PostShow = Backbone.View.extend({
         that.model.fetch();
       },
     });
+  },
+
+  addComment: function () {
+    var view = new Vinstagram.Views.AddComment({
+      model: this.model
+    });
+    this.$el.find('.comment').html(view.render().$el)
   }
+
+
 });
