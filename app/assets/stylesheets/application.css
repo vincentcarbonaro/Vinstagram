@@ -14,7 +14,6 @@
  *= require_self
  */
 
-
  html, head, body, header,
  nav, h1, a, ul, li, main,
  section, p, footer, small {
@@ -100,43 +99,42 @@
  }
 
  body .backdrop {
-   margin: auto;
-   padding-top: 25px;
-   padding-left: 50px;
-   padding-bottom: 35px;
+
  }
 
-
- #main  {
+#main {
    margin: auto;
    width: 578px;
-   padding: 20px;
    border-left: 1px solid black;
    border-right: 1px solid black;
    border-bottom: 1px solid black;
- }
+   background: darkgray;
+}
 
- .feed li {
+.feed li {
    margin: auto;
-   border: 1px solid black;
-   margin: auto;
-   margin-top: 25px;
    width: 510px;
-   margin-bottom: 25px;
- }
+   padding-top: 35px;
+}
 
 div.post-show-top-bar{
-  background: #517fa4;
+  border: 1px 1px 1px 1px solid black;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  color: #517fa4;
+  background: white;
   padding: 20px;
   border-bottom: 1px solid black;
 }
 
  div.post-show-user {
    float: left;
+   font-size: 16px;
  }
 
  div.post-show-time {
    float: right;
+   font-size: 16px;
  }
 
  div.post-show-image {
@@ -145,6 +143,35 @@ div.post-show-top-bar{
  }
 
  div.post-show-text {
-   border-top: 1px solid black;
-   padding: 0px 20px 0px 20px;
+   background: white;
+   border: 1px 1px 1px 1px solid black;
+   padding: 10px 0px 0px 15px;
+   border-bottom-left-radius: 3px;
+   border-bottom-right-radius: 3px;
+ }
+
+ /***********************************/
+
+ div.indy-post-show {
+   padding-top: 35px;
+   margin: auto;
+   margin: auto;
+   margin-top: 25px;
+   width: 510px;
+   margin-bottom: 25px;
+ }
+
+ /***********************************/
+
+ .search {
+   padding: 20px;
+ }
+
+ .upload {
+   padding: 20px;
+ }
+
+ .user_show {
+   padding: 20px;
+
  }

@@ -11,11 +11,11 @@
 </div>
 
 <div class="post-show-image">
-<img src="/log2.jpg" alt="ERROR" height='510'/>
+  <a href="#/post/<%= post.id %>"><img src="/log2.jpg" alt="ERROR" height='510'/></a>
 </div>
 
 <div class="post-show-text">
-  <a href="#/post/<%= post.id %>"><%= post.escape('text') %></a>
+  <%= post.escape('text') %>
   <br>
   &hearts; <%= post.escape('num_likes') %> Likes
   <br>

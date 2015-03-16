@@ -1,28 +1,43 @@
-<title>Post Show Page</title>
+<div class="indy-post-show">
 
-<h2>Post Show</h2>
+  <div class="post-show-top-bar group">
 
-<a href="#/user/<%= post.author().escape('id') %>"><%= post.author().escape('username') %></a> -
-<%= post.escape('Time_Ago') %>
-<br>
-<a href="#/post/<%= post.id %>"><%= post.escape('text') %></a>
-<br>
-&hearts; <%= post.escape('num_likes') %> Likes
-<br>
+    <div class="post-show-user">
+      <a href="#/user/<%= post.author().escape('id') %>"><%= post.author().escape('username') %></a>
+    </div>
 
-<% post.comments().each( function (comment) { %>
-  <strong><%= comment.escape('author_name') %></strong> <%= comment.escape('body') %>
-  <br>
-  <%  }) %>
+    <div class="post-show-time">
+      <%= post.escape('Time_Ago') %> Ago
+    </div>
 
-<% if(post.escape('is_liked') === "true") { %>
-  <button class="toggle_like"><strong> &hearts; Liked</strong></button>
-<%  } else { %>
-  <button class="toggle_like">Like</button>
-<% } %>
+  </div>
 
-<button class="add_comment">Comment</button><br>
-<div class="comment"><br></div>
+  <div class="post-show-image">
+    <a href="#/post/<%= post.id %>"><img src="/log2.jpg" alt="ERROR" height='510'/></a>
+  </div>
 
-<div class="user_options">
+  <div class="post-show-text">
+    <%= post.escape('text') %>
+    <br>
+    &hearts; <%= post.escape('num_likes') %> Likes
+    <br>
+
+    <% post.comments().each( function (comment) { %>
+      <strong><%= comment.escape('author_name') %></strong> <%= comment.escape('body') %>
+      <br>
+    <%  }) %>
+
+    <% if(post.escape('is_liked') === "true") { %>
+      <button class="toggle_like"><strong> &hearts; Liked</strong></button>
+    <%  } else { %>
+      <button class="toggle_like">Like</button>
+    <% } %>
+
+    <button class="add_comment">Comment</button>
+    <button class="destroy">Delete Post</button>
+    <div class="comment"></div>
+  </div>
+
+  <div class="user_options"></div>
+
 </div>
