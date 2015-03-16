@@ -12,6 +12,28 @@ class Post < ActiveRecord::Base
     primary_key: "id"
   )
 
+  has_many(
+    :likes,
+    class_name: "Like",
+    foreign_key: "post_id",
+    primary_key: :id
+  )
+
+  has_many(
+    :comments,
+    class_name: "Comment",
+    foreign_key: "post_id",
+    primary_key: :id
+  )
+
+  def self.is_liked?(user, post)
+    !!Like.where(liker_id: user.id, post_id: post.id).first
+  end
+
+  def num_likes
+    self.likes.count
+  end
+
   def Time_Ago
     time_ago_in_words(self.created_at)
   end

@@ -3,6 +3,8 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   helper_method :current_user, :signed_in?, :is_current_user?, :is_following?
 
+
+
   def is_current_user?(user)
     user == current_user
   end

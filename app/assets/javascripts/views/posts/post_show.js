@@ -7,7 +7,9 @@ Vinstagram.Views.PostShow = Backbone.View.extend({
   },
 
   events: {
-    'click button': 'destroyPost'
+    'click .destroy': 'destroyPost',
+    'click .toggle_like': 'toggleLike'
+
   },
 
   render: function () {
@@ -29,6 +31,20 @@ Vinstagram.Views.PostShow = Backbone.View.extend({
   destroyPost: function (event) {
     this.model.destroy();
     Backbone.history.navigate('', {trigger :true})
-  }
+  },
 
+  toggleLike: function () {
+    var that = this;
+
+    $.ajax({
+      url: "api/likes",
+      type: "POST",
+      data: {
+        post_id: this.model.id
+      },
+      success: function () {
+        that.model.fetch();
+      },
+    });
+  }
 });
