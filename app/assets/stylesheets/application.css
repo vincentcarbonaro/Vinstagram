@@ -76,10 +76,21 @@
    float: left;
  }
 
- .header-logo {
+/*This is the image icon*/
+ .user-img {
    float: right;
    border-left: 1px solid black;
  }
+
+/*These are the dropdown windows*/
+ .user-settings {
+   /*display: none;*/
+ }
+
+ /*li:hover .header-notifications {
+   display: block;
+ }*/
+
 
  /*------------------------------------*/
 

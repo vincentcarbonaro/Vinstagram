@@ -8,7 +8,14 @@
       <li><a href="#user/<%= current_user.id %>">My Profile</a></li>
     </ul>
 
-    <a href="#" class="header-logo">
+    <!-- <nav class="user-img">
+      <a><%= current_user.username %></a>
+      <ul class="user-settings">
+      <li><%= button_to "Sign Out", session_url, :method => :delete %></li>
+      </ul>
+    </nav> -->
+
+    <a href="#" class="user-img">
       <%= button_to "Sign Out", session_url, :method => :delete %></a>
 
   </nav>
