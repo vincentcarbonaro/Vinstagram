@@ -37,8 +37,10 @@ Vinstagram.Views.FeedItem = Backbone.View.extend({
   },
 
   addComment: function () {
-    this.$el.append("lol<br>")
-    console.log('comment');
+    var view = new Vinstagram.Views.AddComment({
+      model: this.model
+    });
+    this.$el.find('.comment').html(view.render().$el)
   }
 
 })
