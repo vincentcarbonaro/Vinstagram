@@ -4,7 +4,7 @@
 
   <div class="form-header">
     <div class="logo">Vinstagram</div>
-  </div>  
+  </div>
 
   <div class="form">
 
@@ -20,25 +20,24 @@
         <input type="text" name="user[username]" value="">
       </label>
 
-      <br>
-      <br>
+      <br><br>
 
       <label> Password:
       <input type="password" name="user[password]" value="">
 
-      <br>
-      <br>
+      <br><br>
 
-      <input type="submit" name="name" value="Sign In!">
+      <section class="options">
+        Don't Have An Account Yet? <br>
+        <%= link_to "Sign Up!", new_user_url %>
+      </section>
+
+
+      <input class="button" type="submit" name="name" value="Log In!">
 
     </form>
 
-    <br>
-    <br>
-    <br>
-
-    Don't Have An Account Yet? <br>
-    <%= link_to "Sign Up!", new_user_url %>
+    <br><br><br>
 
   </div>
 

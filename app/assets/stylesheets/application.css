@@ -95,7 +95,7 @@
  /*------------------------------------*/
 
  body {
-   background: #B2B2B2;
+   background: whitesmoke;
    min-height: 100%;
  }
 
@@ -109,9 +109,16 @@
 
  #main  {
    margin: auto;
-   width: 600px;
+   width: 500px;
    padding: 20px;
    border-left: 1px solid black;
    border-right: 1px solid black;
    border-bottom: 1px solid black;
+ }
+
+ .feed li {
+   border: 1px solid black;
+   padding: 15px 10px 15px 10px;
+   margin-bottom: 20px;
+   height: 500px;
  }

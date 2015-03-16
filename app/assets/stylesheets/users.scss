@@ -3,20 +3,22 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .welcome{
-  border: 1px solid black;
+  border: 1px solid gray;
   border-radius: 1%;
-  top: 100px;
   background: white;
-  margin: auto;
-  position: relative;
+  position: absolute;
   width: 402px;
-  margin: 0 auto;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -50%);
 }
 
 .welcome .form-header{
   background: #517fa4;
   color: white;
   height: 45px;
+  // font-family: cursive;
+  font-size: 20px;
 }
 
 .welcome .logo {
@@ -27,5 +29,18 @@
 }
 
 .welcome .form {
-  padding: 20px;
+  padding: 25px;
+}
+
+input.button {
+  float: right;
+  color: white;
+  height: 40px;
+  width: 75px;
+  font-size: 15px;
+  background: green;
+}
+
+section.options{
+  float: left;
 }
