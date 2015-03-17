@@ -24,7 +24,7 @@
    font: inherit;
    color: inherit;
    text-align: inherit;
-   /*text-decoration: inherit;*/
+   text-decoration: inherit;
    vertical-align: inherit;
    box-sizing: inherit;
    background: transparent;
@@ -82,9 +82,9 @@
  }
 
 /*These are the dropdown windows*/
- .user-settings {
+ /*.user-settings {*/
    /*display: none;*/
- }
+ /*}*/
 
  /*li:hover .header-notifications {
    display: block;
@@ -93,31 +93,33 @@
 
  /*------------------------------------*/
 
- body {
+.backdrop {
    background: whitesmoke;
    min-height: 100%;
  }
 
- body .backdrop {
-
- }
-
-#main {
+.feed {
    margin: auto;
    width: 578px;
    border-left: 1px solid black;
    border-right: 1px solid black;
    border-bottom: 1px solid black;
+   border-bottom-left-radius: 3px;
+   border-bottom-right-radius: 3px;
    background: darkgray;
 }
 
 .feed li {
    margin: auto;
    width: 510px;
-   padding-top: 35px;
+   padding-bottom: 35px;
 }
 
-div.post-show-top-bar{
+.feed li:first-child {
+  padding-top: 35px;
+}
+
+.feed-item-top-bar{
   border: 1px 1px 1px 1px solid black;
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
@@ -127,22 +129,22 @@ div.post-show-top-bar{
   border-bottom: 1px solid black;
 }
 
- div.post-show-user {
+.feed-item-user {
    float: left;
    font-size: 16px;
  }
 
- div.post-show-time {
+.feed-item-time {
    float: right;
    font-size: 16px;
  }
 
- div.post-show-image {
+.feed-item-image {
    height: 510px;
    width: 510px;
  }
 
- div.post-show-text {
+.feed-item-text {
    background: white;
    border: 1px 1px 1px 1px solid black;
    padding: 10px 0px 0px 15px;
@@ -152,7 +154,7 @@ div.post-show-top-bar{
 
  /***********************************/
 
- div.indy-post-show {
+ .indy-post-show {
    padding-top: 35px;
    margin: auto;
    margin: auto;
@@ -161,17 +163,42 @@ div.post-show-top-bar{
    margin-bottom: 25px;
  }
 
- /***********************************/
-
  .search {
    padding: 20px;
+   width: 578px;
+   margin: auto;
+   border-left: 1px solid black;
+   border-right: 1px solid black;
+   border-bottom: 1px solid black;
  }
 
  .upload {
    padding: 20px;
+   width: 578px;
+   margin: auto;
+   border-left: 1px solid black;
+   border-right: 1px solid black;
+   border-bottom: 1px solid black;
  }
 
- .user_show {
-   padding: 20px;
+.footer {
+  width: 912-40px;
+  height: 50px;
+}
 
- }
+.user-show {
+  width: 860px;
+  margin: auto;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.user-show-item{
+  float: left;
+  display: block;
+  height: 156px;
+  width: 156px;
+  border: 1px solid black;
+  padding: 3px;
+}

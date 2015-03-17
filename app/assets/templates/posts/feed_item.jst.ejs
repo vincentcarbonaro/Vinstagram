@@ -1,20 +1,20 @@
-<div class="post-show-top-bar group">
+<div class="feed-item-top-bar group">
 
-    <div class="post-show-user">
+    <div class="feed-item-user">
       <a href="#/user/<%= post.author().escape('id') %>"><%= post.author().escape('username') %></a>
     </div>
 
-    <div class="post-show-time">
+    <div class="feed-item-time">
       <%= post.escape('Time_Ago') %> Ago
     </div>
 
 </div>
 
-<div class="post-show-image">
+<div class="feed-item-image">
   <a href="#/post/<%= post.id %>"><img src="/log2.jpg" alt="ERROR" height='510'/></a>
 </div>
 
-<div class="post-show-text">
+<div class="feed-item-text">
   <%= post.escape('text') %>
   <br>
   &hearts; <%= post.escape('num_likes') %> Likes

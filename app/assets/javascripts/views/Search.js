@@ -8,7 +8,7 @@ Vinstagram.Views.Search = Backbone.View.extend({
   },
 
   events: {
-    'click .search': 'search',
+    'click .run_search': 'search',
   },
 
   render: function () {

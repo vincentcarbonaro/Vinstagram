@@ -37,7 +37,7 @@ Vinstagram.Views.UserShow = Backbone.View.extend({
 
   currentUserOptionsUserShow: function () {
     var view = new Vinstagram.Views.currentUserOptionsUserShow();
-    this.$el.find('.user_options').append(view.render().$el);
+    this.$el.find('.user-options').append(view.render().$el);
   },
 
   displayPosts: function () {
@@ -46,14 +46,14 @@ Vinstagram.Views.UserShow = Backbone.View.extend({
       var view = new Vinstagram.Views.UnfollowButton({
         model: this.model
       });
-      this.$el.find('.user_options').append(view.render().$el);
+      this.$el.find('.user-options').append(view.render().$el);
     }
 
     this.model.posts().each( function (post) {
       var view = new Vinstagram.Views.UserShowItem({
         model: post
       });
-      this.$el.find('.user_posts').append(view.render().$el)
+      this.$el.find('.user-posts').append(view.render().$el)
     }.bind(this))
 
   },
@@ -62,7 +62,7 @@ Vinstagram.Views.UserShow = Backbone.View.extend({
     var view = new Vinstagram.Views.UnfollowedUserOptions({
       model: this.model
     });
-    this.$el.find('.user_posts').append(view.render().$el)
+    this.$el.find('.user-posts').append(view.render().$el)
   }
 
 })
