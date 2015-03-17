@@ -4,7 +4,7 @@
 
   <div class="form-header">
     <div class="logo">Vinstagram</div>
-  </div>  
+  </div>
   <div class="form">
 
     <% if flash[:errors] %>
@@ -35,14 +35,16 @@
       <br>
       <br>
 
-      <input type="submit" name="name" value="Sign Up!">
+      <section class="options">
+        Already Registered? <br>
+        <%= link_to "Sign In!", new_user_url %>
+      </section>
+
+      <input type="submit" class="button" value="Sign Up!">
 
     </form>
 
     <br><br><br>
-
-    Already Registered? <br>
-    <%= link_to "Sign In!", new_user_url %>
 
   </div>
 </div>

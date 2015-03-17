@@ -9,7 +9,7 @@
   position: absolute;
   width: 402px;
   left: 50%;
-  top: 40%;
+  top: 35%;
   transform: translate(-50%, -50%);
 }
 
@@ -32,11 +32,11 @@
   padding: 25px;
 }
 
-input.button {
+.welcome .button {
   float: right;
   color: white;
   height: 40px;
-  width: 75px;
+  width: 80px;
   font-size: 15px;
   background: green;
 }
