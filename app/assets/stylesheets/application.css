@@ -202,3 +202,10 @@
   border: 1px solid black;
   padding: 3px;
 }
+
+.settings{
+  width: 598px;
+  margin: auto;
+  border: 1px solid black;
+  padding: 20px;
+}

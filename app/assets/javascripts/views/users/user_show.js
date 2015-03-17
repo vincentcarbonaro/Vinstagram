@@ -22,9 +22,6 @@ Vinstagram.Views.UserShow = Backbone.View.extend({
     });
     this.$el.html(content);
 
-    // if user is the current user, display post create and profile pic upload
-    if (this.model.get('is_current_user')) { this.currentUserOptionsUserShow() }
-
     //if user is following or is current user, display all posts
     if (this.model.get('is_following') || this.model.get('is_current_user')) {
       this.displayPosts();
@@ -36,7 +33,9 @@ Vinstagram.Views.UserShow = Backbone.View.extend({
   },
 
   currentUserOptionsUserShow: function () {
-    var view = new Vinstagram.Views.currentUserOptionsUserShow();
+    var view = new Vinstagram.Views.currentUserOptionsUserShow({
+      model: this.model
+    });
     this.$el.find('.user-options').append(view.render().$el);
   },
 

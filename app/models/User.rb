@@ -1,5 +1,8 @@
 class User < ActiveRecord::Base
 
+  has_attached_file :picture, default_url: "log2.png"
+  validates_attachment_content_type :picture, :content_type => /\Aimage\/.*\Z/
+
   include PgSearch
   pg_search_scope :search, against: [:username, :email]
 
@@ -64,9 +67,6 @@ class User < ActiveRecord::Base
   end
 
   ################################################
-
-  has_attached_file :picture
-  validates_attachment_content_type :picture, :content_type => /\Aimage\/.*\Z/
 
   attr_reader :password
 
