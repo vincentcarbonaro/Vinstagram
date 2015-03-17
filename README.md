@@ -61,7 +61,7 @@ I'll need to add `search` routes to both the users and tags controller. On the B
 - [x] "Like" button and counter for posts
 - [ ] Pagination/infinite scroll
 - [ ] Activity history (e.g. likes, follows, posts)
-- [ ] User avatars
+- [x] User avatars
 - [ ] Typeahead search bar
 - [ ] Picture Filters
 - [ ] Picture Cropping

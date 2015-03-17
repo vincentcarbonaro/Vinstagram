@@ -4,11 +4,11 @@
 
   <h3>Upload Post</h3>
 
-  <form class="post_form" enctype="multipart/form-data">
+  <form class="post_form">
 
     <label>
       Image <br>
-      <input type="file" name="post[img]" value="">
+      <input id="input-picture-file" type="file" name="picture">
     </label>
 
     <br><br>
@@ -23,5 +23,8 @@
     <input type="submit" value="Create Post">
 
   </form>
+
+  <br>
+  <img class="pic-preview" src="" id="picture-preview">
 
 </div>

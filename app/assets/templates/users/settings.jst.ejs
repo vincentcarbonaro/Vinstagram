@@ -1,17 +1,21 @@
 <section class="settings">
 
-  <h2>Settings</h2>
+<h2>Settings</h2>
 
   <label>
     Upload Profile Picture <br>
     <input id="input-picture-file" type="file" name="picture">
   </label>
-  <br><Br>
 
+  <br><br>
 
-    <img src="" id="picture-preview">
-    <br><br>
-    <input type="submit" value="Save!">
-    <br>
+  <img class="pic-preview" src="" id="picture-preview">
 
+  <br><br>
+  <input type="submit" value="Save!">
+  <br>
+
+  <br>
+   <br>
+      <img class="pic-preview" src="<%= user.attributes.picture_url %>" id="picture-preview">
 </section>

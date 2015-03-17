@@ -10,7 +10,7 @@ gem 'bcrypt', require: 'bcrypt'
 gem 'backbone-on-rails'
 
 gem "paperclip", "~> 4.2"
-gem "aws-sdk"
+gem 'aws-sdk', '< 2.0'
 gem "figaro"
 
 gem 'pg_search'

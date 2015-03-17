@@ -186,12 +186,30 @@
   height: 50px;
 }
 
+/**********************/
+
 .user-show {
   width: 860px;
   margin: auto;
   border-left: 1px solid black;
   border-right: 1px solid black;
   border-bottom: 1px solid black;
+  padding: 20px;
+}
+
+.user-show {
+  width: 860px;
+  margin: auto;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+  padding: 20px;
+}
+
+.user-show-header {
+  margin: auto;
+  border: 1px solid black;
+  padding: 20px;
 }
 
 .user-show-item{
@@ -203,9 +221,19 @@
   padding: 3px;
 }
 
+/**********************/
+
 .settings{
   width: 598px;
   margin: auto;
-  border: 1px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
   padding: 20px;
+}
+
+.pic-preview{
+  border: 1px solid black;
+  height: 156px;
+  width: 156px;
 }

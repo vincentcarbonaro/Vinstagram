@@ -12,12 +12,16 @@ Vinstagram.Views.Feed = Backbone.View.extend({
     });
     this.$el.html(content)
 
-    this.collection.each( function (post) {
-      var view = new Vinstagram.Views.FeedItem({
-        model: post
-      })
-      this.$el.find('.feed').append(view.render().$el)
-    }.bind(this));
+    if (this.collection.length === 0) {
+      this.$el.find('.feed').append("No Posts Available!")
+    } else {
+      this.collection.each( function (post) {
+        var view = new Vinstagram.Views.FeedItem({
+          model: post
+        })
+        this.$el.find('.feed').append(view.render().$el)
+      }.bind(this));
+    }
 
     return this;
   }

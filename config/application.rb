@@ -22,6 +22,8 @@ module Vinstagram
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
 
+
+    ##Rspec Generators
     config.generators do |g|
       g.test_framework :rspec,
         :fixtures => true,
@@ -31,6 +33,17 @@ module Vinstagram
         :controller_specs => true,
         :request_specs => true
     end
+
+    config.paperclip_defaults = {
+      :storage => :s3,
+      :path => "images/:class/:id.:style.:extension", # this is how you specify
+      :s3_credentials =>  {                           # the path and file name
+        :bucket => ENV["S3_BUCKET"],
+        :access_key_id => ENV["S3_ACCESS_KEY_ID"],
+        :secret_access_key => ENV["S3_SECRET_ACCESS_KEY"],
+        :s3_host_name => "s3.amazonaws.com" # to find this, manually upload a file into your S3 bucket and then look at the file's properties (button in the top right in the bucket). The host_name is the host of the "link" for the file.
+      }
+    }
 
     config.active_record.raise_in_transactional_callbacks = true
   end

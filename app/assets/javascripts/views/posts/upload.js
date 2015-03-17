@@ -26,7 +26,7 @@ Vinstagram.Views.Upload = Backbone.View.extend({
           Backbone.history.navigate('', {trigger: true});
         },
         error: function () {
-          alert("lol no. you need text bruh");
+          console.log('error!!');
         }
       });
     }

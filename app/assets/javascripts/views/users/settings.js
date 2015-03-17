@@ -4,14 +4,18 @@ Vinstagram.Views.Settings = Backbone.View.extend({
 
   template: JST['users/settings'],
 
-    events: {
-      "submit": "submit",
-      "change #input-picture-file": "changePicture"
-    },
+  initialize: function () {
+    this.listenTo(this.model, 'sync', this.render)
+  },
+
+  events: {
+    "submit": "submit",
+    "change #input-picture-file": "changePicture"
+  },
 
   render: function () {
     var content = this.template({
-
+      user: this.model
     });
     this.$el.html(content)
     return this;
@@ -19,6 +23,19 @@ Vinstagram.Views.Settings = Backbone.View.extend({
 
   submit: function (event) {
     event.preventDefault();
+
+    var formData = this.$el.serializeJSON();
+    var that = this;
+
+    this.model.save(formData, {
+      success: function () {
+        console.log('hooray');
+        that = that;
+        that.model.fetch();
+        Backbone.history.navigate("", {trigger: true});
+      }
+    });
+
   },
 
   changePicture: function (event) {
@@ -37,22 +54,3 @@ Vinstagram.Views.Settings = Backbone.View.extend({
   }
 
 })
-
-
-
-
-//
-//   changePicture: function (event) {
-//     var file = event.currentTarget.files[0];
-//     var fileReader = new FileReader();
-//     var that = this;
-//     fileReader.onloadend = function () {
-//       that.model.set("picture", fileReader.result);
-//       that.previewPic(fileReader.result);
-//     };
-//     fileReader.readAsDataURL(file);
-//   },
-//
-
-//
-// })

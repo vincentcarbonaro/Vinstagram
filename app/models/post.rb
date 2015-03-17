@@ -3,7 +3,11 @@ require 'action_view'
 class Post < ActiveRecord::Base
   include ActionView::Helpers::DateHelper
 
+  has_attached_file :picture
+  validates_attachment_content_type :picture, :content_type => /\Aimage\/.*\Z/
+
   validates :author_id, :text, presence: true
+  validates_attachment_presence :picture
 
   belongs_to(
     :author,

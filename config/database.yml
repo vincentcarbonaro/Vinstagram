@@ -80,6 +80,6 @@ test:
 #
 production:
   <<: *default
-  database: petadopter_production
-  username: petadopter
-  password: <%= ENV['PETADOPTER_DATABASE_PASSWORD'] %>
+  database: vinstagram_production
+  username: vinstagram
+  password: <%= ENV['VINSTAGRAM_DATABASE_PASSWORD'] %>

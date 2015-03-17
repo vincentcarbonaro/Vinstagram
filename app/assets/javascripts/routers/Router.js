@@ -10,7 +10,7 @@ Vinstagram.Routers.Router = Backbone.Router.extend({
     'post/:id': 'postShow',
     'upload': 'upload',
     'search': "search",
-    'user/:id/settings': "settings"
+    'settings/:id': "settings"
   },
 
   feed: function () {
