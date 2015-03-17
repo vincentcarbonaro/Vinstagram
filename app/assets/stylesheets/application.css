@@ -237,3 +237,11 @@
   height: 156px;
   width: 156px;
 }
+
+.upload-pic-preview{
+  border: 1px solid black;
+  height: 300px;
+  width: 300px;
+  margin: auto;
+  display: block;
+}

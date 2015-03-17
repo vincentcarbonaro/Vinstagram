@@ -9,6 +9,8 @@ module Api
     def create
       @post = current_user.posts.new(post_params)
 
+      @post.picture = (params[:picture])
+
       if @post.save
         render json: @post
       else
