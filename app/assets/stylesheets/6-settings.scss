@@ -24,18 +24,33 @@
   text-align: center;
   font-size:36px;
   font-weight: bold;
+  margin-bottom: 25px;
+}
+
+.settings-bottom{
+  margin:auto;
+  width: 598px;
+}
+
+.left-pane{
+  float: left;
+  padding-top: 3px;
+  padding-left: 90px;
+
+}
+
+.right-pane{
+  float: right;
+}
+
+.current-pic{
+  border: 1px solid black;
+  height: 156px;
+  width: 156px;
 }
 
 .pic-preview{
   border: 1px solid black;
   height: 156px;
   width: 156px;
-}
-
-.upload-pic-preview{
-  border: 1px solid black;
-  height: 300px;
-  width: 300px;
-  margin: auto;
-  display: block;
 }

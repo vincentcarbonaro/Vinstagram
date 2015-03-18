@@ -1,4 +1,4 @@
-<section class="settings">
+<section class="settings group">
 
   <title>Settings</title>
 
@@ -6,21 +6,23 @@
     Settings
   </u></section>
 
-  <label>
-    Change Profile Picture <br>
-    <input id="input-picture-file" type="file" name="picture">
-  </label>
+  <section class="settings-bottom">
 
-  <br><br>
+    <section class="left-pane"><br><br>
+      Current Picture:
+      <br>
+      <img class="current-pic" src="<%= user.attributes.picture_url %>" id="picture-preview">
+    </section>
 
-  <img class="pic-preview" src="" id="picture-preview">
+    <section class="right-pane">
+      Change Profile Picture <br>
+      <input id="input-picture-file" type="file" name="picture">
+      <br><br>
+      <img class="pic-preview" src="" id="picture-preview">
+      <br><br>
+      <input type="submit" value="Save!">
+    </section>
 
-  <br><br>
-  <input type="submit" value="Save!">
-  <br>
-
-  <br><br>
-
-  <img class="pic-preview" src="<%= user.attributes.picture_url %>" id="picture-preview">
+  </section>
 
 </section>
