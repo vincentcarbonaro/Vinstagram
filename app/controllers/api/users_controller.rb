@@ -2,8 +2,10 @@ module Api
   class UsersController < ApiController
 
     def index
-      @users = User.all
-      render json: @users
+      # I don't think this is used?
+      # could use for searches?
+      # @users = User.all
+      # render json: @users
     end
 
     def show

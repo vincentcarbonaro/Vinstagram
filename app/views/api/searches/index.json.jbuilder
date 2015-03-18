@@ -1,1 +1,1 @@
-json.results @search_results
+json.results @search_results, :id, :username

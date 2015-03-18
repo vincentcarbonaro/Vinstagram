@@ -1,13 +1,11 @@
 <div class="feed-item-top-bar group">
-
     <div class="feed-item-user">
       <a href="#/user/<%= post.author().escape('id') %>"><%= post.author().escape('username') %></a>
     </div>
 
     <div class="feed-item-time">
-      <%= post.escape('Time_Ago') %> Ago
+      <%= post.escape('Time_Ago') %> ago
     </div>
-
 </div>
 
 <div class="feed-item-image">
@@ -15,10 +13,15 @@
 </div>
 
 <div class="feed-item-text">
-  <%= post.escape('text') %>
-  <br>
-  &hearts; <%= post.escape('num_likes') %> Likes
-  <br>
+  <% if(post.escape('text')) { %>
+    <%= post.escape('text') %>
+    <br>
+  <% } %>
+
+  <% if(post.escape('num_likes') != "0") { %>
+    &hearts; <%= post.escape('num_likes') %> Likes
+    <br>
+  <% } %>
 
   <% post.comments().each( function (comment) { %>
     <strong><%= comment.escape('author_name') %></strong> <%= comment.escape('body') %>

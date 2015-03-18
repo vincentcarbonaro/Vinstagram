@@ -4,11 +4,14 @@ class User < ActiveRecord::Base
   validates_attachment_content_type :picture, :content_type => /\Aimage\/.*\Z/
 
   include PgSearch
-  pg_search_scope :search, against: [:username, :email]
+  pg_search_scope :user_search,
+                  against: [:username],
+                  using: { tsearch: {:prefix => true} }
+
 
   validates :username, :email, :password_digest, :session_token, presence: true
   validates :password, length: { minimum: 6, allow_nil: true }
-  validates :username, :email, uniqueness: true
+  validates :username, :email, uniqueness: { case_sensitive: false }
 
   ################################################
 

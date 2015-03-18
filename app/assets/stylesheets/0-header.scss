@@ -6,6 +6,9 @@
   background: #517fa4;
   color: white;
   border-bottom: 1px solid black;
+  position: fixed;
+  margin: auto;
+  width: 100%;
 }
 
 .header a {
@@ -18,7 +21,6 @@
   margin: auto;
   width: 900px;
   border-left: 1px solid black;
-  // border-right: 1px solid black;
 }
 
 .header-list {
@@ -33,7 +35,6 @@
 .user-img {
   float: right;
   border-left: 1px solid black;
-  /*position: relative;*/
 }
 /*
 .settings {
@@ -53,6 +54,10 @@
 .user-img:hover .settings {
  background: green;
 }*/
+
+#main{
+  padding-top: 38px;
+}
 
 .backdrop {
   background: whitesmoke;
