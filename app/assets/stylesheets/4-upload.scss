@@ -1,8 +1,44 @@
-.upload {
-  padding: 20px;
-  width: 578px;
+.upload-backdrop {
+  width: 800px;
   margin: auto;
+  padding-bottom: 70px;
   border-left: 1px solid black;
   border-right: 1px solid black;
   border-bottom: 1px solid black;
+  border-bottom-radius: 5px;
+  background: darkgray;
+}
+
+.upload {
+  width: 600px;
+  margin: auto;
+  background: white;
+  padding: 20px;
+  border: 1px solid black;
+  border-bottom-radius: 5px;
+}
+
+.upload-title {
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.post-image-select {
+  margin: 35px 0;
+  margin-left: 45px;
+}
+
+.post-pic-preview {
+  height: 510px;
+  width: 510px;
+  display: block;
+  border: 1px solid black;
+  margin: auto;
+  border-radius: 3px;
+}
+
+.caption-and-submit {
+  margin-left: 45px;
+  margin-bottom: 30px;
 }

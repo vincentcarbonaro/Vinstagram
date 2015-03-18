@@ -19,8 +19,9 @@ Vinstagram is a clone of Instagram built on Rails and Backbone. Users can:
 - [x] Like Posts
 - [x] Comment on Posts
 - [x] Posts are Images
-- [ ] Create Tags for topics in Comments
+
 - [ ] Create Tags for Users in Comments
+- [ ] Create Tags for topics in Comments
 - [ ] Search for Posts by tag
 
 ## Design Docs
@@ -59,9 +60,9 @@ I'll need to add `search` routes to both the users and tags controller. On the B
 
 ### Bonus Features (TBD)
 - [x] "Like" button and counter for posts
+- [x] User avatars
 - [ ] Pagination/infinite scroll
 - [ ] Activity history (e.g. likes, follows, posts)
-- [x] User avatars
 - [ ] Typeahead search bar
 - [ ] Picture Filters
 - [ ] Picture Cropping

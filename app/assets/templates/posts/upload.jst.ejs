@@ -1,30 +1,30 @@
-<div class="upload">
+<section class="upload-backdrop">
+  <div class="upload">
+    <title>Upload Post</title>
 
-  <title>Upload Post</title>
+    <section class='upload-title'>
+      <u>Upload a Post!</u>
+    </section>
 
-  <h3>Upload Post</h3>
+    <form class="post_form">
 
-  <form class="post_form">
+      <section class="post-image-select">
+        Select a File To Upload <br>
+        <input id="input-picture-file" type="file" name="picture">
+      </section>
 
-    <label>
-      Image <br>
-      <input id="input-picture-file" type="file" name="picture">
-    </label>
+      <img class="post-pic-preview" src="" id="picture-preview">
 
-    <br><br>
+      <br><br>
 
-    <label>
-      Text <br>
-      <input type="text" name="post[text]" value="">
-    </label>
+      <section class="caption-and-submit">
 
-    <br><br>
+        Write a Caption...<br>
+        <textarea name="post[text]" rows="8" cols="40" value=""></textarea>
 
-    <input type="submit" value="Create Post">
+        <input type="submit" value="Share">
 
-  </form>
-
-  <br>
-  <img class="pic-preview" src="" id="picture-preview">
-
-</div>
+      </section>
+    </form>
+  </div>
+</section>
