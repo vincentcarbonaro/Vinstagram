@@ -1,4 +1,11 @@
 <title>My Feed</title>
 
-<ul class='feed'>
-</ul>
+<% if(posts.length > 0) { %>
+  <ul class='feed'></ul>
+<% } else { %>
+  <section class="no-posts">
+    There Aren't Any Posts To Show :( <br><br>
+    It's Probably Because You Have No Friends.
+  </section>
+
+<% } %>
