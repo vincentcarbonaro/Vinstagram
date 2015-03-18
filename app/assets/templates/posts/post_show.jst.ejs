@@ -1,47 +1,43 @@
-<div class="indy-post-show-backdrop">
+<title>Post Show</title>
 
-  <title>Post Show</title>
+<section class="post-show-item">
 
-  <section class="post-show-item">
+  <div class="post-show-top-bar group">
 
-    <div class="post-show-top-bar group">
-
-      <div class="post-show-user">
-        <a href="#/user/<%= post.author().escape('id') %>"><%= post.author().escape('username') %></a>
-      </div>
-
-      <div class="post-show-time">
-        <%= post.escape('Time_Ago') %> Ago
-      </div>
-
+    <div class="post-show-user">
+      <a href="#/user/<%= post.author().escape('id') %>"><%= post.author().escape('username') %></a>
     </div>
 
-    <div class="post-show-image">
-      <a href="#/post/<%= post.id %>"><img src="<%= post.attributes.picture_url %>" alt="ERROR" height='510'/></a>
+    <div class="post-show-time">
+      <%= post.escape('Time_Ago') %> Ago
     </div>
 
-    <div class="post-show-text">
-      <%= post.escape('text') %>
+  </div>
+
+  <div class="post-show-image">
+    <a href="#/post/<%= post.id %>"><img src="<%= post.attributes.picture_url %>" alt="ERROR" height='510'/></a>
+  </div>
+
+  <div class="post-show-text">
+    <%= post.escape('text') %>
+    <br>
+    &hearts; <%= post.escape('num_likes') %> Likes
+    <br>
+
+    <% post.comments().each( function (comment) { %>
+      <strong><%= comment.escape('author_name') %></strong> <%= comment.escape('body') %>
       <br>
-      &hearts; <%= post.escape('num_likes') %> Likes
-      <br>
+    <%  }) %>
 
-      <% post.comments().each( function (comment) { %>
-        <strong><%= comment.escape('author_name') %></strong> <%= comment.escape('body') %>
-        <br>
-      <%  }) %>
+    <% if(post.escape('is_liked') === "true") { %>
+      <button class="toggle_like"><strong> &hearts; Liked</strong></button>
+    <%  } else { %>
+      <button class="toggle_like">Like</button>
+    <% } %>
 
-      <% if(post.escape('is_liked') === "true") { %>
-        <button class="toggle_like"><strong> &hearts; Liked</strong></button>
-      <%  } else { %>
-        <button class="toggle_like">Like</button>
-      <% } %>
+    <button class="add_comment">Comment</button>
+    <div class="comment"></div>
+    <div class="user_options"></div>
+  </div>
 
-      <button class="add_comment">Comment</button>
-      <div class="comment"></div>
-      <div class="user_options"></div>
-    </div>
-
-  </section>
-
-</div>
+</section>

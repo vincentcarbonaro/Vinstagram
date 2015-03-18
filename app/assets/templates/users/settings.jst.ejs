@@ -2,24 +2,25 @@
 
   <title>Settings</title>
 
-  <h2>Settings</h2>
+  <section class='settings-title'><u>
+    Settings
+  </u></section>
 
-    <label>
-      Upload Profile Picture <br>
-      <input id="input-picture-file" type="file" name="picture">
-    </label>
+  <label>
+    Change Profile Picture <br>
+    <input id="input-picture-file" type="file" name="picture">
+  </label>
 
-    <br><br>
+  <br><br>
 
-    <img class="pic-preview" src="" id="picture-preview">
+  <img class="pic-preview" src="" id="picture-preview">
 
-    <br><br>
-    <input type="submit" value="Save!">
-    <br>
+  <br><br>
+  <input type="submit" value="Save!">
+  <br>
 
-    <br><br>
+  <br><br>
 
-    <!-- showing old picture OR default picture -->
-    <img class="pic-preview" src="<%= user.attributes.picture_url %>" id="picture-preview">
+  <img class="pic-preview" src="<%= user.attributes.picture_url %>" id="picture-preview">
 
 </section>

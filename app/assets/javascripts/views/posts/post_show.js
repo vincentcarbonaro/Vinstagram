@@ -2,6 +2,10 @@ Vinstagram.Views.PostShow = Backbone.View.extend({
 
   template: JST['posts/post_show'],
 
+  tagName: 'section',
+
+  className: 'indy-post-show-backdrop',
+
   initialize: function () {
     this.listenTo(this.model, 'sync', this.render);
   },
