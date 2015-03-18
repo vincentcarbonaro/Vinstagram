@@ -40,72 +40,8 @@
  }
 
  /* Clearfix */
-
  .group:after {
    content: "";
    display: block;
    clear: both;
  }
-
- /*------------------------------------*/
-
- .header {
-   background: #517fa4;
-   color: white;
-   border-bottom: 1px solid black;
- }
-
- .header a {
-   display: block;
-   padding: 10px 20px;
-   border-right: 1px solid black;
- }
-
- .header-nav {
-   margin: auto;
-   width: 900px;
-   border-left: 1px solid black;
- }
-
- .header-list {
-   float: left;
- }
-
- .header-list > li {
-   float: left;
- }
-
-/*This is the image icon*/
- .user-img {
-   float: right;
-   border-left: 1px solid black;
-   /*position: relative;*/
- }
- /*
-.settings {
-  display: none;
-  position: absolute;
-  left: -1px;
-  overflow: hidden;
-  color: black;
-  background: orange;
-  width: 250px;
-}
-
-.user-img:hover {
-  background: green;
-}
-
-.user-img:hover .settings {
-  background: green;
-}*/
-
-.backdrop {
-   background: whitesmoke;
-   min-height: 100%;
- }
-
-footer {
-  width: 912-40px;
-  height: 50px;
-}

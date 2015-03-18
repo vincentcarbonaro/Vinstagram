@@ -25,7 +25,7 @@
 }
 
 .post-image-select {
-  margin: 35px 0;
+  margin: 25px 0 15px 45px;
   margin-left: 45px;
 }
 
@@ -39,6 +39,16 @@
 }
 
 .caption-and-submit {
-  margin-left: 45px;
-  margin-bottom: 30px;
+  margin: 25px 45px;
+}
+
+.text-area {
+  float: left;
+}
+
+.share-button {
+  float: right;
+  background: #517fa4;
+  height: 50px;
+  width: 100px;
 }
