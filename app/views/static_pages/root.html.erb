@@ -9,15 +9,18 @@
       <li><a href="#settings/<%= current_user.id %>">Settings </a></li>
     </ul>
 
-    <!-- <nav class="user-img">
-      <a><%= current_user.username %></a>
-      <ul class="user-settings">
-      <li><%= button_to "Sign Out", session_url, :method => :delete %></li>
-      </ul>
-    </nav> -->
-
     <a href="#" class="user-img">
       <%= button_to "Sign Out", session_url, :method => :delete %></a>
+
+    <!-- <a href="#" class="user-img">
+      <%= button_to "Sign Out", session_url, :method => :delete %></a> -->
+
+      <!-- <a href="#" class="user-img">User's Picture</a>
+      <ul class="settings">
+        <li><a href="#">Settings 1 </a></li>
+        <li><a href="#">Settings 2</a></li>
+        <li><a href="#">Settings 3</a></li>
+      </ul> -->
 
   </nav>
 </header>

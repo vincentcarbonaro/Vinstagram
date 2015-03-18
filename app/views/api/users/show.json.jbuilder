@@ -8,4 +8,7 @@ json.is_following is_following?(@user)
 
 json.posts @user.posts do |post|
   json.extract! post, :id, :text, :Time_Ago, :created_at
+
+  json.picture_url image_url(post.picture.url)
+
 end

@@ -79,16 +79,26 @@
  .user-img {
    float: right;
    border-left: 1px solid black;
+   /*position: relative;*/
  }
+ /*
+.settings {
+  display: none;
+  position: absolute;
+  left: -1px;
+  overflow: hidden;
+  color: black;
+  background: orange;
+  width: 250px;
+}
 
-/*These are the dropdown windows*/
- /*.user-settings {*/
-   /*display: none;*/
- /*}*/
+.user-img:hover {
+  background: green;
+}
 
- /*li:hover .header-notifications {
-   display: block;
- }*/
+.user-img:hover .settings {
+  background: green;
+}*/
 
 .backdrop {
    background: whitesmoke;

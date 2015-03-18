@@ -7,16 +7,14 @@
    border-bottom-left-radius: 3px;
    border-bottom-right-radius: 3px;
    background: darkgray;
+   padding: 35px 0;
 }
 
 .feed li {
    margin: auto;
    width: 510px;
-   padding-bottom: 35px;
-}
-
-.feed li:first-child {
-  padding-top: 35px;
+   border-radius: 3px;
+   border: 1px solid black;
 }
 
 .feed-item-top-bar{
@@ -46,7 +44,7 @@
 
 .feed-item-text {
    background: white;
-   border: 1px 1px 1px 1px solid black;
+   border-top: 1px solid black;
    padding: 10px 0px 0px 15px;
    border-bottom-left-radius: 3px;
    border-bottom-right-radius: 3px;
