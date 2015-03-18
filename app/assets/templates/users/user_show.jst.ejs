@@ -3,16 +3,18 @@
 
     <title><%= user.escape('username') %>s' Profile</title>
 
-    <section class="user-show-top">
+    <section class="user-show-top group">
 
-      <strong><%= user.escape('username') %></strong>
-      <br>
-      Posts: <%= this.model.posts().length %>
-      <br>
-      Followers: <%= this.model.escape('num_followers') %>
-      <br>
-      Following: <%= this.model.escape('num_followees') %>
-      <br>
+      <section class="user-show-text">
+        <strong><%= user.escape('username') %></strong>
+        <br>
+        Posts: <%= this.model.posts().length %>
+        <br>
+        Followers: <%= this.model.escape('num_followers') %>
+        <br>
+        Following: <%= this.model.escape('num_followees') %>
+        <br>
+      </section>
 
       <div class="user-options">
       </div>

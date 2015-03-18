@@ -21,8 +21,16 @@
 
 .user-show-top {
   margin: auto;
-  // border-bottom: 1px solid black;
-  padding: 20px;
+  padding: 25px 25px 0 25px;
+}
+
+.user-show-text {
+  float: right;
+  text-align: left;
+}
+
+.user-show-bottom {
+  padding-bottom: 25px;
 }
 
 .user-show img {
@@ -31,10 +39,6 @@
   max-height:156px;
   width: auto;
   height: auto;
-}
-
-.user-show-bottom {
-  padding-bottom: 25px;
 }
 
 .user-show-item {
