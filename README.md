@@ -71,3 +71,6 @@ I'll need to add `search` routes to both the users and tags controller. On the B
 [phase-three]: ./docs/phases/phase3.md
 [phase-four]: ./docs/phases/phase4.md
 [phase-five]: ./docs/phases/phase5.md
+
+
+figaro heroku:set-e production

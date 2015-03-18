@@ -6,7 +6,7 @@ class Post < ActiveRecord::Base
   has_attached_file :picture
   validates_attachment_content_type :picture, :content_type => /\Aimage\/.*\Z/
 
-  validates :author_id, :text, presence: true
+  validates :author_id, presence: true
   validates_attachment_presence :picture
 
   belongs_to(
