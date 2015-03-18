@@ -31,7 +31,6 @@ Vinstagram.Views.Settings = Backbone.View.extend({
 
     this.model.save(formData, {
       success: function () {
-        console.log('hooray');
         that = that;
         that.model.fetch();
         Backbone.history.navigate("", {trigger: true});

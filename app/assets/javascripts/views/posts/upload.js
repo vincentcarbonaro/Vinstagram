@@ -41,6 +41,8 @@ Vinstagram.Views.Upload = Backbone.View.extend({
       fileReader.onloadend = function () {
         that.model.set("picture", fileReader.result);
         that.previewPic(fileReader.result);
+        that.$el.find('.post-pic-preview').toggle();
+        that.$el.find('.caption-and-submit').toggle();
       };
       fileReader.readAsDataURL(file);
     },
