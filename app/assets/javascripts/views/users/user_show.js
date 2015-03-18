@@ -52,7 +52,7 @@ Vinstagram.Views.UserShow = Backbone.View.extend({
       var view = new Vinstagram.Views.UserShowItem({
         model: post
       });
-      this.$el.find('.user-posts').append(view.render().$el)
+      this.$el.find('.user-show-bottom').append(view.render().$el)
     }.bind(this))
 
   },
@@ -61,7 +61,7 @@ Vinstagram.Views.UserShow = Backbone.View.extend({
     var view = new Vinstagram.Views.UnfollowedUserOptions({
       model: this.model
     });
-    this.$el.find('.user-posts').append(view.render().$el)
+    this.$el.find('.user-show-bottom').append(view.render().$el)
   }
 
 })

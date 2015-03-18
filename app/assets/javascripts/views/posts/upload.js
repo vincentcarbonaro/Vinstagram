@@ -29,7 +29,7 @@ Vinstagram.Views.Upload = Backbone.View.extend({
           Backbone.history.navigate('', {trigger: true});
         },
         error: function () {
-          console.log('error!!');
+          alert('You Must Select A Picture First!')
         }
       });
     },
@@ -48,4 +48,5 @@ Vinstagram.Views.Upload = Backbone.View.extend({
     previewPic: function (src) {
       this.$("#picture-preview").attr("src", src);
     }
+
 });

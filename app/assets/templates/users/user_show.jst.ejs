@@ -1,25 +1,26 @@
-<section class="user-show group">
+<section class='user-show-backdrop'>
+  <section class="user-show group">
 
-  <title><%= user.escape('username') %>s' Profile</title>
+    <title><%= user.escape('username') %>s' Profile</title>
 
-  <section class="user-show-header">
+    <section class="user-show-top">
 
-    <strong><%= user.escape('username') %></strong>
-    <br>
-    Posts: <%= this.model.posts().length %>
-    <br>
-    Followers: <%= this.model.escape('num_followers') %>
-    <br>
-    Following: <%= this.model.escape('num_followees') %>
-    <br>
+      <strong><%= user.escape('username') %></strong>
+      <br>
+      Posts: <%= this.model.posts().length %>
+      <br>
+      Followers: <%= this.model.escape('num_followers') %>
+      <br>
+      Following: <%= this.model.escape('num_followees') %>
+      <br>
 
-    <div class="user-options">
-    </div>
+      <div class="user-options">
+      </div>
+
+    </section>
+
+    <ul class='user-show-bottom group'>
+    </ul>
 
   </section>
-
-  <br><br> <!-- if user is followed, display posts here, otherwise show follow button -->
-  <ul class="user-posts">
-  </ul>
-
 </section>

@@ -12,7 +12,7 @@ module Api
     end
 
     def update
-      @user = User.find(params[:user][:id])
+      @user = current_user
 
       @user.picture = (params[:user][:picture])
       if @user.save

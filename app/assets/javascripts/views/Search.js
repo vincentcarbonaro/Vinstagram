@@ -2,6 +2,10 @@ Vinstagram.Views.Search = Backbone.View.extend({
 
   template: JST["searches/search"],
 
+  tagName: "section",
+
+  className: "search-backdrop",
+
   initialize: function () {
     this.searchResults = new Vinstagram.Collections.SearchResults();
     this.listenTo(this.searchResults, 'sync', this.render)

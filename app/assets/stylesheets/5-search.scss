@@ -1,3 +1,15 @@
+.search-backdrop {
+  width: 678px;
+  margin: auto;
+  background: darkgray;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  padding-bottom: 25px;
+}
+
 .search {
   padding: 20px;
   width: 578px;
@@ -5,4 +17,7 @@
   border-left: 1px solid black;
   border-right: 1px solid black;
   border-bottom: 1px solid black;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background: white;
 }

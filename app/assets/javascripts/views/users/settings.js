@@ -2,6 +2,8 @@ Vinstagram.Views.Settings = Backbone.View.extend({
 
   tagName: 'form',
 
+  className: 'settings-backdrop',
+
   template: JST['users/settings'],
 
   initialize: function () {

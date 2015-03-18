@@ -45,3 +45,7 @@
    display: block;
    clear: both;
  }
+
+ html {
+   background: lightgray;
+ }

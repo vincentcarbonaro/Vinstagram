@@ -1,32 +1,48 @@
+.user-show-backdrop{
+  margin: auto;
+  width: 990px;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background: darkgray;
+}
+
 .user-show {
-  width: 860px;
+  background: white;
+  width: 940px;
   margin: auto;
   border-left: 1px solid black;
   border-right: 1px solid black;
   border-bottom: 1px solid black;
-  padding: 20px;
+  margin-bottom: 25px;
 }
 
-.user-show {
-  width: 860px;
+.user-show-top {
   margin: auto;
-  border-left: 1px solid black;
-  border-right: 1px solid black;
   border-bottom: 1px solid black;
   padding: 20px;
 }
 
-.user-show-header {
-  margin: auto;
-  border: 1px solid black;
-  padding: 20px;
+.user-show img {
+  display: block;
+  max-width:156px;
+  max-height:156px;
+  width: auto;
+  height: auto;
 }
 
-.user-show-item{
+.user-show-bottom {
+  padding-bottom: 25px;
+}
+
+.user-show-item {
   float: left;
   display: block;
   height: 156px;
   width: 156px;
   border: 1px solid black;
-  padding: 3px;
+  margin-left: 25px;
+  margin-top: 25px;
 }
