@@ -1,4 +1,4 @@
-json.extract! @user, :id, :username, :num_followers, :num_followees
+json.extract! @user, :id, :username, :num_followers, :num_followees, :bio
 
 json.picture_url image_url(@user.picture.url)
 

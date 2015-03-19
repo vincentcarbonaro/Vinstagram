@@ -9,19 +9,23 @@
         <img src="<%= user.attributes.picture_url %>" alt="error"/>
       </section>
 
-      <section class="user-show-bio">
-        BIO HERE
-      </section>
+      <div class="user-show-username"><%= user.escape('username') %></div>
 
-      <section class="user-show-text">
-        <strong><%= user.escape('username') %></strong>
-        <br>
-        Posts: <%= this.model.posts().length %>
-        <br>
-        Followers: <%= this.model.escape('num_followers') %>
-        <br>
-        Following: <%= this.model.escape('num_followees') %>
-        <br>
+      <table class="user-show-text">
+        <tr>
+          <th>Posts</td>
+          <th>Followers</td>
+          <th>Followed</td>
+        </tr>
+        <tr>
+          <td><%= this.model.posts().length %></td>
+          <td><%= this.model.escape('num_followers') %></td>
+          <td><%= this.model.escape('num_followees') %></td>
+        </tr>
+      </table>
+
+      <section class="user-show-bio">
+        <%= user.escape('bio') %>
       </section>
 
       <div class="user-options">

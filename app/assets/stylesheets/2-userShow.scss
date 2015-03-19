@@ -21,7 +21,7 @@
 
 .user-show-top {
   margin: auto;
-  width: 618px;
+  max-width: 500px;
   padding: 25px;
 }
 
@@ -35,17 +35,51 @@
   width: 156px;
 }
 
+.user-show-username{
+  text-align: center;
+  width: 300px;
+  float: left;
+  margin-left: 25px;
+  font-weight: bold;
+  font-size: 24px;
+}
+
 .user-show-bio{
   float: left;
-  height: 156px;
-  width: 312px;
+  width: 300px;
+  word-wrap: break-word;
   margin-left: 25px;
+  margin-top: 15px;
+  // text-align: center;
+  textarea {
+    border: none;
+    resize: none;
+  }
 }
 
 .user-show-text {
-  margin-left: 25px;
   float: left;
-  text-align: left;
+  margin-left: 25px;
+  margin-top: 10px;
+}
+
+table {
+  margin-top:5px;
+  border-collapse: separate;
+  width: 300px;
+  border: 1px solid black;
+}
+
+th{
+  border: 1px solid black;
+}
+
+td{
+  border: 1px solid black;
+}
+
+tr {
+  text-align: center;
 }
 
 .user-show-bottom {
