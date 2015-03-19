@@ -50,9 +50,18 @@
   float: left;
 }
 
-.follow-button{
+.unfollow-button{
   background: green;
   width: 100px;
+  font-size: 12px;
+}
+
+.follow-button{
+  width: 100px;
+  border: 1px solid blue;
+  background: white;
+  color: blue;
+  font-size: 14px;
 }
 
 .user-show-bio{

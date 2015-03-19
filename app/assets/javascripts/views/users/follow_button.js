@@ -3,7 +3,7 @@ Vinstagram.Views.FollowButton = Backbone.View.extend({
   template: JST['users/follow_button'],
 
   events: {
-    'click .follow-button': 'followToggle'
+    'click button': 'followToggle'
   },
 
   render: function () {
