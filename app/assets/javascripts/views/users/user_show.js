@@ -2,6 +2,10 @@ Vinstagram.Views.UserShow = Backbone.View.extend({
 
   template: JST['users/user_show'],
 
+  tagName: "section",
+
+  className: "user-show-backdrop",
+
   initialize: function () {
     this.listenTo(this.model, 'sync', this.render)
   },
@@ -14,44 +18,22 @@ Vinstagram.Views.UserShow = Backbone.View.extend({
 
     //if user is following or is current user, display all posts
     if (this.model.get('is_following') || this.model.get('is_current_user')) {
-      this.displayPosts();
-    } else {
-      this.unfollowedUserOptions();
+      this.model.posts().each( function (post) {
+        var view = new Vinstagram.Views.UserShowItem({
+          model: post
+        });
+        this.$el.find('.user-show-bottom').append(view.render().$el)
+      }.bind(this))
+    }
+
+    if (!this.model.get('is_current_user')) {
+      var view = new Vinstagram.Views.FollowButton({
+        model: this.model
+      });
+      this.$el.find('.user-show-follow-button').append(view.render().$el);
     }
 
     return this;
   },
-
-  currentUserOptionsUserShow: function () {
-    var view = new Vinstagram.Views.currentUserOptionsUserShow({
-      model: this.model
-    });
-    this.$el.find('.user-options').append(view.render().$el);
-  },
-
-  displayPosts: function () {
-
-    if (!this.model.get('is_current_user')) {
-      var view = new Vinstagram.Views.UnfollowButton({
-        model: this.model
-      });
-      this.$el.find('.user-options').append(view.render().$el);
-    }
-
-    this.model.posts().each( function (post) {
-      var view = new Vinstagram.Views.UserShowItem({
-        model: post
-      });
-      this.$el.find('.user-show-bottom').append(view.render().$el)
-    }.bind(this))
-
-  },
-
-  unfollowedUserOptions: function () {
-    var view = new Vinstagram.Views.UnfollowedUserOptions({
-      model: this.model
-    });
-    this.$el.find('.user-show-bottom').append(view.render().$el)
-  }
 
 })

@@ -26,6 +26,9 @@ Vinstagram.Views.Settings = Backbone.View.extend({
   submit: function (event) {
     event.preventDefault();
 
+    this.$el.find('.save-settings').val("Saving...");
+    this.$el.find('.save-settings').prop('disabled', true);
+
     var formData = this.$el.serializeJSON();
     var that = this;
 

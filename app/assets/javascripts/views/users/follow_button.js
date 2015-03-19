@@ -1,18 +1,20 @@
-Vinstagram.Views.UnfollowButton = Backbone.View.extend({
+Vinstagram.Views.FollowButton = Backbone.View.extend({
 
-  template: JST['users/unfollow_button'],
+  template: JST['users/follow_button'],
 
   events: {
-    'click .unfollow_user': 'unfollowUser'
+    'click .follow-button': 'followToggle'
   },
 
   render: function () {
-    var view = this.template();
+    var view = this.template({
+      user: this.model
+    });
     this.$el.html(view)
     return this;
   },
 
-  unfollowUser: function () {
+  followToggle: function () {
 
     var that = this;
 

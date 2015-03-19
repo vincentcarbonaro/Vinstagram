@@ -39,11 +39,20 @@
 
 .user-show-username{
   text-align: center;
-  width: 300px;
+  width: 150px;
   float: left;
   margin-left: 25px;
   font-weight: bold;
   font-size: 24px;
+}
+
+.user-show-follow-button{
+  float: left;
+}
+
+.follow-button{
+  background: green;
+  width: 100px;
 }
 
 .user-show-bio{
@@ -95,6 +104,7 @@ tr {
   max-height:156px;
   width: auto;
   height: auto;
+  border: 1px solid black;
 }
 
 .user-show-item {

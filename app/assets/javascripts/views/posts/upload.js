@@ -8,15 +8,15 @@ Vinstagram.Views.Upload = Backbone.View.extend({
     },
 
     render: function () {
-      var content = this.template({
-
-      });
+      var content = this.template();
       this.$el.html(content);
       return this;
     },
 
     submitForm: function (event) {
       event.preventDefault();
+      this.$el.find('.share-button').val("Posting...");
+      this.$el.find('.share-button').prop('disabled', true);
 
       var formData = $(event.currentTarget).serializeJSON();
       var that = this;
@@ -27,9 +27,6 @@ Vinstagram.Views.Upload = Backbone.View.extend({
           that = that;
           that.model.fetch();
           Backbone.history.navigate('', {trigger: true});
-        },
-        error: function () {
-          alert('You Must Select A Picture First!')
         }
       });
     },

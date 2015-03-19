@@ -1,40 +1,37 @@
-<section class='user-show-backdrop'>
-  <section class="user-show group">
+<section class="user-show group">
 
-    <title><%= user.escape('username') %>s' Profile</title>
+  <title><%= user.escape('username') %>s' Profile</title>
 
-    <section class="user-show-top group">
+  <section class="user-show-top group">
 
-      <section class="user-show-pic">
-        <img src="<%= user.attributes.picture_url %>" alt="error"/>
-      </section>
-
-      <div class="user-show-username"><%= user.escape('username') %></div>
-
-      <table class="user-show-text">
-        <tr>
-          <th>Posts</td>
-          <th>Followers</td>
-          <th>Followed</td>
-        </tr>
-        <tr>
-          <td><%= this.model.posts().length %></td>
-          <td><%= this.model.escape('num_followers') %></td>
-          <td><%= this.model.escape('num_followees') %></td>
-        </tr>
-      </table>
-
-      <section class="user-show-bio">
-        <%= user.escape('bio') %>
-      </section>
-
-      <div class="user-options">
-      </div>
-
+    <section class="user-show-pic">
+      <img src="<%= user.attributes.picture_url %>" alt="error"/>
     </section>
 
-    <ul class='user-show-bottom group'>
-    </ul>
+    <div class="user-show-username"><%= user.escape('username') %></div>
+
+    <section class="user-show-follow-button"></section>
+
+    <table class="user-show-text">
+      <tr>
+        <th>Posts</td>
+        <th>Followers</td>
+        <th>Following</td>
+      </tr>
+      <tr>
+        <td><%= this.model.posts().length %></td>
+        <td><%= this.model.escape('num_followers') %></td>
+        <td><%= this.model.escape('num_followees') %></td>
+      </tr>
+    </table>
+
+    <section class="user-show-bio">
+      <%= user.escape('bio') %>
+    </section>
 
   </section>
+
+  <ul class='user-show-bottom group'>
+  </ul>
+
 </section>
