@@ -6,16 +6,6 @@ Vinstagram.Views.UserShow = Backbone.View.extend({
     this.listenTo(this.model, 'sync', this.render)
   },
 
-  uploadPostPage: function (event) {
-    this.$el.find('.upload').html();
-    this.$el.find('.open_upload').remove();
-    var post = new Vinstagram.Models.Post();
-    var view = new Vinstagram.Views.PostForm({
-      model: post
-    });
-    this.$el.find('.upload_form').html(view.render().$el);
-  },
-
   render: function () {
     var content = this.template({
       user: this.model

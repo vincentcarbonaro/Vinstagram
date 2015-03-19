@@ -5,6 +5,14 @@
 
     <section class="user-show-top group">
 
+      <section class="user-show-pic">
+        <img src="<%= user.attributes.picture_url %>" alt="error"/>
+      </section>
+
+      <section class="user-show-bio">
+        BIO HERE
+      </section>
+
       <section class="user-show-text">
         <strong><%= user.escape('username') %></strong>
         <br>

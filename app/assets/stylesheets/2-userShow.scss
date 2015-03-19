@@ -21,15 +21,35 @@
 
 .user-show-top {
   margin: auto;
-  padding: 25px 25px 0 25px;
+  width: 618px;
+  padding: 25px;
+}
+
+.user-show-pic{
+  float: left;
+  max-width:156px;
+  max-height:156px;
+  width: auto;
+  height: auto;
+  height: 156px;
+  width: 156px;
+}
+
+.user-show-bio{
+  float: left;
+  height: 156px;
+  width: 312px;
+  margin-left: 25px;
 }
 
 .user-show-text {
-  float: right;
+  margin-left: 25px;
+  float: left;
   text-align: left;
 }
 
 .user-show-bottom {
+  border-top: 1px solid black;
   padding-bottom: 25px;
 }
 
