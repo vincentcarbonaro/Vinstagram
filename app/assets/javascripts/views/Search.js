@@ -37,10 +37,11 @@ Vinstagram.Views.Search = Backbone.View.extend({
     var container = this.$(".search-results");
 
     var that = this;
-
     this.searchResults.each(function (model) {
-      var template = JST["searches/user_item"]
-      container.append(template({user: model}))
+      var template = JST["searches/search_item"]
+      container.append(template({
+        user: model
+      }))
     });
 
 

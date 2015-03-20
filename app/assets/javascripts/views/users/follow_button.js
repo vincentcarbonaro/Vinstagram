@@ -15,7 +15,6 @@ Vinstagram.Views.FollowButton = Backbone.View.extend({
   },
 
   followToggle: function () {
-
     var that = this;
 
     $.ajax({

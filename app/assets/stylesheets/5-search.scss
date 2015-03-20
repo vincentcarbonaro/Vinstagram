@@ -1,23 +1,75 @@
 .search-backdrop {
-  width: 678px;
+  width: 650px;
   margin: auto;
-  background: darkgray;
+  padding-bottom: 30px;
   border-left: 1px solid black;
   border-right: 1px solid black;
   border-bottom: 1px solid black;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
-  padding-bottom: 30px;
+  background: darkgray;
 }
 
 .search {
-  padding: 20px;
-  width: 578px;
+  width: 550px;
   margin: auto;
+  background: white;
+  padding: 25px 25px 25px 25px;
   border-left: 1px solid black;
   border-right: 1px solid black;
   border-bottom: 1px solid black;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
-  background: white;
+}
+
+.search-top {
+}
+
+.search-results {
+}
+
+.search-results li {
+  float: left;
+  width: 273px;
+}
+
+.search-results li:first-child {
+  border: 1px solid black;
+  margin-top: 25px;
+}
+
+.search-results li:nth-child(2) {
+  border-top: 1px solid black;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+  margin-top: 25px;
+}
+
+.search-results li:nth-child(2n+3) {
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.search-results li:nth-child(2n+4) {
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.search-results li:nth-child(n):hover {
+  background: #517fa4;
+}
+
+.search-item img {
+  display: block;
+  max-width: 50px;
+  max-height: 50px;
+  float: left;
+  margin: 5px;
+}
+
+.search-item-user-name {
+  text-align: center;
+  float: left;
+  width: 200px;
 }

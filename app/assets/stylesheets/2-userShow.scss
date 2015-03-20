@@ -38,12 +38,12 @@
 }
 
 .user-show-username{
+  font-weight: bold;
   text-align: center;
   width: 175px;
   float: left;
   margin-left: 25px;
-  font-weight: bold;
-  font-size: 24px;
+  font-size: 16px;
   overflow: hidden;
 }
 
@@ -61,7 +61,6 @@
 }
 
 .follow-button{
-  // letter-spacing: 1px;
   width: 100px;
   border: 1px solid blue;
   background: white;
@@ -75,10 +74,13 @@
   word-wrap: break-word;
   margin-left: 25px;
   margin-top: 15px;
-  // text-align: center;
   textarea {
     border: none;
     resize: none;
+    font-size: 14px;
+    font-color: black;
+    height: 46px;
+    width: 300px;
   }
 }
 
@@ -93,6 +95,7 @@ table {
   border-collapse: separate;
   width: 300px;
   border: 1px solid black;
+  font-size: 14px;
 }
 
 th{

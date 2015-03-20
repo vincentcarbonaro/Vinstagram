@@ -26,7 +26,12 @@
     </table>
 
     <section class="user-show-bio">
-      <%= user.escape('bio') %>
+      <section class="text-area-trigger">
+        <textarea disabled class="text-area" name="post[text]" rows="3" cols="38" value=""><%= user.escape('bio') %></textarea>
+      </section>
+    <section>
+
+      </section>
     </section>
 
   </section>
