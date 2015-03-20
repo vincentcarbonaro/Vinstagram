@@ -61,6 +61,32 @@ class User < ActiveRecord::Base
     primary_key: :id
   )
 
+  has_many(
+    :likes,
+    class_name: "Like",
+    foreign_key: :liker_id,
+    primary_key: :id
+  )
+
+
+  def feed_posts(page_num)
+
+    followees = self.followees
+
+    followed_user_ids = [self.id]
+    followees.each do |user|
+     followed_user_ids << user.id
+    end
+
+    Post.includes(
+      :author,
+      :likes,
+      :likers,
+      comments: [:author])
+      .where("author_id IN (?)", followed_user_ids)
+      .order(created_at: :desc).page(page_num).per(4)
+  end
+
   def num_followers
     followers.count
   end

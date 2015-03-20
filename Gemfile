@@ -14,6 +14,7 @@ gem 'aws-sdk', '< 2.0'
 gem "figaro"
 
 gem 'pg_search'
+gem 'kaminari'
 
 group :production do
   gem 'rails_12factor'

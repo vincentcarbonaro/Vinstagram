@@ -14,8 +14,6 @@ module Api
     def update
       @user = current_user
 
-      sleep(3)
-
       @user.picture = (params[:user][:picture])
       if @user.save
         render json: @user

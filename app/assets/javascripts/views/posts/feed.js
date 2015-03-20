@@ -3,7 +3,13 @@ Vinstagram.Views.Feed = Backbone.View.extend({
   template: JST['posts/feed'],
 
   initialize: function () {
+    this.bindScroll();
     this.listenTo(this.collection, 'sync', this.render);
+    this.pageNum = 1;
+  },
+
+  events: {
+    "click .next-page": "nextPage"
   },
 
   render: function () {
@@ -12,9 +18,7 @@ Vinstagram.Views.Feed = Backbone.View.extend({
     });
     this.$el.html(content)
 
-    if (this.collection.length === 0) {
-      this.$el.find('.feed').append("No Posts Available!")
-    } else {
+    if (this.collection.length != 0) {
       this.collection.each( function (post) {
         var view = new Vinstagram.Views.FeedItem({
           model: post
@@ -24,6 +28,37 @@ Vinstagram.Views.Feed = Backbone.View.extend({
     }
 
     return this;
-  }
+  },
+
+  bindScroll: function () {
+    $(window).on("scroll", this.handleScroll.bind(this));
+  },
+
+  handleScroll: function (event){
+    var $doc = $(document);
+		var scrolledDist = $doc.height() - window.innerHeight - $doc.scrollTop();
+
+		if (scrolledDist < 300) {
+			this.nextPageInfiniteScroll();
+		}
+  },
+
+  nextPageInfiniteScroll: function () {
+    if (this.requestingNextPage) return;
+
+    this.requestingNextPage = true;
+
+    this.collection.fetch({
+      remove: false,
+      data: {
+        page: this.pageNum + 1
+      },
+      success: function () {
+        this.requestingNextPage = false;
+        this.pageNum++;
+      }.bind(this)
+    });
+  },
+
 
 });

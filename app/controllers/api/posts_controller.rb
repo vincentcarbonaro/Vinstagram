@@ -2,7 +2,7 @@ module Api
   class PostsController < ApiController
 
     def index
-      @posts = Post.get_posts(current_user)
+      @posts = current_user.feed_posts(params[:page])
       render :index
     end
 

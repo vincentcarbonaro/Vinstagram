@@ -59,5 +59,4 @@ Vinstagram.Views.PostShow = Backbone.View.extend({
     this.$el.find('.comment').html(view.render().$el)
   }
 
-
 });

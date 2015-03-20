@@ -8,6 +8,9 @@ json.author @post.author, :id, :username
 
 json.is_current_user is_current_user?(@post.author)
 
-json.is_liked Post.is_liked?(current_user, @post)
+json.is_liked @post.likers.include?(current_user)
 
-json.comments @post.comments, :body, :created_at, :author_name
+json.comments @post.comments do |comment|
+  json.extract! comment, :id, :body, :created_at
+  json.author comment.author, :id, :username
+end

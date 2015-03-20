@@ -52,11 +52,14 @@
 
 .unfollow-button{
   background: green;
+  color: white;
+  letter-spacing: 1px;
   width: 100px;
   font-size: 12px;
 }
 
 .follow-button{
+  // letter-spacing: 1px;
   width: 100px;
   border: 1px solid blue;
   background: white;
@@ -121,7 +124,6 @@ tr {
   display: block;
   height: 156px;
   width: 156px;
-  border: 1px solid black;
   margin-left: 25px;
   margin-top: 25px;
 }
