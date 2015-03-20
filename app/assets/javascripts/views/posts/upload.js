@@ -18,6 +18,8 @@ Vinstagram.Views.Upload = Backbone.View.extend({
       this.$el.find('.share-button').val("Posting...");
       this.$el.find('.share-button').prop('disabled', true);
 
+      debugger
+
       var formData = $(event.currentTarget).serializeJSON();
       var that = this;
 
