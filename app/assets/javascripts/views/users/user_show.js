@@ -11,7 +11,10 @@ Vinstagram.Views.UserShow = Backbone.View.extend({
   },
 
   events: {
-    'click .text-area-trigger': 'editBio'
+    // 'click .text-area-trigger': 'editBio',
+  },
+
+  saveBio: function (event) {
   },
 
   editBio: function (event) {

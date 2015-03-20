@@ -2,6 +2,7 @@ module Api
   class UsersController < ApiController
 
     def index
+      # Using this for fetching the current user for settings!
       @user = current_user
       render :index
     end
