@@ -29,7 +29,7 @@
   <%  }) %>
 
   <% if(post.escape('is_liked') === "true") { %>
-    <button class="toggle_like"><strong> &hearts; Liked</strong></button>
+    <button id='liked-button' class="toggle_like"><strong> &hearts; Liked</strong></button>
   <%  } else { %>
     <button class="toggle_like">Like</button>
   <% } %>
