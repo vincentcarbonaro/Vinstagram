@@ -39,15 +39,17 @@
 
 .user-show-username{
   text-align: center;
-  width: 150px;
+  width: 175px;
   float: left;
   margin-left: 25px;
   font-weight: bold;
   font-size: 24px;
+  overflow: hidden;
 }
 
 .user-show-follow-button{
-  float: left;
+  float: right;
+  margin-right: 30px;
 }
 
 .unfollow-button{

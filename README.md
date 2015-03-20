@@ -61,7 +61,7 @@ I'll need to add `search` routes to both the users and tags controller. On the B
 ### Bonus Features (TBD)
 - [x] "Like" button and counter for posts
 - [x] User avatars
-- [ ] Pagination/infinite scroll
+- [x] Infinite scroll
 - [ ] Activity history (e.g. likes, follows, posts)
 - [ ] Typeahead search bar
 - [ ] Picture Filters
