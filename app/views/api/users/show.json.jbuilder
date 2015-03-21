@@ -1,6 +1,6 @@
 json.extract! @user, :id, :username, :num_followers, :num_followees, :bio
 
-json.picture_url image_url(@user.picture.url)
+json.picture_url image_url(@user.picture.url(:small))
 
 json.is_current_user is_current_user?(@user)
 

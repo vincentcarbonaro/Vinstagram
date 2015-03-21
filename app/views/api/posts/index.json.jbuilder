@@ -6,7 +6,7 @@ json.array! @posts do |post|
 
   json.likes post.likes, :id, :liker_id, :created_at
 
-  json.picture_url image_url(post.picture.url)
+  json.picture_url image_url(post.picture.url(:large))
 
   json.author post.author, :id, :username
 
