@@ -1,21 +1,21 @@
 .user-show-backdrop{
   margin: auto;
   width: 1000px;
-  border-left: 1px solid black;
-  border-right: 1px solid black;
-  border-bottom: 1px solid black;
+  border-left: 2px solid #cacaca;
+  border-right: 2px solid #cacaca;
+  border-bottom: 2px solid #cacaca;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
-  background: darkgray;
+  background: #ddd;
 }
 
 .user-show {
   background: white;
   width: 940px;
   margin: auto;
-  border-left: 1px solid black;
-  border-right: 1px solid black;
-  border-bottom: 1px solid black;
+  border-left: 1px solid #cacaca;
+  border-right: 1px solid #cacaca;
+  border-bottom: 1px solid #cacaca;
   margin-bottom: 30px;
 }
 

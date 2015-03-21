@@ -12,9 +12,22 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.serializeJSON
+//= require jquery.color
+//= require jquery.ui
+//= require jquery.iframe-transport
+//= require jquery.fileupload
+//= require jquery.cloudinary
+//= require jquery.Jcrop
+//= require imagesloaded.pkgd
+//= require moment
+//= require shepherd
 //= require underscore
 //= require backbone
-//= require jquery.serializeJSON
+//= require backbone.composite_view
+
+//= require backbone
+
 //= require vinstagram
 //= require_tree ../templates
 //= require_tree ./models

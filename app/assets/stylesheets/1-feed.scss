@@ -1,20 +1,21 @@
 .feed {
    margin: auto;
    width: 578px;
-   border-left: 1px solid black;
-   border-right: 1px solid black;
-   border-bottom: 1px solid black;
+   border-left: 2px solid #cacaca;
+   border-right: 2px solid #cacaca;
+   border-bottom: 2px solid #cacaca;
    border-bottom-left-radius: 3px;
    border-bottom-right-radius: 3px;
-   background: darkgray;
+   background: #ddd;
    padding-top: 25px;
+   height: 100%;
 }
 
 .feed li {
    margin: auto;
    width: 510px;
    border-radius: 3px;
-   border: 1px solid black;
+   border: 1px solid #cacaca;
    margin-bottom: 35px;
 }
 
@@ -41,7 +42,15 @@
 .feed-item-image {
    height: 510px;
    width: 510px;
- }
+   display: block;
+   overflow: false;
+}
+
+.feed-item-image img {
+  max-height: 510px;
+  max-width: 510px;
+  display: block;
+}
 
 .feed-item-text {
    background: white;
