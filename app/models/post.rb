@@ -3,7 +3,9 @@ require 'action_view'
 class Post < ActiveRecord::Base
   include ActionView::Helpers::DateHelper
 
-  has_attached_file :picture, :styles => { :large => "510x510>", :small => "100x100>"}
+  has_attached_file :picture, :styles => { :large => "510x510#", :small => "100x100>"}
+
+  # has_attached_file :picture, :styles => { :large => "510x510>", :small => "100x100>"}
   validates_attachment_content_type :picture, :content_type => /\Aimage\/.*\Z/
 
   validates :author_id, presence: true
