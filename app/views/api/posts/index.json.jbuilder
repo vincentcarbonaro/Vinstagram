@@ -10,6 +10,8 @@ json.array! @posts do |post|
 
   json.author post.author, :id, :username
 
+  json.author_thumb image_url(post.author.picture.url(:small))
+
   json.is_liked post.likers.include?(current_user)
 
   json.comments post.comments do |comment|

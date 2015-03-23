@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
 
-  has_attached_file :picture, default_url: "default.png"
+  has_attached_file :picture, default_url: "default.png", :styles => { :small => '156x156', :thumb => '100x100' }#, :processors => [:cropper]
   validates_attachment_content_type :picture, :content_type => /\Aimage\/.*\Z/
 
   include PgSearch

@@ -12,7 +12,8 @@ Vinstagram.Views.Settings = Backbone.View.extend({
 
   events: {
     "submit": "submit",
-    "change #input-picture-file": "changePicture"
+    "change #input-picture-file": "changePicture",
+    'click .current-pic': 'trigger'
   },
 
   render: function () {
@@ -21,6 +22,11 @@ Vinstagram.Views.Settings = Backbone.View.extend({
     });
     this.$el.html(content)
     return this;
+  },
+
+  trigger: function () {
+    event.preventDefault();
+    this.$("#input-picture-file").trigger("click");
   },
 
   submit: function (event) {
@@ -54,7 +60,7 @@ Vinstagram.Views.Settings = Backbone.View.extend({
   },
 
   previewPic: function (src) {
-    this.$("#picture-preview").attr("src", src);
+    this.$(".current-pic").attr("src", src);
   }
 
 })

@@ -7,7 +7,7 @@
    border-bottom-left-radius: 3px;
    border-bottom-right-radius: 3px;
    background: #ddd;
-   padding-top: 25px;
+   padding-top: 35px;
    height: 100%;
 }
 
@@ -24,16 +24,27 @@
   border-top-right-radius: 3px;
   color: #517fa4;
   background: white;
-  padding: 20px;
+  padding: 10px;
   border-bottom: 1px solid #cacaca;
 }
 
+.feed-item-user-img{
+  float: left;
+  height: 40px;
+}
+
 .feed-item-user {
-   float: left;
-   font-size: 16px;
+  padding-left: 10px;
+  line-height: 40px;
+  height: 40px;
+  float: left;
+  font-size: 16px;
+  display: inline;
  }
 
 .feed-item-time {
+  line-height: 40px;
+  padding-right: 15px;
    float: right;
    font-size: 16px;
  }

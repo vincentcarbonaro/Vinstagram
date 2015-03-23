@@ -20,6 +20,10 @@
   padding: 25px;
 }
 
+#input-picture-file{
+  display:none;
+}
+
 .settings-title{
   text-align: center;
   font-size:36px;
@@ -34,8 +38,6 @@
 
 .left-pane{
   float: left;
-  padding-top: 3px;
-  padding-left: 75px;
 }
 
 .right-pane{
@@ -43,12 +45,6 @@
 }
 
 .current-pic{
-  border: 1px solid #cacaca;
-  height: 156px;
-  width: 156px;
-}
-
-.pic-preview{
   border: 1px solid #cacaca;
   height: 156px;
   width: 156px;

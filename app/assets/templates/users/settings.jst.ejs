@@ -2,24 +2,20 @@
 
   <title>Settings</title>
 
-  <section class='settings-title'><u>
-    Settings
-  </u></section>
+  <section class='settings-title'>
+    <u>Settings</u>
+  </section>
 
-  <section class="settings-bottom">
+  <section class="settings-bottom group">
 
-    <section class="left-pane"><br><br>
-      Current Profile Picture:
-      <br>
+    <section class="left-pane">
+      Current Profile Picture:<br>
+      <input id="input-picture-file" type="file" name="picture">
       <img class="current-pic" src="<%= user.attributes.picture_url %>">
     </section>
 
     <section class="right-pane">
-      Change Profile Picture <br>
-      <input id="input-picture-file" type="file" name="picture">
-      <br><br>
-      <img class="pic-preview" src="default.png" id="picture-preview">
-      <br><br>
+      <textarea name="name" rows="8" cols="40"></textarea><br>
       <input class="save-settings" type="submit" value="Save!">
     </section>
 

@@ -19,6 +19,9 @@ Vinstagram.Views.AddComment = Backbone.View.extend({
     var formData = $(event.currentTarget).serializeJSON();
     var that = this;
 
+    this.$el.find('.add-comment').val("Posting..");
+    this.$el.find('.add-comment').prop('disabled', true);
+
     $.ajax({
       url: "api/comments",
       type: "POST",

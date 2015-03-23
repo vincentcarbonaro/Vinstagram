@@ -4,7 +4,7 @@ Vinstagram.Views.Upload = Backbone.View.extend({
 
     events: {
       'submit form': 'submitForm',
-      "change #input-picture-file": "changePicture",
+      "change #input-post-file": "changePicture",
       "click #crop-picture": "updatePicture",
     },
 
@@ -42,6 +42,7 @@ Vinstagram.Views.Upload = Backbone.View.extend({
         that.previewPic(fileReader.result);
         that.$el.find('.post-pic-box').toggle();
         that.$el.find('.caption-and-submit').toggle();
+        that.$el.find('.post-image-select').toggle();
       };
       fileReader.readAsDataURL(file);
     },
@@ -60,11 +61,11 @@ Vinstagram.Views.Upload = Backbone.View.extend({
           allowResize: true,
           onSelect: that.updateCrop,
           onChange: that.updateCrop,
-          allowMove: true,
           bgOpacity: .3,
           aspectRatio: 1,
           bgColor: 'black',
-          setSelect: [0, 0, 510, 510]
+          setSelect: [0, 0, 510, 510],
+          addClass: 'jcrop-dark'
         });
       });
 

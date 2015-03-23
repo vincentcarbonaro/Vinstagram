@@ -26,25 +26,29 @@
   font-size: 36px;
   font-weight: bold;
   text-align: center;
+  margin-bottom: 25px;
 }
 
 .post-image-select {
-  margin: 25px 0 15px 45px;
+  margin: 0 0 15px 45px;
   margin-left: 45px;
+  z-index: 2;
 }
 
 .post-pic-box {
   max-height: 510px;
   max-width: 510px;
   border-radius: 3px;
-  border: 1px solid black;
+  // border: 1px solid black;
   margin: auto;
-  display: block;
-  position: relative;
+  // display: block;
   display: none;
+  z-index: 2;
 }
 
 .post-pic-preview {
+  z-index: 2;
+
 }
 
 .caption-and-submit {
