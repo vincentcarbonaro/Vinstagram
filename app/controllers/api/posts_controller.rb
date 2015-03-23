@@ -31,7 +31,7 @@ module Api
 
     private
     def post_params
-      params.require(:post).permit(:text, :picture)
+      params.require(:post).permit(:text, :crop_x, :crop_y, :crop_w, :crop_h)
     end
 
   end

@@ -6,7 +6,7 @@
       <u>Upload a Post!</u>
     </section>
 
-    <form class="post_form">
+    <form class="post_form" enctype='multipart/form-data'>
 
       <section class="post-image-select">
         Select a File To Upload <br>
@@ -16,6 +16,11 @@
       <section class="post-pic-box">
         <img class="post-pic-preview" src="" id="picture-preview">
       </section>
+
+      <input type="hidden" id="crop_x" value="" name='post[crop_x]'>
+      <input type="hidden" id="crop_y" value="" name='post[crop_y]'>
+      <input type="hidden" id="crop_w" value="" name='post[crop_h]'>
+      <input type="hidden" id="crop_h" value="" name='post[crop_w]'>
 
       <section class="caption-and-submit">
 

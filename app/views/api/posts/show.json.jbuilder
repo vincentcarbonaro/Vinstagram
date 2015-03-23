@@ -2,7 +2,7 @@
 
 json.extract! @post, :id, :text, :Time_Ago, :created_at, :num_likes
 
-json.picture_url image_url(@post.picture.url)
+json.picture_url image_url(@post.picture.url(:large))
 
 json.author @post.author, :id, :username
 

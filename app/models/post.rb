@@ -3,11 +3,22 @@ require 'action_view'
 class Post < ActiveRecord::Base
   include ActionView::Helpers::DateHelper
 
-  has_attached_file :picture, :styles => { :large => "510x510#", :small => "100x100#"}
+  has_attached_file :picture, :styles => { :large => "510x510#", :small => "156x156#"}, :processors => [:cropper]
   validates_attachment_content_type :picture, :content_type => /\Aimage\/.*\Z/
 
   validates :author_id, presence: true
   validates_attachment_presence :picture
+
+  attr_accessor :crop_x, :crop_y, :crop_w, :crop_h
+  # after_update :reprocess_avatar#, :if => cropping
+
+  # def cropping?
+    # !crop_x.blank? && !crop_y.blank? && !crop_w.blank? && !crop_h.blank?
+  # end
+
+  # def reprocess_picture
+      # picture.reprocess!# unless cropping?
+  # end
 
   belongs_to(
     :author,

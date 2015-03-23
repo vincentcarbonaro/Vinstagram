@@ -5,6 +5,7 @@ Vinstagram.Views.Upload = Backbone.View.extend({
     events: {
       'submit form': 'submitForm',
       "change #input-picture-file": "changePicture",
+      "click #crop-picture": "updatePicture",
     },
 
     render: function () {
@@ -22,6 +23,7 @@ Vinstagram.Views.Upload = Backbone.View.extend({
       var that = this;
 
       this.model.set(formData);
+
       this.model.save({}, {
         success: function () {
           that = that;
@@ -38,15 +40,41 @@ Vinstagram.Views.Upload = Backbone.View.extend({
       fileReader.onloadend = function () {
         that.model.set("picture", fileReader.result);
         that.previewPic(fileReader.result);
-        // that.$el.find('.post-pic-preview').toggle();
-        // that.$el.find('.caption-and-submit').toggle();
+        that.$el.find('.post-pic-box').toggle();
+        that.$el.find('.caption-and-submit').toggle();
       };
       fileReader.readAsDataURL(file);
     },
 
     previewPic: function (src) {
       this.$("#picture-preview").attr("src", src);
-      this.$("#picture-preview").Jcrop();
-    }
+
+      var that = this;
+
+      jQuery(function($) {
+        $('#picture-preview').Jcrop({
+          boxWidth: 510,
+          boxHeight: 510,
+          allowSelect: true,
+          allowMove: true,
+          allowResize: true,
+          onSelect: that.updateCrop,
+          onChange: that.updateCrop,
+          allowMove: true,
+          bgOpacity: .3,
+          aspectRatio: 1,
+          bgColor: 'black',
+          setSelect: [0, 0, 510, 510]
+        });
+      });
+
+    },
+
+    updateCrop: function (coords) {
+      $('#crop_x').val(Math.round(coords.x));
+      $('#crop_y').val(Math.round(coords.y));
+      $('#crop_w').val(Math.round(coords.w));
+      $('#crop_h').val(Math.round(coords.h));
+    },
 
 });
