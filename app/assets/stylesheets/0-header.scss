@@ -1,7 +1,7 @@
 .header {
   background: #517fa4;
   color: white;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #cacaca;
   position: fixed;
   margin: auto;
   width: 100%;
@@ -10,13 +10,13 @@
 .header a {
   display: block;
   padding: 10px 20px;
-  border-right: 1px solid black;
+  border-right: 1px solid #cacaca;
 }
 
 .header-nav {
   margin: auto;
   width: 900px;
-  border-left: 1px solid black;
+  border-left: 1px solid #cacaca;
 }
 
 .header-list {
@@ -30,7 +30,7 @@
 /*This is the image icon*/
 .user-img {
   float: right;
-  border-left: 1px solid black;
+  border-left: 1px solid #cacaca;
 }
 /*
 .settings {
@@ -38,7 +38,7 @@
  position: absolute;
  left: -1px;
  overflow: hidden;
- color: black;
+ color: #cacaca;
  background: orange;
  width: 250px;
 }

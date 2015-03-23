@@ -1,9 +1,9 @@
 <% if (user.escape('is_following') === 'true') { %>
 
-  <button id='follow-buton' class="unfollow-button">Following</button>
+  <input type="button" id='follow-button' class="unfollow-button" value="Following">
 
 <% } else { %>
 
-  <button id='follow-buton' class="follow-button">+ Follow</button>
+  <input type="button" id='follow-button' class="follow-button" value='+  Follow'>
 
 <%  } %>

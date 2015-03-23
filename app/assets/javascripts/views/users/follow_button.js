@@ -3,7 +3,7 @@ Vinstagram.Views.FollowButton = Backbone.View.extend({
   template: JST['users/follow_button'],
 
   events: {
-    'click button': 'followToggle'
+    'click #follow-button': 'followToggle'
   },
 
   render: function () {
@@ -14,7 +14,17 @@ Vinstagram.Views.FollowButton = Backbone.View.extend({
     return this;
   },
 
-  followToggle: function () {
+  followToggle: function (event) {
+    event.preventDefault();
+
+    if (this.$el.find('#follow-button').val() === "+  Follow") {
+      this.$el.find('#follow-button').val("Following..");
+    } else {
+      this.$el.find('#follow-button').val("Unfollowing..")
+    }
+
+    this.$el.find('#follow-button').prop('disabled', true);
+
     var that = this;
 
     $.ajax({

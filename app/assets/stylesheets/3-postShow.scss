@@ -2,9 +2,9 @@
   padding: 25px 0;
   margin: auto;
   width: 578px;
-  border-left: 1px solid black;
-  border-right: 1px solid black;
-  border-bottom: 1px solid black;
+  border-left: 1px solid #cacaca;
+  border-right: 1px solid #cacaca;
+  border-bottom: 1px solid #cacaca;
   border-bottom-left-radius: 3px;
   border-bottom-right-radius: 3px;
   background: #ddd;
@@ -14,17 +14,17 @@
   border-radius: 3px;
   margin: auto;
   width: 510px;
-  border: 1px solid black;
+  border: 1px solid #cacaca;
 }
 
 .post-show-top-bar{
-  border: 1px 1px 1px 1px solid black;
+  border: 1px 1px 1px 1px solid #cacaca;
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
   color: #517fa4;
   background: white;
   padding: 20px;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #cacaca;
 }
 
 .post-show-user {
@@ -44,7 +44,7 @@
  }
 
 .post-show-text {
-  border-top: 1px solid black;
+  border-top: 1px solid #cacaca;
   background: white;
   border: 1px 1px 1px 1px solid black;
   padding: 10px 0px 20px 10px;
