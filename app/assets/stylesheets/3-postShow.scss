@@ -11,6 +11,7 @@
 }
 
 .post-show-item {
+  color: #1c5380;
   border-radius: 3px;
   margin: auto;
   width: 510px;
@@ -18,23 +19,27 @@
 }
 
 .post-show-top-bar{
-  border: 1px 1px 1px 1px solid #cacaca;
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
-  color: #517fa4;
   background: white;
-  padding: 20px;
+  padding: 10px;
   border-bottom: 1px solid #cacaca;
 }
 
 .post-show-user {
-   float: left;
-   font-size: 16px;
+  padding-left: 10px;
+  line-height: 40px;
+  height: 40px;
+  float: left;
+  font-size: 16px;
+  display: inline;
  }
 
  .post-show-time {
-  float: right;
-  font-size: 16px;
+   line-height: 40px;
+   padding-right: 15px;
+    float: right;
+    font-size: 16px;
 }
 
 .post-show-image {

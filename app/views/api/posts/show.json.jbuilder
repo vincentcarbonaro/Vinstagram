@@ -6,6 +6,8 @@ json.picture_url image_url(@post.picture.url(:large))
 
 json.author @post.author, :id, :username
 
+json.author_thumb image_url(@post.author.picture.url(:small))
+
 json.is_current_user is_current_user?(@post.author)
 
 json.is_liked @post.likers.include?(current_user)

@@ -6,7 +6,7 @@ Vinstagram.Views.FeedItem = Backbone.View.extend({
 
   events: {
     'click .toggle_like': 'toggleLike',
-    'click .add_comment': 'addComment'
+    'submit .comment-form': 'addComment'
   },
 
   initialize: function () {
@@ -17,7 +17,7 @@ Vinstagram.Views.FeedItem = Backbone.View.extend({
     var content = this.template({
       post: this.model
     });
-    
+
     this.$el.html(content);
     return this;
   },
@@ -37,11 +37,26 @@ Vinstagram.Views.FeedItem = Backbone.View.extend({
     });
   },
 
-  addComment: function () {
-    var view = new Vinstagram.Views.AddComment({
-      model: this.model
+  addComment: function (event) {
+    event.preventDefault();
+
+    var formData = $(event.currentTarget).serializeJSON();
+    var that = this;
+
+    this.$el.find('.comment-submit').val("Posting..");
+    this.$el.find('.comment-submit').prop('disabled', true);
+
+    $.ajax({
+      url: "api/comments",
+      type: "POST",
+      data: {
+        post_id: this.model.id,
+        body: formData.body
+      },
+      success: function () {
+        that.model.fetch();
+      }
     });
-    this.$el.find('.comment').html(view.render().$el)
   }
 
 })

@@ -31,7 +31,7 @@
 
   <section class="like-count">
     <% if (post.escape('num_likes') > 0) { %>
-      &hearts; <%= post.escape('num_likes') %> Likes
+      <%= post.escape('num_likes') %> Likes
       <br>
     <% } %>
   </section>
@@ -44,17 +44,13 @@
     <br>
   <% } %>
 
-
-
   <% post.comments().each( function (comment) { %>
     <a href="#user/<%= comment.attributes.author.id %>"><strong><%= comment.attributes.author.username %></strong></a> <%= comment.escape('body') %>
     <br>
   <%  }) %>
 
-
-
-
-
-  <button class="add_comment">Comment</button><br>
-  <div class="comment"><br></div>
 </div>
+
+<form class="comment-form">
+  <input class="comment-submit" type="text" name="body" placeholder="Add a comment...">
+</form>

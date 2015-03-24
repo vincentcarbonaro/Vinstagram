@@ -12,6 +12,7 @@
 }
 
 .feed li {
+  color: #1c5380;
    margin: auto;
    width: 510px;
    border-radius: 3px;
@@ -22,7 +23,6 @@
 .feed-item-top-bar{
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
-  color: #517fa4;
   background: white;
   padding: 10px;
   border-bottom: 1px solid #cacaca;
@@ -64,6 +64,7 @@
 
 .like-bar {
   background: white;
+  height: 40px;
 }
 
 .like-icon{
@@ -83,17 +84,32 @@
 
 .like-count{
   float: left;
-  font-size: 20px;
-  padding: 5px 10px;
+  font-size: 18px;
+  height:40px;
+  line-height: 40px;
+  padding-left: 10px;
 }
 
 .feed-item-text {
    background: white;
    border-top: 1px solid #cacaca;
-   padding: 10px 0px 0px 15px;
+   padding: 10px;
    border-bottom-left-radius: 3px;
    border-bottom-right-radius: 3px;
  }
+
+.comment-form {
+  border-top: 1px solid #cacaca;
+  padding: 10px;
+  background: white;
+}
+
+.comment-form input {
+  width: 465px;
+  height: 15px;
+  font-size: 15px;
+  padding: 10px;
+}
 
  .no-posts{
    margin-top: 100px;

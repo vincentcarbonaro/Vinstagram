@@ -4,6 +4,10 @@
 
   <div class="post-show-top-bar group">
 
+    <div class="feed-item-user-img">
+      <a href="#/user/<%= post.author().escape('id') %>"><img src="<%= post.escape('author_thumb') %>" alt="" height="40" width="40" /></a>
+    </div>
+
     <div class="post-show-user">
       <a href="#/user/<%= post.author().escape('id') %>"><%= post.author().escape('username') %></a>
     </div>
@@ -30,7 +34,7 @@
 
     <section class="like-count">
       <% if (post.escape('num_likes') > 0) { %>
-        &hearts; <%= post.escape('num_likes') %> Likes
+        <%= post.escape('num_likes') %> Likes
         <br>
       <% } %>
     </section>
@@ -47,9 +51,12 @@
       <br>
     <%  }) %>
 
-    <button class="add_comment">Comment</button>
-    <div class="comment"><br></div>
     <div class="user_options"></div>
+
   </div>
+
+  <form class="comment-form">
+    <input class="comment-submit" type="text" name="body" placeholder="Add a comment...">
+  </form>
 
 </section>

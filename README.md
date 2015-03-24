@@ -25,7 +25,6 @@ Vinstagram is a clone of [Instagram](www.instagram.com) built on Ruby on Rails a
 - Cropping for Profile Pictures
 - Search Header
 - Edit Bio
-- Comment Textarea
 - Delete Comments
 - Delete/Signout Confirmations
 - Private Accounts
@@ -41,3 +40,4 @@ Vinstagram is a clone of [Instagram](www.instagram.com) built on Ruby on Rails a
 - Combine Feed Item and Post Show
 - Add hovers for clickable items
 - add user image to post show
+- top padding and side borders on feed item VS post show
