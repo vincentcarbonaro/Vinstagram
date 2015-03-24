@@ -18,26 +18,34 @@
     <a href="#/post/<%= post.id %>"><img src="<%= post.attributes.picture_url %>" alt="ERROR" height='510'/></a>
   </div>
 
+  <section class="like-bar group">
+
+    <section class="like-icon">
+      <% if(post.escape('is_liked') === "true") { %>
+        <a id='liked-icon' class="toggle_like"><i class="fa fa-heart"></i></a>
+      <%  } else { %>
+        <a id="unliked-icon" class="toggle_like"><i class="fa fa-heart"></i></a>
+      <% } %>
+    </section>
+
+    <section class="like-count">
+      <% if (post.escape('num_likes') > 0) { %>
+        &hearts; <%= post.escape('num_likes') %> Likes
+        <br>
+      <% } %>
+    </section>
+
+  </section>
+
   <div class="post-show-text">
     <% if(post.escape('text')) { %>
       <%= post.escape('text') %>  <br>
-    <% } %>
-
-    <% if (post.escape('num_likes') > 0) { %>
-      &hearts; <%= post.escape('num_likes') %> Likes
-      <br>
     <% } %>
 
     <% post.comments().each( function (comment) { %>
       <a href="#user/<%= comment.attributes.author.id %>"><strong><%= comment.attributes.author.username %></strong></a> <%= comment.escape('body') %>
       <br>
     <%  }) %>
-
-    <% if(post.escape('is_liked') === "true") { %>
-      <button class="toggle_like"><strong> &hearts; Liked</strong></button>
-    <%  } else { %>
-      <button class="toggle_like">Like</button>
-    <% } %>
 
     <button class="add_comment">Comment</button>
     <div class="comment"><br></div>

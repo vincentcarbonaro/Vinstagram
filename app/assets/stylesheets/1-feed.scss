@@ -62,6 +62,31 @@
   display: block;
 }
 
+.like-bar {
+  background: white;
+}
+
+.like-icon{
+  float: left;
+  padding: 5px 10px;
+  font-size: 20px;
+  border-right: 1px solid #cacaca;
+}
+
+#liked-icon{
+  color: red;
+}
+
+#unliked-icon {
+  color: #cacaca;
+}
+
+.like-count{
+  float: left;
+  font-size: 20px;
+  padding: 5px 10px;
+}
+
 .feed-item-text {
    background: white;
    border-top: 1px solid #cacaca;
