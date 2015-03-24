@@ -13,7 +13,7 @@ Vinstagram is a clone of [Instagram](www.instagram.com) built on Ruby on Rails a
 
 ## Technical Details
  -	File upload storage with Paperclip and Amazon AWS
- - 
+ - Uses Jcrop Jquery plug in to crop photos
  
 ## TODO
 - Create Tags for Users in Comments
