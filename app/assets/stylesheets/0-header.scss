@@ -9,9 +9,26 @@
 }
 
 .header a {
+  font-size: 26px;
   display: block;
-  padding: 10px 20px;
+  padding: 5px 10px;
   border-right: 1px solid #cacaca;
+}
+
+a > .fa-home {
+  font-size: 35px;
+}
+
+a > .fa-search {
+  font-size: 35px;
+}
+
+a > .fa-camera-retro {
+  font-size: 35px;
+}
+
+a > .fa-cog {
+  font-size: 32px;
 }
 
 .header-nav {

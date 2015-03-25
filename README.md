@@ -4,7 +4,7 @@ Vinstagram is a clone of [Instagram](www.instagram.com) built on Ruby on Rails a
 
 ## Features
 - Single Page App (Execpt User/Session Pages)
-- Infinitly Scrolling Picture Feed
+- Infinitely Scrolling Picture Feed
 - Users can search for and follow other users
 - Users can upload and crop photos
 - Users can follow/unfollow other users
@@ -12,7 +12,7 @@ Vinstagram is a clone of [Instagram](www.instagram.com) built on Ruby on Rails a
 
 
 ## Technical Details
- -	File upload storage with Paperclip and Amazon AWS
+ - File upload storage with Paperclip and Amazon AWS
  - Uses Jcrop Jquery plug in to crop photos
 
 ## TODO
@@ -38,5 +38,4 @@ Vinstagram is a clone of [Instagram](www.instagram.com) built on Ruby on Rails a
 - Comments as Replies
 - Edit/delete comments
 - Combine Feed Item and Post Show
-- Add hovers for clickable items
-- add user image to post show
+- Add hovers for clickable items (sigout button, delete button)

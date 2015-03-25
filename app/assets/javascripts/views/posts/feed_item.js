@@ -19,6 +19,11 @@ Vinstagram.Views.FeedItem = Backbone.View.extend({
     });
 
     this.$el.html(content);
+
+    if (this.model.comments().length != 0 || this.model.get('text')){
+      this.$el.find('.feed-item-text').toggle();
+    }
+
     return this;
   },
 
