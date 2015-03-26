@@ -35,7 +35,9 @@
     </section>
 
     <section class="like-count">
-      <% if (post.escape('num_likes') > 0) { %>
+      <% if (post.escape('num_likes') == 1) { %>
+        1 Like
+      <% } else if (post.escape('num_likes') > 0) { %>
         <%= post.escape('num_likes') %> Likes
         <br>
       <% } %>

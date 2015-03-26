@@ -44,6 +44,8 @@
 
 .jcrop-holder {
   margin: auto;
+  z-index: 2;
+  
 }
 
 .post-pic-box {
@@ -52,7 +54,6 @@
   margin: auto;
   border-radius: 3px;
   display: none;
-  z-index: 2;
   margin-top: 15px;
   width: 100%;
 }
