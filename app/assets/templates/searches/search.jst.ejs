@@ -4,11 +4,21 @@
 
   <section class="search-top">
 
-    <input placeholder=" Search for users.." type="text" class="query" value="<%= collection._query %>"> <br><br>
+    <section class="users-search-box">
+      <form class="users-search">
+        <input placeholder="    Search for users.." type="text" class="query" value="<%= collection._query %>"> <br><br>
+      </form>
+    </section>
 
-    <input type="submit" class="run_search">
+    <section class="tags-search-box">
+      <form class="tags-search">
+        <input disabled placeholder="             Inactive" type="text" name="name" value="">
+      </form>
+    </section>
 
-    <input placeholder=" Inactive" type="text" name="name" value="">
+    <br><br>
+
+    <!-- <input type="submit" class="run_search"> -->
 
   </section>
 

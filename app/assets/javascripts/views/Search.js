@@ -12,7 +12,8 @@ Vinstagram.Views.Search = Backbone.View.extend({
   },
 
   events: {
-    'click .run_search': 'search',
+    'submit .users-search': 'searchForUsers',
+    'submit .tags-search': 'searchForTags'
   },
 
   render: function () {
@@ -24,13 +25,20 @@ Vinstagram.Views.Search = Backbone.View.extend({
     return this;
   },
 
-  search: function (event){
+  searchForUsers: function (event){
+    event.preventDefault();
+    
     this.searchResults._query = this.$(".query").val();
     this.searchResults.fetch({
       data: {
         query: this.searchResults._query
       }
     });
+  },
+
+  searchForTags: function (event) {
+    event.preventDefault();
+    alert('feature-not-yet-implemented');
   },
 
   renderSearchResults: function () {
@@ -43,9 +51,6 @@ Vinstagram.Views.Search = Backbone.View.extend({
         user: model
       }))
     });
-
-
   }
-
 
 })
