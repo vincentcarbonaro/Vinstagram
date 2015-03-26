@@ -16,7 +16,10 @@ module Api
       @user = current_user
 
       @user.bio = (params[:user][:bio])
-      @user.picture = (params[:user][:picture])
+
+      if(params[:user][:picture])
+        @user.picture = (params[:user][:picture])
+      end
 
       if @user.save
         render json: @user

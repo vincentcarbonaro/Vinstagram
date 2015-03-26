@@ -1,6 +1,6 @@
 Vinstagram.Views.Settings = Backbone.View.extend({
 
-  tagName: 'form',
+  tagName: 'section',
 
   className: 'settings-backdrop',
 
@@ -11,7 +11,7 @@ Vinstagram.Views.Settings = Backbone.View.extend({
   },
 
   events: {
-    "submit": "submit",
+    "submit": "saveChanges",
     'click .current-pic': 'changePic',
     "change #input-picture-file": "changePicture",
   },
@@ -45,17 +45,20 @@ Vinstagram.Views.Settings = Backbone.View.extend({
     this.$(".current-pic").attr("src", src);
   },
 
-  submit: function (event) {
+  saveChanges: function (event) {
     event.preventDefault();
 
     this.$el.find('.save-settings').val("Saving...");
     this.$el.find('.save-settings').prop('disabled', true);
 
+
     var formData = this.$el.serializeJSON();
     var that = this;
 
+
     this.model.save(formData, {
       success: function () {
+        console.log(that.formData);
         that = that;
         that.model.fetch();
         Backbone.history.navigate("", {trigger: true});

@@ -8,16 +8,18 @@
 
   <section class="settings-bottom group">
 
-    <section class="left-pane">
-      Current Profile Picture:<br>
-      <input id="input-picture-file" type="file" name="picture">
-      <img class="current-pic" src="<%= user.escape('picture_url') %>">
-    </section>
+    <form>
+      <section class="left-pane">
+        Current Profile Picture:<br>
+        <input  id="input-picture-file" type="file" name="picture">
+        <img class="current-pic" src="<%= user.escape('picture_url') %>">
+      </section>
 
-    <section class="right-pane">
-      <textarea name="bio" rows="8" cols="40"><%= user.escape('bio') %></textarea><br>
-      <input class="save-settings" type="submit" value="Save Changes">
-    </section>
+      <section class="right-pane">
+        <textarea name="bio" rows="8" cols="40"><%= user.escape('bio') %></textarea><br>
+        <input class="save-settings" type="submit" value="Save Changes">
+      </section>
+    </form>
 
   </section>
 
