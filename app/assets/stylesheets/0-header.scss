@@ -11,7 +11,6 @@
   color: white;
   border-bottom: 1px solid #cacaca;
   position: fixed;
-  margin: auto;
   width: 100%;
   z-index: 3;
   display: block;
@@ -99,7 +98,8 @@ a > .fa-cog {
   float: left;
   height: 40px;
   line-height: 40px;
-  padding-left: 5px;
+  // padding-left: 5px;
+  padding: 0 5px;
 }
 
 ////////////////////////
@@ -126,10 +126,11 @@ a > .fa-cog {
 }
 
 .dropdown {
+  width: 100px;
 }
 
 .dropdown a {
   border: none;
-  padding: 5px;
+  padding: 5px 10px;
   display: block;
 }

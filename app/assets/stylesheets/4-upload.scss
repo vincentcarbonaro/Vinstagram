@@ -22,17 +22,29 @@
   border-bottom-right-radius: 5px;
 }
 
-.upload-title {
-  font-size: 36px;
-  font-weight: bold;
-  text-align: center;
-  margin-bottom: 25px;
+.post-image-select {
+  // margin: auto;
+  // display: block;
+  // width: 200px;
+  // z-index: 2;
+  display: none;
 }
 
-.post-image-select {
-  margin: 0 0 15px 45px;
-  margin-left: 45px;
-  z-index: 2;
+.add-a-photo {
+  background: #517fa4;
+  color: white;
+  border: 1px solid #cacaca;
+  border-radius: 5px;
+  font-size: 20px;
+  padding: 15px;
+  margin: auto;
+  display: block;
+  width: 100%;
+  // margin-bottom: 5px;
+}
+
+.add-a-photo:hover {
+  opacity: .6;
 }
 
 .post-pic-box {
@@ -44,11 +56,11 @@
   // display: block;
   display: none;
   z-index: 2;
+  margin-top: 15px;
 }
 
 .post-pic-preview {
   z-index: 2;
-
 }
 
 .caption-and-submit {
@@ -72,4 +84,8 @@
   height: 50px;
   width: 180px;
   font-size: 24px;
+}
+
+.share-button:hover {
+  opacity: .6;
 }

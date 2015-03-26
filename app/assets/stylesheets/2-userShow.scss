@@ -20,11 +20,16 @@
 }
 
 .user-show-top {
+  margin-top: 1px;
+}
+
+.user-show-middle {
+  display: block;
   border-left: 1px solid #cacaca;
   border-right: 1px solid #cacaca;
-  margin: auto;
   max-width: 500px;
   padding: 25px;
+  margin: auto;
 }
 
 .user-show-pic{
@@ -37,7 +42,7 @@
   width: 156px;
 }
 
-.user-show-username{
+.user-show-username {
   font-weight: bold;
   text-align: center;
   width: 175px;
@@ -47,13 +52,12 @@
   overflow: hidden;
 }
 
-.user-show-follow-button{
+.user-show-follow-button {
   float: right;
   margin-right: 30px;
 }
 
 .unfollow-button{
-  background: green;
   color: white;
   letter-spacing: 1px;
   width: 100px;
@@ -110,6 +114,7 @@ tr {
   text-align: center;
 }
 
+
 .user-show-bottom {
   border-top: 1px solid #cacaca;
   padding-bottom: 25px;
@@ -117,10 +122,12 @@ tr {
 
 .user-show img {
   display: block;
+  height: 156px; //added this on ferry
+  width: 156px; //added this on ferry
   max-width:156px;
   max-height:156px;
-  width: auto;
-  height: auto;
+  // width: auto;
+  // height: auto;
   border: 1px solid #cacaca;
 }
 

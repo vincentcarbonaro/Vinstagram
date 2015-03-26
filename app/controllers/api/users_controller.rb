@@ -15,7 +15,9 @@ module Api
     def update
       @user = current_user
 
+      @user.bio = (params[:user][:bio])
       @user.picture = (params[:user][:picture])
+
       if @user.save
         render json: @user
       else
@@ -26,7 +28,7 @@ module Api
 
     private
     def user_params
-      params.require(:user).permit(:picture)
+      params.require(:user).permit(:picture, :bio)
     end
 
   end

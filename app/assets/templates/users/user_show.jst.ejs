@@ -4,34 +4,38 @@
 
   <section class="user-show-top group">
 
-    <section class="user-show-pic">
-      <img src="<%= user.attributes.picture_url %>" alt="error"/>
-    </section>
+    <section class="user-show-middle group">
 
-    <div class="user-show-username"><%= user.escape('username') %></div>
-
-    <section class="user-show-follow-button"></section>
-
-    <table class="user-show-text">
-      <tr>
-        <th>Posts</td>
-        <th>Followers</td>
-        <th>Following</td>
-      </tr>
-      <tr>
-        <td><%= this.model.posts().length %></td>
-        <td><%= this.model.escape('num_followers') %></td>
-        <td><%= this.model.escape('num_followees') %></td>
-      </tr>
-    </table>
-
-    <section class="user-show-bio">
-      <section class="text-area-trigger">
-        <textarea disabled class="text-area" name="post[text]" rows="3" cols="38" value=""><%= user.escape('bio') %></textarea>
+      <section class="user-show-pic">
+        <img src="<%= user.attributes.picture_url %>" alt="error"/>
       </section>
-    <section>
 
+      <div class="user-show-username">
+        <%= user.escape('username') %>
+      </div>
+
+      <section class="user-show-follow-button">
       </section>
+
+      <table class="user-show-text">
+        <tr>
+          <th>Posts</td>
+          <th>Followers</td>
+          <th>Following</td>
+        </tr>
+        <tr>
+          <td><%= this.model.posts().length %></td>
+          <td><%= this.model.escape('num_followers') %></td>
+          <td><%= this.model.escape('num_followees') %></td>
+        </tr>
+      </table>
+
+      <section class="user-show-bio">
+        <section class="text-area-trigger">
+          <textarea disabled class="text-area" name="post[text]" rows="3" cols="38" value=""><%= user.escape('bio') %></textarea>
+        </section>
+      </section>
+
     </section>
 
   </section>

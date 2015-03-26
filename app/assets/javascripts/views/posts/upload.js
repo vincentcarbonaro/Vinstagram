@@ -6,6 +6,12 @@ Vinstagram.Views.Upload = Backbone.View.extend({
       'submit form': 'submitForm',
       "change #input-post-file": "changePicture",
       "click #crop-picture": "updatePicture",
+      'click .add-a-photo': 'triggerFileSelect',
+    },
+
+    triggerFileSelect: function () {
+      event.preventDefault();
+      this.$("#input-post-file").trigger("click");
     },
 
     render: function () {
@@ -40,15 +46,16 @@ Vinstagram.Views.Upload = Backbone.View.extend({
       fileReader.onloadend = function () {
         that.model.set("picture", fileReader.result);
         that.previewPic(fileReader.result);
-        that.$el.find('.post-pic-box').toggle();
-        that.$el.find('.caption-and-submit').toggle();
-        that.$el.find('.post-image-select').toggle();
+        that.$el.find('.post-pic-box').toggle(true);
+        that.$el.find('.caption-and-submit').toggle(true);
+        // that.$el.find('.post-image-select').toggle(true);
       };
       fileReader.readAsDataURL(file);
     },
 
     previewPic: function (src) {
       this.$("#picture-preview").attr("src", src);
+      // this.render();
 
       var that = this;
 

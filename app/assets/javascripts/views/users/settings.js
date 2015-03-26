@@ -12,8 +12,8 @@ Vinstagram.Views.Settings = Backbone.View.extend({
 
   events: {
     "submit": "submit",
+    'click .current-pic': 'changePic',
     "change #input-picture-file": "changePicture",
-    'click .current-pic': 'trigger'
   },
 
   render: function () {
@@ -24,9 +24,25 @@ Vinstagram.Views.Settings = Backbone.View.extend({
     return this;
   },
 
-  trigger: function () {
+  changePicture: function (event) {
+    var file = event.currentTarget.files[0];
+    var fileReader = new FileReader();
+    var that = this;
+    fileReader.onloadend = function () {
+      that.model.set("picture", fileReader.result);
+      that.previewPic(fileReader.result);
+    };
+    fileReader.readAsDataURL(file);
+  },
+
+  //the auto trigger from clicking the image
+  changePic: function () {
     event.preventDefault();
     this.$("#input-picture-file").trigger("click");
+  },
+
+  previewPic: function (src) {
+    this.$(".current-pic").attr("src", src);
   },
 
   submit: function (event) {
@@ -47,20 +63,5 @@ Vinstagram.Views.Settings = Backbone.View.extend({
     });
 
   },
-
-  changePicture: function (event) {
-    var file = event.currentTarget.files[0];
-    var fileReader = new FileReader();
-    var that = this;
-    fileReader.onloadend = function () {
-      that.model.set("picture", fileReader.result);
-      that.previewPic(fileReader.result);
-    };
-    fileReader.readAsDataURL(file);
-  },
-
-  previewPic: function (src) {
-    this.$(".current-pic").attr("src", src);
-  }
 
 })
