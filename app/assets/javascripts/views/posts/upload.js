@@ -48,32 +48,30 @@ Vinstagram.Views.Upload = Backbone.View.extend({
         that.previewPic(fileReader.result);
         that.$el.find('.post-pic-box').toggle(true);
         that.$el.find('.caption-and-submit').toggle(true);
-        // that.$el.find('.post-image-select').toggle(true);
       };
       fileReader.readAsDataURL(file);
     },
 
     previewPic: function (src) {
+
       this.$("#picture-preview").attr("src", src);
-      // this.render();
+      $('.jcrop-holder img').attr('src', src);
 
       var that = this;
 
-      jQuery(function($) {
-        $('#picture-preview').Jcrop({
-          boxWidth: 510,
-          boxHeight: 510,
-          allowSelect: true,
-          allowMove: true,
-          allowResize: true,
-          onSelect: that.updateCrop,
-          onChange: that.updateCrop,
-          bgOpacity: .3,
-          aspectRatio: 1,
-          bgColor: 'black',
-          setSelect: [0, 0, 510, 510],
-          addClass: 'jcrop-dark'
-        });
+      $('#picture-preview').Jcrop({
+        boxWidth: 510,
+        boxHeight: 510,
+        allowSelect: true,
+        allowMove: true,
+        allowResize: true,
+        onSelect: that.updateCrop,
+        onChange: that.updateCrop,
+        bgOpacity: .3,
+        aspectRatio: 1,
+        bgColor: 'black',
+        setSelect: [0, 0, 510, 510],
+        addClass: 'jcrop-dark'
       });
 
     },
