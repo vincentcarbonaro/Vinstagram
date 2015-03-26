@@ -22,15 +22,11 @@
   border-bottom-right-radius: 5px;
 }
 
-.post-image-select {
-  // margin: auto;
-  // display: block;
-  // width: 200px;
-  // z-index: 2;
+#input-post-file {
   display: none;
 }
 
-.add-a-photo {
+.select-a-photo {
   background: #517fa4;
   color: white;
   border: 1px solid #cacaca;
@@ -40,32 +36,36 @@
   margin: auto;
   display: block;
   width: 100%;
-  // margin-bottom: 5px;
 }
 
-.add-a-photo:hover {
+.select-a-photo:hover {
   opacity: .6;
 }
+
+.inner-box {
+  margin: auto;
+  display: block;
+}
+
+.jcrop-holder {
+  margin: auto;
+}
+
 
 .post-pic-box {
   max-height: 510px;
   max-width: 510px;
-  border-radius: 3px;
-  // border: 1px solid black;
   margin: auto;
-  // display: block;
+  border-radius: 3px;
   display: none;
   z-index: 2;
   margin-top: 15px;
-}
-
-.post-pic-preview {
-  z-index: 2;
+  width: 100%;
 }
 
 .caption-and-submit {
   margin: 25px 20px 0 20px;
-  display: none;
+  // display: none;
 }
 
 .caption-and-submit textarea {
@@ -84,6 +84,9 @@
   height: 50px;
   width: 180px;
   font-size: 24px;
+  border: 1px solid #cacaca;
+  border-radius: 5px;
+  color: white;
 }
 
 .share-button:hover {

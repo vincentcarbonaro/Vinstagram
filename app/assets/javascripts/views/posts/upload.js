@@ -2,11 +2,15 @@ Vinstagram.Views.Upload = Backbone.View.extend({
 
     template: JST['posts/upload'],
 
+    tagName: 'section',
+
+    className: 'upload-backdrop',
+
     events: {
       'submit form': 'submitForm',
       "change #input-post-file": "changePicture",
       "click #crop-picture": "updatePicture",
-      'click .add-a-photo': 'triggerFileSelect',
+      'click .select-a-photo': 'triggerFileSelect',
     },
 
     triggerFileSelect: function () {
@@ -53,6 +57,8 @@ Vinstagram.Views.Upload = Backbone.View.extend({
     },
 
     previewPic: function (src) {
+
+      this.render();
 
       this.$("#picture-preview").attr("src", src);
       $('.jcrop-holder img').attr('src', src);

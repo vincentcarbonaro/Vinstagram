@@ -1,36 +1,29 @@
-<section class="upload-backdrop">
-  <div class="upload">
-    <title>Upload Post</title>
+<div class="upload">
+  <title>Upload Post</title>
 
-    <!-- <section class='upload-title'>
-      <u>Upload a Post!</u>
-    </section> -->
+  <input class="select-a-photo" type="button" name="name" value="Select a Photo">
 
-    <input class="add-a-photo" type="button" name="name" value="Select a Photo">
+  <form class="post_form" enctype='multipart/form-data'>
 
-    <form class="post_form" enctype='multipart/form-data'>
+    <input id="input-post-file" type="file" name="picture">
 
-      <section class="post-image-select">
-        Select a File To Upload <br>
-        <input id="input-post-file" type="file" name="picture">
-      </section>
+    <section class="post-pic-box">
 
-      <section class="post-pic-box">
+      <section class="inner-box">
         <img class="post-pic-preview" src="" id="picture-preview">
       </section>
 
-      <input type="hidden" id="crop_x" value="" name='post[crop_x]'>
-      <input type="hidden" id="crop_y" value="" name='post[crop_y]'>
-      <input type="hidden" id="crop_w" value="" name='post[crop_h]'>
-      <input type="hidden" id="crop_h" value="" name='post[crop_w]'>
+    </section>
 
-      <section class="caption-and-submit">
+    <input type="hidden" id="crop_x" value="" name='post[crop_x]'>
+    <input type="hidden" id="crop_y" value="" name='post[crop_y]'>
+    <input type="hidden" id="crop_w" value="" name='post[crop_h]'>
+    <input type="hidden" id="crop_h" value="" name='post[crop_w]'>
 
-        <textarea placeholder="Enter a caption..." class="test-area" name="post[text]" rows="4" cols="30" value=""></textarea>
+    <section class="caption-and-submit">
+      <textarea placeholder="Enter a caption..." class="test-area" name="post[text]" rows="4" cols="30" value=""></textarea>
+      <input class="share-button" type="submit" value="Share Post!">
+    </section>
 
-        <input class="share-button" type="submit" value="Share Post!">
-
-      </section>
-    </form>
-  </div>
-</section>
+  </form>
+</div>
