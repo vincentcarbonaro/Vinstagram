@@ -4,26 +4,33 @@
 <header class="header">
   <nav class="header-nav group">
 
-    <ul class="header-list group">
+    <ul class="header-left-list group">
       <li><a href="#"><i class="fa fa-home"></i></a></li>
       <li><a href="#search"><i class="fa fa-search"></i></a></li>
       <li><a href="#upload"><i class="fa fa-camera-retro fa-lg"></i></a></li>
-      <li><a href="#settings"><i class="fa fa-cog fa-fw"></i></a></li>
-      <li><a href="#user/<%= current_user.id %>">My Profile</a></li>
     </ul>
 
-    <a href="#" class="user-img">
-      <%= button_to "Sign Out", session_url, :method => :delete %></a>
+    <section class="header-right-list group">
 
-    <!-- <a href="#" class="user-img">
-      <%= button_to "Sign Out", session_url, :method => :delete %></a> -->
+        <a href="#user/<%= current_user.id %>" class="header-right">
+          <img class="header-img" src="<%= current_user.picture.url(:thumb) %>" alt=""/>
 
-      <!-- <a href="#" class="user-img">User's Picture</a>
-      <ul class="settings">
-        <li><a href="#">Settings 1 </a></li>
-        <li><a href="#">Settings 2</a></li>
-        <li><a href="#">Settings 3</a></li>
-      </ul> -->
+          <div class="header-name">
+            <%= current_user.username %>
+          </div>
+        </a>
+
+        <ul class="dropdown">
+          <li><a href="#user/<%= current_user.id %>">My Profile</a></li>
+          <li><a href="#settings">Settings</a></li>
+          <li><%= link_to "Sign out", session_url, :method => :delete %></li>
+        </ul>
+
+    </section>
+
+    <div class="header-logo">
+      <a href="#">&nbsp&nbspVinstagram&nbsp&nbsp</a>
+    </div>
 
   </nav>
 </header>

@@ -24,6 +24,10 @@ Vinstagram.Views.PostShow = Backbone.View.extend({
 
     if (this.model.get('is_current_user')) { this.currentUserOptionsPostShow() }
 
+    if (this.model.comments().length != 0 || this.model.get('text')){
+      this.$el.find('.feed-item-text').toggle();
+    }
+
     return this;
   },
 

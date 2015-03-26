@@ -39,3 +39,4 @@ Vinstagram is a clone of [Instagram](www.instagram.com) built on Ruby on Rails a
 - Edit/delete comments
 - Combine Feed Item and Post Show
 - Add hovers for clickable items (sigout button, delete button)
+- Domain Name

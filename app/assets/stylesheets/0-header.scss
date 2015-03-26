@@ -1,3 +1,11 @@
+#main{
+  padding-top: 51px;
+}
+
+.backdrop {
+  min-height: 100%;
+}
+
 .header {
   background: #517fa4;
   color: white;
@@ -6,21 +14,39 @@
   margin: auto;
   width: 100%;
   z-index: 3;
+  display: block;
 }
 
-.header a {
-  font-size: 26px;
-  display: block;
-  padding: 5px 10px;
+.header-nav {
+  margin: auto;
+  width: 900px;
+  border-left: 1px solid #cacaca;
+}
+
+.header-left-list a {
   border-right: 1px solid #cacaca;
 }
 
+.header-nav a:hover {
+  opacity: .4;
+  background: white;
+  color: #517fa4;
+}
+
+.header-left-list a {
+  font-size: 26px; //only applies to 'my profile'
+  display: block;
+  padding: 5px 10px;
+  height: 40px;
+  line-height: 40px;
+}
+
 a > .fa-home {
-  font-size: 35px;
+  font-size: 38px;
 }
 
 a > .fa-search {
-  font-size: 35px;
+  font-size: 31px;
 }
 
 a > .fa-camera-retro {
@@ -31,49 +57,79 @@ a > .fa-cog {
   font-size: 32px;
 }
 
-.header-nav {
+.header-left-list {
+  float: left;
+}
+
+.header-left-list > li {
+  float: left;
+}
+
+.header-logo {
+  border: none;
+  width: 200px;
   margin: auto;
-  width: 900px;
-  border-left: 1px solid #cacaca;
+  line-height: 51px;
+  height: 51px;
+  font-size: 30px;
 }
 
-.header-list {
-  float: left;
-}
-
-.header-list > li {
-  float: left;
-}
-
-/*This is the image icon*/
-.user-img {
+.header-right {
+  height: 40px;
+  padding: 5px 10px;
   float: right;
   border-left: 1px solid #cacaca;
-}
-/*
-.settings {
- display: none;
- position: absolute;
- left: -1px;
- overflow: hidden;
- color: #cacaca;
- background: orange;
- width: 250px;
+  cursor: pointer;
+  cursor: hand;
+  display: block;
 }
 
-.user-img:hover {
- background: green;
+.header-right-list {
+  float: right;
+  border-right: 1px solid #cacaca;
 }
 
-.user-img:hover .settings {
- background: green;
-}*/
-
-#main{
-  padding-top: 38px;
+.header-right img {
+  float: left;
+  height: 100%;
+  width: auto;
 }
 
-.backdrop {
-  background: whitesmoke;
-  min-height: 100%;
+.header-name {
+  float: left;
+  height: 40px;
+  line-height: 40px;
+  padding-left: 5px;
+}
+
+////////////////////////
+
+.dropdown > li {
+  float: left;
+  width: 100%;
+  display: none;
+}
+
+.dropdown {
+  position: absolute;
+  top: 50px;
+  width: 90px;
+}
+
+.header-right:hover  {
+  display: block;
+}
+
+.header-right-list:hover li {
+  display: block;
+  background: #517fa4;
+}
+
+.dropdown {
+}
+
+.dropdown a {
+  border: none;
+  padding: 5px;
+  display: block;
 }
