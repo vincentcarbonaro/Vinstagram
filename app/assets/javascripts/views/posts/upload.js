@@ -68,7 +68,7 @@ Vinstagram.Views.Upload = Backbone.View.extend({
       $('#picture-preview').Jcrop({
         boxWidth: 510,
         boxHeight: 510,
-        allowSelect: true,
+        allowSelect: false,
         allowMove: true,
         allowResize: true,
         onSelect: that.updateCrop,
