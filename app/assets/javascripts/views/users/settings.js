@@ -1,6 +1,6 @@
 Vinstagram.Views.Settings = Backbone.View.extend({
 
-  tagName: 'section',
+  tagName: 'form',
 
   className: 'settings-backdrop',
 
@@ -11,9 +11,9 @@ Vinstagram.Views.Settings = Backbone.View.extend({
   },
 
   events: {
-    "submit": "saveChanges",
-    'click .current-pic': 'changePic',
+    "submit": "submit",
     "change #input-picture-file": "changePicture",
+    'click .current-pic': 'trigger'
   },
 
   render: function () {
@@ -22,6 +22,30 @@ Vinstagram.Views.Settings = Backbone.View.extend({
     });
     this.$el.html(content)
     return this;
+  },
+
+  trigger: function () {
+    event.preventDefault();
+    this.$("#input-picture-file").trigger("click");
+  },
+
+  submit: function (event) {
+    event.preventDefault();
+
+    this.$el.find('.save-settings').val("Saving...");
+    this.$el.find('.save-settings').prop('disabled', true);
+
+    var formData = this.$el.serializeJSON();
+    var that = this;
+
+    this.model.save(formData, {
+      success: function () {
+        that = that;
+        that.model.fetch();
+        Backbone.history.navigate("", {trigger: true});
+      }
+    });
+
   },
 
   changePicture: function (event) {
@@ -35,34 +59,8 @@ Vinstagram.Views.Settings = Backbone.View.extend({
     fileReader.readAsDataURL(file);
   },
 
-  //the auto trigger from clicking the image
-  changePic: function () {
-    event.preventDefault();
-    this.$("#input-picture-file").trigger("click");
-  },
-
   previewPic: function (src) {
     this.$(".current-pic").attr("src", src);
-  },
-
-  saveChanges: function (event) {
-    event.preventDefault();
-
-    this.$el.find('.save-settings').val("Saving...");
-    this.$el.find('.save-settings').prop('disabled', true);
-
-    var formData = this.$el.serializeJSON();
-    var that = this;
-
-    this.model.save(formData, {
-      success: function () {
-        console.log(that.formData);
-        that = that;
-        that.model.fetch();
-        Backbone.history.navigate("", {trigger: true});
-      }
-    });
-
-  },
+  }
 
 })
