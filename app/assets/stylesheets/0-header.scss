@@ -112,7 +112,6 @@ a > .fa-cog {
 .dropdown {
   position: absolute;
   top: 50px;
-  width: 90px;
 }
 
 .header-right:hover  {
@@ -125,11 +124,13 @@ a > .fa-cog {
 }
 
 .dropdown {
-  width: 100px;
+  width: 107px;
+
 }
 
 .dropdown a {
   border: none;
   padding: 5px 10px;
   display: block;
+  text-align: center;
 }

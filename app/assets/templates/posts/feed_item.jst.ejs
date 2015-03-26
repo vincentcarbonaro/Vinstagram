@@ -1,14 +1,14 @@
 <div class="feed-item-top-bar group">
 
-  <div class="feed-item-user-img">
-    <a href="#/user/<%= post.author().escape('id') %>"><img src="<%= post.escape('author_thumb') %>" alt="" height="40" width="40" /></a>
-  </div>
+  <a href="#/user/<%= post.author().escape('id') %>">
+    <div class="feed-item-user-img">
+      <img src="<%= post.escape('author_thumb') %>" alt="" height="40" width="40" />
+    </div>
 
-
-  <div class="feed-item-user">
-
-    <a href="#/user/<%= post.author().escape('id') %>"><%= post.author().escape('username') %></a>
-  </div>
+    <div class="feed-item-user">
+      <%= post.author().escape('username') %>
+    </div>
+  </a>
 
   <div class="feed-item-time">
     <%= post.escape('Time_Ago') %> Ago

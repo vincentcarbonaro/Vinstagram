@@ -34,12 +34,17 @@
 }
 
 .feed-item-user {
-  padding-left: 10px;
+  padding: 0 15px;
   line-height: 40px;
   height: 40px;
   float: left;
   font-size: 16px;
   display: inline;
+ }
+
+ .feed-item-user:hover {
+   background: #cacaca;
+   color: white;
  }
 
 .feed-item-time {
