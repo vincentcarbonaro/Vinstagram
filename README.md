@@ -1,6 +1,6 @@
 # [Vinstagram](https://vinstagram.herokuapp.com)
 
-Vinstagram is a clone of [Instagram](www.instagram.com) built on Ruby on Rails and Backbone.js.
+Vinstagram is a picture sharing social media site inspired by [Instagram](www.instagram.com) built on Ruby on Rails and Backbone.js.
 
 ## Features
 - Single Page App (Execpt User/Session Pages)
@@ -9,7 +9,6 @@ Vinstagram is a clone of [Instagram](www.instagram.com) built on Ruby on Rails a
 - Users can upload and crop photos
 - Users can follow/unfollow other users
 - Users can comment on posts
-
 
 ## Technical Details
  - File upload storage with Paperclip and Amazon AWS
