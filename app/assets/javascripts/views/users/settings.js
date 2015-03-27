@@ -42,7 +42,7 @@ Vinstagram.Views.Settings = Backbone.View.extend({
       success: function () {
         that = that;
         that.model.fetch();
-        Backbone.history.navigate("", {trigger: true});
+        Backbone.history.navigate("user/" + that.model.id, {trigger: true});
       }
     });
 

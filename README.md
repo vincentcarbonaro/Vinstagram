@@ -37,4 +37,3 @@ Vinstagram is a clone of [Instagram](www.instagram.com) built on Ruby on Rails a
 - Combine Feed Item and Post Show
 - Domain Name
 - clean up edit bio
-- pending like

@@ -10,15 +10,15 @@ class Post < ActiveRecord::Base
   validates_attachment_presence :picture
 
   attr_accessor :crop_x, :crop_y, :crop_w, :crop_h
-  # after_update :reprocess_avatar#, :if => cropping
 
-  # def cropping?
-    # !crop_x.blank? && !crop_y.blank? && !crop_w.blank? && !crop_h.blank?
-  # end
+  has_many :tags,
+  class_name: "Tag",
+  foreign_key: :post_id,
+  primary_key: :id
 
-  # def reprocess_picture
-      # picture.reprocess!# unless cropping?
-  # end
+  has_many :topics,
+  through: :tags,
+  source: :topic
 
   belongs_to(
     :author,

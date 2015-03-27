@@ -3,6 +3,8 @@ module Api
 
     def create
 
+      sleep(2)
+
       @like = Like.where({
         liker_id: current_user.id,
         post_id: params[:post_id]

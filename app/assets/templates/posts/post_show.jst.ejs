@@ -47,7 +47,9 @@
 
   <div class="post-show-text">
     <% if(post.escape('text')) { %>
-      <%= post.escape('text') %>  <br>
+      <strong><%= post.author().escape('username') %></strong>:
+      <%= post.escape('text') %>
+      <br>
     <% } %>
 
     <% post.comments().each( function (comment) { %>

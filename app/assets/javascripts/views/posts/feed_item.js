@@ -30,6 +30,8 @@ Vinstagram.Views.FeedItem = Backbone.View.extend({
   toggleLike: function () {
     var that = this;
 
+    this.$el.find('.like-icon').attr("class", "pending-like")
+
     $.ajax({
       url: "api/likes",
       type: "POST",

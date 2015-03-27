@@ -21,11 +21,11 @@
 
 <section class="like-bar group">
 
-  <section class="like-icon">
+  <section class="like-icon toggle_like">
     <% if(post.escape('is_liked') === "true") { %>
-      <a id='liked-icon' class="toggle_like"><i class="fa fa-heart"></i></a>
+      <a id='liked-icon'><i class="fa fa-heart"></i></a>
     <%  } else { %>
-      <a id="unliked-icon" class="toggle_like"><i class="fa fa-heart"></i></a>
+      <a id="unliked-icon"><i class="fa fa-heart"></i></a>
     <% } %>
   </section>
 
@@ -42,6 +42,7 @@
 
 <div class="feed-item-text">
   <% if(post.escape('text')) { %>
+    <strong><%= post.author().escape('username') %></strong>:
     <%= post.escape('text') %>
     <br>
   <% } %>
