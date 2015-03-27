@@ -13,7 +13,8 @@ Vinstagram.Views.Search = Backbone.View.extend({
 
   events: {
     'submit .users-search': 'searchForUsers',
-    'submit .tags-search': 'searchForTags'
+    'click .run-search': 'searchForUsers',
+    // 'submit .tags-search': 'searchForTags'
   },
 
   render: function () {
@@ -26,8 +27,9 @@ Vinstagram.Views.Search = Backbone.View.extend({
   },
 
   searchForUsers: function (event){
+
     event.preventDefault();
-    
+
     this.searchResults._query = this.$(".query").val();
     this.searchResults.fetch({
       data: {
@@ -41,16 +43,22 @@ Vinstagram.Views.Search = Backbone.View.extend({
     alert('feature-not-yet-implemented');
   },
 
-  renderSearchResults: function () {
-    var container = this.$(".search-results");
 
+  renderSearchResults: function () {
+
+    var container = this.$(".search-results");
     var that = this;
-    this.searchResults.each(function (model) {
-      var template = JST["searches/search_item"]
-      container.append(template({
-        user: model
-      }))
-    });
+
+    if (this.searchResults.length > 0) {
+      this.searchResults.each(function (model) {
+        var template = JST["searches/search_item"]
+        container.append(template({
+          user: model
+        }))
+      });
+    } else {
+      this.$el.find('.search-results').append("<br>Your Search Has Returned No Results")
+    }
   }
 
 })

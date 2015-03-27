@@ -42,7 +42,7 @@
 
 <div class="feed-item-text">
   <% if(post.escape('text')) { %>
-    <strong><%= post.author().escape('username') %></strong>:
+    <a href="#user/<%= post.author().escape('id') %>"><strong><%= post.author().escape('username') %></strong></a>:
     <%= post.escape('text') %>
     <br>
   <% } %>
