@@ -38,10 +38,33 @@
 
 .left-pane{
   float: left;
+  width: 265px;
+  height: 185px;
+  padding: 15px;
+  text-align: center;
+}
+
+.left-pane img {
+  margin: auto;
+  display: block;
 }
 
 .right-pane{
+  padding: 15px;
   float: right;
+  width: 270px;
+  height: 185px;
+  padding-top: 50px;
+  text-align: center;
+}
+
+.right-pane input {
+  display: block;
+  margin: auto;
+}
+
+.right-pane textarea {
+  width: 98%;
 }
 
 .current-pic{

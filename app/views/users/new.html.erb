@@ -15,38 +15,34 @@
     <form action="<%= users_url %>" method="post">
       <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
 
-      <label> Username:
+      <section class="sign-first">
+        <label>Username:</label>
         <input tabindex="1" type="text" name="user[username]" value="<%= @user.username %>">
-      </label>
-
-      <br><br>
-
-      <label> Email:
-      <input tabindex="2" type="text" name="user[email]" value="<%= @user.email %>">
-      </label>
-
-      <br><br>
-
-      <label> Password:
-      <input tabindex="3" type="password" name="user[password]" value="">
-
-      <br><br>
-
-      <label> Confirm Password:
-      <input tabindex="4" type="password" name="user[password_confirmation]" value="">
-
-      <br><br>
-
-      <section class="options">
-        Already Registered? <br>
-        <u><%= link_to "Sign In!", new_session_url %></u>
       </section>
 
-      <input tabindex="5" type="submit" class="button" value="Sign Up!">
+      <section class="sign-nth">
+        <label>Email:</label>
+        <input tabindex="2" type="text" name="user[email]" value="<%= @user.email %>">
+      </section>
+
+      <section class="sign-nth">
+        <label> Password:
+        <input tabindex="3" type="password" name="user[password]" value="">
+      </section>
+
+      <section class="sign-nth">
+        <label> Confirm Password:
+        <input tabindex="4" type="password" name="user[password_confirmation]" value="">
+      </section>
+
+      <section class="sign-bottom group">
+        <label>
+          Already Registered? <br>
+          <u><%= link_to "Sign In!", new_session_url %></u>
+        </label>
+        <input tabindex="5" type="submit" class="button" value="Sign Up!">
+      </section>
 
     </form>
-
-    <br><br><br>
-
   </div>
 </div>

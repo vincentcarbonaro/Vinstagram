@@ -3,10 +3,11 @@
   border-radius: 1%;
   background: white;
   position: absolute;
-  width: 402px;
+  width: 415px;
   left: 50%;
-  top: 35%;
+  top: 50%;
   transform: translate(-50%, -50%);
+  font-size: 16px;
 }
 
 .welcome .form-header{
@@ -28,15 +29,70 @@
   padding: 25px;
 }
 
-.welcome .button {
-  float: right;
-  color: white;
-  height: 40px;
-  width: 80px;
-  font-size: 15px;
-  background: green;
+.form {
 }
 
-section.options{
+.sign-first {
+  display: block;
+  height: 35px;
+}
+
+.sign-first label {
+  line-height: 35px;
+}
+
+.sign-first input {
+  float: right;
+  border: 1px solid #cacaca;
+  border-radius: 5px;
+  width: 200px;
+  height: 20px;
+  padding: 5px 5px 5px 10px;
+}
+
+.sign-nth {
+  padding-top: 15px;
+  display: block;
+  height: 35px;
+}
+
+.sign-nth label {
+  line-height: 35px;
+}
+
+.sign-nth input {
+  float: right;
+  border: 1px solid #cacaca;
+  border-radius: 5px;
+  width: 200px;
+  height: 20px;
+  padding: 5px 5px 5px 10px;
+}
+
+.sign-bottom {
+  margin-top: 25px;
+  width: 100%;
+}
+
+.sign-bottom label {
+  padding-top: 10px;
+}
+
+.sign-bottom input {
+  float: right;
+  color: white;
+  height: 35px;
+  width: 75px;
+  font-size: 15px;
+  background: green;
+  border-radius: 5px;
+  opacity: .8;
+}
+
+.sign-bottom input:hover {
+  opacity: .5;
+}
+
+.sign-bottom label {
   float: left;
 }

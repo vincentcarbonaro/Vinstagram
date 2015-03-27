@@ -6,7 +6,7 @@
     <div class="logo">Vinstagram</div>
   </div>
 
-  <div class="form">
+  <div class="form group">
 
     <% if flash.now[:errors] %>
       <%= flash.now[:errors][0] %>
@@ -16,29 +16,24 @@
     <form action="<%= session_url %>" method="post">
       <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
 
-      <label> Username:
+      <section class="sign-first">
+        <label>Username:</label>
         <input tabindex="1" type="text" name="user[username]" value="">
-      </label>
-
-      <br><br>
-
-      <label> Password:
-      <input tabindex="2" type="password" name="user[password]" value="">
-
-      <br><br>
-
-      <section class="options">
-        Don't Have An Account Yet? <br>
-        <u><%= link_to "Sign Up!", new_user_url %></u>
       </section>
 
+      <section class="sign-nth">
+        <label>Password:</label>
+        <input tabindex="2" type="password" name="user[password]" value="">
+      </section>
 
-      <input tabindex="3" class="button" type="submit" name="name" value="Log In!">
+      <section class="sign-bottom group">
+        <label>
+          Don't Have An Account Yet? <br>
+          <u><%= link_to "Sign Up!", new_user_url %></u>
+        </label>
+        <input tabindex="3" type="submit" name="name" value="Log In!">
+      </section>
 
     </form>
-
-    <br><br><br>
-
   </div>
-
 </div>
