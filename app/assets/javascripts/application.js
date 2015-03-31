@@ -25,7 +25,6 @@
 //= require underscore
 //= require backbone
 //= require backbone.composite_view
-
 //= require backbone
 
 //= require vinstagram
