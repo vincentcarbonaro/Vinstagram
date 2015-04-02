@@ -2,9 +2,8 @@
 
   <a href="#/user/<%= post.author().escape('id') %>">
     <div class="feed-item-user-img">
-      <img src="<%= post.escape('author_thumb') %>" alt="" height="40" width="40" />
+      <img src="<%= post.escape('author_thumb') %>" alt="" height="40" width="40"/>
     </div>
-
     <div class="feed-item-user">
       <%= post.author().escape('username') %>
     </div>
@@ -19,41 +18,24 @@
   <a href="#/post/<%= post.id %>"><img src="<%= post.attributes.picture_url %>" alt="ERROR"/></a>
 </div>
 
-<section class="like-bar group">
+<section class="like-bar group"></section>
 
-  <section class="like-icon toggle_like">
-    <% if(post.escape('is_liked') === "true") { %>
-      <a id='liked-icon'><i class="fa fa-heart"></i></a>
-    <%  } else { %>
-      <a id="unliked-icon"><i class="fa fa-heart"></i></a>
-    <% } %>
+<section class="comments-bar group">
+
+  <section class="toggled-section">
+
+      <section class="caption group">
+        <% if(post.escape('text')) { %>
+          <a href="#user/<%= post.author().escape('id') %>"><strong><%= post.author().escape('username') %></strong></a>:
+          <%= post.escape('text') %>
+          <br>
+        <% } %>
+      </section>
+
+    <section class="comment-list group"></section>
+
   </section>
 
-  <section class="like-count">
-    <% if (post.escape('num_likes') == 1) { %>
-      1 Like
-    <% } else if (post.escape('num_likes') > 0) { %>
-      <%= post.escape('num_likes') %> Likes
-      <br>
-    <% } %>
-  </section>
+  <section class="add-comment-section group"></section>
 
 </section>
-
-<div class="feed-item-text">
-  <% if(post.escape('text')) { %>
-    <a href="#user/<%= post.author().escape('id') %>"><strong><%= post.author().escape('username') %></strong></a>:
-    <%= post.escape('text') %>
-    <br>
-  <% } %>
-
-  <% post.comments().each( function (comment) { %>
-    <a href="#user/<%= comment.attributes.author.id %>"><strong><%= comment.attributes.author.username %></strong>:</a> <%= comment.escape('body') %>
-    <br>
-  <%  }) %>
-
-</div>
-
-<form class="comment-form">
-  <input class="comment-submit" type="text" name="body" placeholder="Add a comment...">
-</form>

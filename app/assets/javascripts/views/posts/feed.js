@@ -1,31 +1,38 @@
-Vinstagram.Views.Feed = Backbone.View.extend({
+Vinstagram.Views.Feed = Backbone.CompositeView.extend({
 
   template: JST['posts/feed'],
 
   initialize: function () {
+    this.listenTo(this.collection, 'add', this.addFeedItem);
+
     this.bindScroll();
-    this.listenTo(this.collection, 'sync', this.render);
     this.pageNum = 1;
+
+    if (this.collection.length != 0) {
+      this.collection.each( function (post) {
+        var feedItem = new Vinstagram.Views.FeedItem({
+          model: post
+        })
+      this.addSubview(".feed", feedItem)
+      }.bind(this));
+    }
+
   },
 
-  events: {
-    "click .next-page": "nextPage"
+  addFeedItem: function (post) {
+    var feedItem = new Vinstagram.Views.FeedItem({
+      model: post
+    });
+    this.addSubview('.feed', feedItem)
+    this.render();
   },
 
   render: function () {
     var content = this.template({
       posts: this.collection
     });
-    this.$el.html(content)
-
-    if (this.collection.length != 0) {
-      this.collection.each( function (post) {
-        var view = new Vinstagram.Views.FeedItem({
-          model: post
-        })
-        this.$el.find('.feed').append(view.render().$el)
-      }.bind(this));
-    }
+    this.$el.html(content);
+    this.attachSubviews();
 
     return this;
   },

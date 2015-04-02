@@ -1,19 +1,17 @@
 Vinstagram.Views.AddComment = Backbone.View.extend({
 
-  template: JST['posts/add_comment'],
+  template: JST["posts/add_comment"],
 
   events: {
-    'submit form': 'addComment',
+    'submit .comment-form':'addComment'
   },
 
   render: function () {
-    var content = this.template;
-    this.$el.html(content);
+    this.$el.html(this.template);
     return this;
   },
 
   addComment: function (event) {
-
     event.preventDefault();
 
     var formData = $(event.currentTarget).serializeJSON();
@@ -31,8 +29,9 @@ Vinstagram.Views.AddComment = Backbone.View.extend({
       },
       success: function () {
         that.model.fetch();
+        that.render();
       }
     });
   },
 
-});
+})

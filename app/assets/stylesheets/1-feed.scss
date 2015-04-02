@@ -123,19 +123,28 @@
   padding-left: 10px;
 }
 
-.feed-item-text {
-   background: white;
-   border-top: 1px solid #cacaca;
-   padding: 5px 10px;
-   border-bottom-left-radius: 3px;
-   border-bottom-right-radius: 3px;
-   display: none;
- }
+.comments-bar{
+  background: white;
+}
+
+.toggled-section {
+  display: none;
+  border-top: 1px solid #cacaca;
+}
+
+.caption {
+  padding-top: 5px;
+  padding-left: 5px;
+}
+
+.comment-list {
+  padding: 0 5px 5px 5px;
+}
 
 .comment-form {
-  border-top: 1px solid #cacaca;
   padding: 10px;
   background: white;
+  border-top: 1px solid #cacaca;
 }
 
 .comment-form input {

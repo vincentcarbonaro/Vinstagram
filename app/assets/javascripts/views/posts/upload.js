@@ -38,6 +38,7 @@ Vinstagram.Views.Upload = Backbone.View.extend({
         success: function () {
           that = that;
           that.model.fetch();
+          Vinstagram.posts.reset();
           Backbone.history.navigate('', {trigger: true});
         }
       });

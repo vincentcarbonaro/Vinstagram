@@ -1,16 +1,26 @@
-Vinstagram.Views.FeedItem = Backbone.View.extend({
+Vinstagram.Views.FeedItem = Backbone.CompositeView.extend({
 
   tagName: 'li',
 
   template: JST['posts/feed_item'],
 
-  events: {
-    'click .toggle_like': 'toggleLike',
-    'submit .comment-form': 'addComment'
-  },
-
   initialize: function () {
-    this.listenTo(this.model, 'sync', this.render);
+    this.listenTo(this.model, 'add', this.render);
+
+    var likesBar = new Vinstagram.Views.LikesBar({
+      model: this.model
+    })
+    this.addSubview('.like-bar', likesBar);
+
+    var commentsBar = new Vinstagram.Views.CommentsBar({
+      model: this.model
+    })
+    this.addSubview('.comment-list', commentsBar);
+
+    var commentForm = new Vinstagram.Views.AddComment({
+      model: this.model
+    })
+    this.addSubview('.add-comment-section', commentForm)
   },
 
   render: function () {
@@ -19,51 +29,13 @@ Vinstagram.Views.FeedItem = Backbone.View.extend({
     });
 
     this.$el.html(content);
+    this.attachSubviews();
 
     if (this.model.comments().length != 0 || this.model.get('text')){
-      this.$el.find('.feed-item-text').toggle();
+      this.$el.find('.toggled-section').toggle(true);
     }
 
     return this;
   },
 
-  toggleLike: function () {
-    var that = this;
-
-    this.$el.find('.like-icon').attr("class", "pending-like")
-
-    $.ajax({
-      url: "api/likes",
-      type: "POST",
-      data: {
-        post_id: this.model.id
-      },
-      success: function () {
-        that.model.fetch();
-      },
-    });
-  },
-
-  addComment: function (event) {
-    event.preventDefault();
-
-    var formData = $(event.currentTarget).serializeJSON();
-    var that = this;
-
-    this.$el.find('.comment-submit').val("Posting..");
-    this.$el.find('.comment-submit').prop('disabled', true);
-
-    $.ajax({
-      url: "api/comments",
-      type: "POST",
-      data: {
-        post_id: this.model.id,
-        body: formData.body
-      },
-      success: function () {
-        that.model.fetch();
-      }
-    });
-  }
-
-})
+});

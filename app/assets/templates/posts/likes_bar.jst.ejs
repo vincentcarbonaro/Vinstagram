@@ -1,0 +1,16 @@
+<section class="like-icon toggle_like">
+  <% if(post.escape('is_liked') === "true") { %>
+    <a id='liked-icon'><i class="fa fa-heart"></i></a>
+  <%  } else { %>
+    <a id="unliked-icon"><i class="fa fa-heart"></i></a>
+  <% } %>
+</section>
+
+<section class="like-count">
+  <% if (post.escape('num_likes') == 1) { %>
+    1 Like
+  <% } else if (post.escape('num_likes') > 0) { %>
+    <%= post.escape('num_likes') %> Likes
+    <br>
+  <% } %>
+</section>

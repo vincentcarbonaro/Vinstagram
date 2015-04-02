@@ -13,6 +13,7 @@ Vinstagram is a picture sharing social media site inspired by [Instagram](www.in
 ## Technical Details
  - File upload storage with Paperclip and Amazon AWS
  - Uses Jcrop Jquery plug in to crop photos
+ - Users Composite Views
 
 ## TODO
 - Create Tags for Users in Comments

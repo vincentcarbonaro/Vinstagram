@@ -10,6 +10,10 @@
   background: #ddd;
 }
 
+.indy-post-show-backdrop {
+  list-style: none;
+}
+
 .post-show-item {
   color: #1c5380;
   border-radius: 3px;
@@ -42,11 +46,11 @@
   background: #cacaca;
 }
 
- .post-show-time {
-   line-height: 40px;
-   padding-right: 15px;
-    float: right;
-    font-size: 16px;
+.post-show-time {
+  line-height: 40px;
+  padding-right: 15px;
+  float: right;
+  font-size: 16px;
 }
 
 .post-show-image {
