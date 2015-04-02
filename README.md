@@ -35,3 +35,5 @@ Vinstagram is a picture sharing social media site inspired by [Instagram](www.in
 - Edit/delete comments
 - Combine Feed Item and Post Show
 - Domain Name
+- billabong font
+- users can delete their own pictures
