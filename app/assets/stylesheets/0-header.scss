@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "SweetheartScript-limited";
+  src: font-url('SweetheartScript-limited.ttf') format('truetype');
+}
+
 #main{
   padding-top: 51px;
 }
@@ -66,11 +71,18 @@ a > .fa-cog {
 
 .header-nav .header-logo {
   border: none;
-  width: 200px;
+  width: 156px;
   margin: auto;
-  line-height: 51px;
+  line-height: 41px;
   height: 51px;
   font-size: 30px;
+  letter-spacing: 2px;
+}
+
+.header-logo a {
+  font-family: 'SweetheartScript-limited';
+  padding: 10px 5px;
+  border-radius: 5px;
 }
 
 .header-right {
@@ -125,7 +137,6 @@ a > .fa-cog {
 
 .dropdown {
   width: 107px;
-
 }
 
 .dropdown a {
