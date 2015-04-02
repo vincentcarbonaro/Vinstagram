@@ -13,13 +13,16 @@
 .welcome .form-header{
   background: #517fa4;
   color: white;
-  height: 45px;
+  height: 55px;
   // font-family: cursive;
   font-size: 20px;
 }
 
 .welcome .logo {
-  height: 33px;
+  font-family: SweetheartScript-limited;
+  padding: 5px;
+  line-height: 12px;
+  font-size: 30px;
   left: 50%;
   margin: 14px 0 0 -48px;
   position: absolute;
