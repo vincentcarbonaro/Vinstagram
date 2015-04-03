@@ -72,12 +72,25 @@
    width: 510px;
    display: block;
    overflow: false;
+   position: relative;
 }
 
 .feed-item-image img {
   max-height: 510px;
   max-width: 510px;
   display: block;
+}
+
+.delete-post {
+  background: red;
+  position: absolute;
+  top: 5px;
+  left: 430px;
+  width: 75px;
+  text-align: center;
+  opacity: .5;
+  color: black;
+  display: none;
 }
 
 .like-bar {

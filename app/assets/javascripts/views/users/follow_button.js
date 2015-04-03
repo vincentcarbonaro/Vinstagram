@@ -34,6 +34,7 @@ Vinstagram.Views.FollowButton = Backbone.View.extend({
         followee_id: this.model.id
       },
       success: function () {
+        Vinstagram.posts.reset();
         that.model.fetch();
       }
     });

@@ -21,6 +21,7 @@ Vinstagram.Views.FeedItem = Backbone.CompositeView.extend({
       model: this.model
     })
     this.addSubview('.add-comment-section', commentForm)
+
   },
 
   render: function () {
