@@ -1,3 +1,37 @@
+.guest-login {
+  border-top: 3px solid #cacaca;
+  margin: 0 15px 25px 15px;
+  width: 365px;
+  position: relative;
+}
+
+.top-label {
+  padding-top: 20px;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+.guest-login label {
+  float: left;
+  padding: 15px;
+  line-height: 5px;
+}
+
+.guest-login input {
+  color: white;
+  height: 35px;
+  font-size: 15px;
+  background: green;
+  border-radius: 5px;
+  opacity: .8;
+  float: right;
+}
+
+.guest-login input:hover {
+  opacity: .4;
+  cursor: pointer;
+}
+
 .welcome{
   border: 1px solid gray;
   border-radius: 1%;
@@ -14,7 +48,6 @@
   background: #517fa4;
   color: white;
   height: 55px;
-  // font-family: cursive;
   font-size: 20px;
 }
 
@@ -94,6 +127,7 @@
 
 .sign-bottom input:hover {
   opacity: .5;
+  cursor: pointer;
 }
 
 .sign-bottom label {
