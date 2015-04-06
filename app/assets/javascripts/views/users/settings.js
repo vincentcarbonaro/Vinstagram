@@ -46,7 +46,6 @@ Vinstagram.Views.Settings = Backbone.View.extend({
         Backbone.history.navigate("user/" + that.model.id, {trigger: true});
       }
     });
-
   },
 
   changePicture: function (event) {
