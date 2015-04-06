@@ -1,7 +1,5 @@
 $(function () {
 
-  console.log('here');
-
   $('.guest-login-button').click(function (event) {
     $('.sign-first input').val('guest')
     $('.sign-nth input').val('superpassword')
