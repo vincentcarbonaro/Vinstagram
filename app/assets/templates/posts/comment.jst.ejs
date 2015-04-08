@@ -1,0 +1,7 @@
+<div class="comment group">
+  <a href="#user/<%= comment.attributes.author.id %>"><strong><%= comment.attributes.author.username %></strong>:</a> <%= comment.escape('body') %>
+    <% if(comment.escape('is_current_user') === "true") { %>
+      <a class="delete-x" href="#">X</a>
+    <% } %>
+  <br>
+</div>

@@ -82,10 +82,11 @@
 }
 
 .delete-post {
+  padding: 3px;
   background: red;
   position: absolute;
   top: 5px;
-  left: 430px;
+  left: 425px;
   width: 75px;
   text-align: center;
   opacity: .5;
@@ -175,4 +176,20 @@
 
 .toggled-section a:hover {
   opacity: .4;
+}
+
+.comment {
+  width: 500px;
+}
+
+.delete-x {
+  color: red;
+  float: right;
+  padding-right: 2px;
+  font-size: 10px;
+  line-spacing: 1px;
+}
+
+.delete-x:hover .comment {
+  background: green;
 }

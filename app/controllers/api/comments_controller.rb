@@ -8,5 +8,11 @@ module Api
       render json: @comment
     end
 
+    def destroy
+      @comment = Comment.where(id: params[:id])
+      Comment.destroy(@comment) if @comment
+      render :json => {}
+    end
+
   end
 end

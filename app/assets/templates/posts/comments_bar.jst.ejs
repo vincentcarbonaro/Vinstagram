@@ -1,9 +1,5 @@
 <section class="comments">
 
-  <div class="feed-item-text">
-    <% post.comments().each( function (comment) { %>
-      <a href="#user/<%= comment.attributes.author.id %>"><strong><%= comment.attributes.author.username %></strong>:</a> <%= comment.escape('body') %>
-      <br>
-    <%  }) %>
-  </div>
+  <div class="feed-item-text"></div>
+  
 </section>

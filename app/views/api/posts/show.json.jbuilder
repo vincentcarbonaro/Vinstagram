@@ -15,4 +15,5 @@ json.is_liked @post.likers.include?(current_user)
 json.comments @post.comments do |comment|
   json.extract! comment, :id, :body, :created_at
   json.author comment.author, :id, :username
+  json.is_current_user is_current_user?(comment.author)
 end

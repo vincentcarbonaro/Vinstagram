@@ -23,7 +23,6 @@ Vinstagram is a picture sharing social media site inspired by [Instagram](www.in
 - Typeahead search bar
 - Picture Filters
 - Cropping for Profile Pictures
-- Delete Comments
 - Delete/Signout Confirmations
 - Private Accounts
 - Search for tags
@@ -32,4 +31,5 @@ Vinstagram is a picture sharing social media site inspired by [Instagram](www.in
 - DM's
 - Notifications
 - Comments as Replies
-- Edit/delete comments
+- Edit Comments
+- pending comment delete

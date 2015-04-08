@@ -28,7 +28,7 @@ Vinstagram.Views.PostShow = Backbone.CompositeView.extend({
 
   checkUser: function () {
     if (this.model.attributes.is_current_user){
-      this.$el.find('.delete-post').toggle();
+      this.$el.find('.delete-post').toggle(true);
     }
   },
 
