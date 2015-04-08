@@ -17,11 +17,8 @@ Vinstagram.Views.Comment = Backbone.View.extend({
   deleteComment: function (event) {
     event.preventDefault();
 
-    if (this.model.attributes.is_current_user) {
-      // this.$el.find('.deladfgdfete-post').text(" ..deleting.. ")
+      this.$el.find('.delete-X').text("()")
       this.model.destroy({});
-    }
   }
-
 
 });

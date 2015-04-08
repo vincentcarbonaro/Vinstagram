@@ -9,8 +9,8 @@ module Api
     end
 
     def destroy
-      @comment = Comment.where(id: params[:id])
-      Comment.destroy(@comment) if @comment
+      @comment = Comment.where(id: params[:id]).first
+      @comment.destroy if @comment.author == current_user || @comment.post.author == current_user
       render :json => {}
     end
 

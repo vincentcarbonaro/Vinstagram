@@ -18,6 +18,7 @@ json.array! @posts do |post|
     json.extract! comment, :id, :body, :created_at
     json.author comment.author, :id, :username
     json.is_current_user is_current_user?(comment.author)
+    json.is_post_owner post.author == current_user
   end
 
 end

@@ -8,7 +8,6 @@
   color: white;
 }
 
-
 .feed {
    margin: auto;
    width: 578px;
@@ -188,6 +187,8 @@
   padding-right: 2px;
   font-size: 10px;
   line-spacing: 1px;
+  font-weight: bold;
+  cursor: pointer;
 }
 
 .delete-x:hover .comment {
