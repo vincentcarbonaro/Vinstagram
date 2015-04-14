@@ -15,4 +15,6 @@ Rails.application.routes.draw do
     get "search", to: "searches#index"
   end
 
+  get '/auth/facebook/callback', to: 'oauth_callbacks#facebook'
+
 end

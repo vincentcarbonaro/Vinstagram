@@ -16,6 +16,11 @@ gem "figaro"
 gem 'pg_search'
 gem 'kaminari'
 
+gem 'devise'
+
+gem 'omniauth'
+gem 'omniauth-facebook'
+
 group :production do
   gem 'rails_12factor'
 end
