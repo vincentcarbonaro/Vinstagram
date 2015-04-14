@@ -12,9 +12,9 @@
 #              picture: File.open("#{Rails.root}/app/assets/images/default_seeds/vin.jpeg")
 #             )
 
-10.times do
+200.times do
   numb = Random.rand(22) + 1
-  u0 = User.create!(username: "test" + (0...10).map { ('a'..'z').to_a[rand(26)] }.join,
+  User.create!(username: (0...10).map { ('a'..'z').to_a[rand(26)] }.join,
               email: (0...10).map { ('a'..'z').to_a[rand(26)] }.join + "@lol.com",
               password: "password",
               password_confirmation: "password",
