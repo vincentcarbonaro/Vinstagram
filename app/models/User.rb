@@ -74,6 +74,18 @@ class User < ActiveRecord::Base
     primary_key: :id
   )
 
+  def self.create_with_omniauth(auth)
+    create! do |user|
+      user.provider = auth["provider"]
+      user.uid = auth["uid"]
+      user.username = auth["info"]["name"].first(14)
+      user.email = auth["info"]["email"]
+
+      user.password = "default"
+      user.password_confirmation = "default"
+    end
+
+  end
 
   def feed_posts(page_num)
 

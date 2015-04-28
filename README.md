@@ -3,7 +3,7 @@
 Vinstagram is a picture sharing social media site inspired by [Instagram](www.instagram.com) built on Ruby on Rails and Backbone.js.
 
 ## Features
-- Single Page App (Execpt User/Session Pages)
+- Single Page App
 - Infinitely Scrolling Picture Feed
 - Users can search for and follow other users
 - Users can upload and crop photos
@@ -11,8 +11,8 @@ Vinstagram is a picture sharing social media site inspired by [Instagram](www.in
 - Users can comment on posts
 
 ## Technical Details
- - File upload storage with Paperclip and Amazon AWS
- - Uses Jcrop to crop photos
+ - File Cropping with JCrop and Paperclip
+ - File storage with Amazon AWS
  - Uses Composite Views
 
 ## TODO
@@ -32,4 +32,5 @@ Vinstagram is a picture sharing social media site inspired by [Instagram](www.in
 - Comments as Replies
 - Edit Comments
 - Omni auth
-- make deleting posts nicer
+- Make Deleting Posts Nicer
+- Improve Readme

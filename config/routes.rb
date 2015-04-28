@@ -2,6 +2,9 @@ Rails.application.routes.draw do
 
   root to: "static_pages#root"
 
+  get 'auth/:provider/callback', to: 'googles#create'
+  get 'auth/failure', to: redirect('/')
+
   resources :users
   resource :session, only: [:new, :create, :destroy]
 
@@ -14,7 +17,5 @@ Rails.application.routes.draw do
     resources :comments
     get "search", to: "searches#index"
   end
-
-  get '/auth/facebook/callback', to: 'oauth_callbacks#facebook'
 
 end
