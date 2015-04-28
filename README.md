@@ -34,3 +34,4 @@ Vinstagram is a picture sharing social media site inspired by [Instagram](www.in
 - Edit Comments
 - Make Deleting Posts Nicer
 - Improve Readme
+- Allow Change Username (to make Omniauth Nicer)
