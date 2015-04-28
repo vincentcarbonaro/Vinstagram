@@ -14,6 +14,7 @@ Vinstagram is a picture sharing social media site inspired by [Instagram](www.in
  - File Cropping with JCrop and Paperclip
  - File storage with Amazon AWS
  - Uses Composite Views
+ - Allows Omniauth with Google
 
 ## TODO
 - Create Tags for Users in Comments
@@ -31,6 +32,5 @@ Vinstagram is a picture sharing social media site inspired by [Instagram](www.in
 - Notifications
 - Comments as Replies
 - Edit Comments
-- Omni auth
 - Make Deleting Posts Nicer
 - Improve Readme
