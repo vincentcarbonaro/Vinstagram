@@ -79,10 +79,8 @@ class User < ActiveRecord::Base
       user.provider = auth["provider"]
       user.uid = auth["uid"]
 
-      temp = auth['info']['email']
-
       temp = ""
-      user.each_char do |char|
+      auth['info']['email'].each_char do |char|
         break if char == "@"
         temp << char
       end
