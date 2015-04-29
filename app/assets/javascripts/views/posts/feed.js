@@ -32,7 +32,7 @@ Vinstagram.Views.Feed = Backbone.CompositeView.extend({
 
     this.count++;
 
-    if(this.count === 8){
+    if(this.count === 4){
       $('.guest-modal').modal();
     }
   },
