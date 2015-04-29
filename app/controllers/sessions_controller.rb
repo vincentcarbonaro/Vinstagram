@@ -18,6 +18,14 @@ class SessionsController < ApplicationController
         user.follows.each do |follow|
           follow.delete
         end
+
+        ## deletes post comments
+        user.posts.each do |post|
+          post.comments.each do |comment|
+            comment.delete
+          end
+        end
+
       end
 
       sign_in(user)
