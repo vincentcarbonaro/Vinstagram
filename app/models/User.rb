@@ -78,10 +78,18 @@ class User < ActiveRecord::Base
     create! do |user|
       user.provider = auth["provider"]
       user.uid = auth["uid"]
-      # user.username = auth["info"]["name"].first(14)
-      user.username = auth['info']['email'].first(14)
-      user.email = auth["info"]["email"]
 
+      temp = auth['info']['email']
+
+      temp = ""
+      a.each_char do |char|
+        break if char == "@"
+        temp << char
+      end
+
+      user.username = temp.first(14)
+
+      user.email = auth["info"]["email"]
       user.password = "default"
       user.password_confirmation = "default"
     end
