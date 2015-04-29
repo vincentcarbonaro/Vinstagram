@@ -12,6 +12,14 @@ class SessionsController < ApplicationController
     )
 
     if user
+
+      ## if user = guest user, delete all follows
+      if user.username == "guest"
+        user.follows.each do |follow|
+          follow.delete
+        end
+      end
+
       sign_in(user)
       redirect_to root_url
     else
@@ -26,3 +34,8 @@ class SessionsController < ApplicationController
   end
 
 end
+
+# create_table "follows", force: :cascade do |t|
+#   t.integer  "follower_id", null: false
+#   t.integer  "followee_id", null: false
+# end
