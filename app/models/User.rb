@@ -82,7 +82,7 @@ class User < ActiveRecord::Base
       temp = auth['info']['email']
 
       temp = ""
-      a.each_char do |char|
+      user.each_char do |char|
         break if char == "@"
         temp << char
       end
