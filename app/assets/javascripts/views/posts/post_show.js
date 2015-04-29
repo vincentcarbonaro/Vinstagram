@@ -36,7 +36,7 @@ Vinstagram.Views.PostShow = Backbone.CompositeView.extend({
 
     //THIS IS TEMPORARY CODE TO KEEP PEOPLE FROM DELETEING VINS AND GUESTS
     //PHOTOS FOR PRESERVING GUEST ACCOUNT
-    if (this.model.id < 25) {
+    if (this.model.id < 24) {
       alert("You can't delete one of our stock photos but feel free to upload and delete new photos!")
     } else {
       if (this.model.attributes.is_current_user) {
