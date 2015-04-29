@@ -30,6 +30,14 @@ class SessionsController < ApplicationController
         user.bio = "Feel free to change the bio in the settings.  You can access it by hovering over the account title 'guest' in the top right corner"
         user.save!
 
+        vin = User.where(username: 'vin').first
+
+        vin.posts.each do |post|
+          post.comments.each do |comment|
+            comment.delete
+          end
+        end
+
       end
 
       sign_in(user)
