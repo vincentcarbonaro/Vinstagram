@@ -1,6 +1,6 @@
 .guest-login {
   border-top: 3px solid #cacaca;
-  margin: 0 15px 25px 15px;
+  margin: 0 15px 10px 15px;
   width: 365px;
   position: relative;
 }
@@ -141,4 +141,16 @@
 .google-sign-in img {
   width: 380px;
   margin: auto;
+}
+
+.google-omni {
+  border-top: 3px solid #cacaca;
+  width: 380px;
+  margin: auto;
+}
+
+.google-omni img {
+  width: 380px;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
