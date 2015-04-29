@@ -21,9 +21,15 @@ class SessionsController < ApplicationController
 
         ## deletes post comments
         user.posts.each do |post|
-          post.comments.each do |comment|
-            comment.delete
+
+          if post.id > 21
+            post.delete
+          else
+            post.comments.each do |comment|
+              comment.delete
+            end
           end
+          
         end
 
         ##reset bio
