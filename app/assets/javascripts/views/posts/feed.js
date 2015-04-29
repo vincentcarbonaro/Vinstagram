@@ -20,6 +20,8 @@ Vinstagram.Views.Feed = Backbone.CompositeView.extend({
       }.bind(this));
     }
 
+    this.first_time = true;
+
   },
 
   addFeedItem: function (post) {
@@ -32,8 +34,9 @@ Vinstagram.Views.Feed = Backbone.CompositeView.extend({
 
     this.count++;
 
-    if(this.count === 4){
+    if(this.count === 4 && this.first_time === true){
       $('.guest-modal').modal();
+      this.first_time = false;
     }
   },
 
