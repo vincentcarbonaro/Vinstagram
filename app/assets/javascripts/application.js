@@ -26,6 +26,7 @@
 //= require backbone
 //= require backbone.composite_view
 //= require backbone
+//= require jquery.modal.min
 
 //= require vinstagram
 //= require_tree ../templates

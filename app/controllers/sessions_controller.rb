@@ -13,7 +13,7 @@ class SessionsController < ApplicationController
 
     if user
 
-      ## if user = guest user, delete all follows
+      ## delete all follows
       if user.username == "guest"
         user.follows.each do |follow|
           follow.delete
@@ -25,6 +25,10 @@ class SessionsController < ApplicationController
             comment.delete
           end
         end
+
+        ##reset bio
+        user.bio = "Feel free to change the bio in the settings.  You can access it by hovering over the account title 'guest' in the top right corner"
+        user.save!
 
       end
 

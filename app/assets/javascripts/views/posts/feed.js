@@ -5,6 +5,9 @@ Vinstagram.Views.Feed = Backbone.CompositeView.extend({
   initialize: function () {
     this.listenTo(this.collection, 'add', this.addFeedItem);
 
+    //this is for guest modal
+    this.count = 0;
+
     this.bindScroll();
     this.pageNum = 1;
 
@@ -20,11 +23,18 @@ Vinstagram.Views.Feed = Backbone.CompositeView.extend({
   },
 
   addFeedItem: function (post) {
+
     var feedItem = new Vinstagram.Views.FeedItem({
       model: post
     });
     this.addSubview('.feed', feedItem)
     this.render();
+
+    this.count++;
+
+    if(this.count === 8){
+      $('.guest-modal').modal();
+    }
   },
 
   render: function () {
