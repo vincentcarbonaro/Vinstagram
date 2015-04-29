@@ -2,6 +2,7 @@ Vinstagram.Routers.Router = Backbone.Router.extend({
 
   initialize: function (options) {
     this.$rootEl = options.$rootEl;
+    this.first_time = true;
   },
 
   routes: {
@@ -17,8 +18,10 @@ Vinstagram.Routers.Router = Backbone.Router.extend({
     Vinstagram.posts.fetch()
     var view = new Vinstagram.Views.Feed({
       collection: Vinstagram.posts,
+      model: this.first_time
     });
     this._swapView(view);
+    this.first_time = false;
   },
 
   userShow: function (id) {

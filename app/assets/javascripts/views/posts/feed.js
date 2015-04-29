@@ -34,9 +34,8 @@ Vinstagram.Views.Feed = Backbone.CompositeView.extend({
 
     this.count++;
 
-    if(this.count === 4 && this.first_time === true){
+    if(this.count === 4 && this.first_time === true && this.model){
       $('.guest-modal').modal();
-      this.first_time = false;
     }
   },
 
