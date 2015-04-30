@@ -1,4 +1,7 @@
 .modal {
+  top: 100px;
+  display: absolute;
+  margin-top: 500px;
   padding-top: 200px;
   display: none;
   width: 450px;
