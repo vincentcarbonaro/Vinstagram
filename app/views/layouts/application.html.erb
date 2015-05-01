@@ -5,10 +5,26 @@
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
-  <%= favicon_link_tag 'favicon.ico' %>
+  <%= favicon_link_tag 'cameralogo2.png' %>
 </head>
 
 <body>
+
+  <section class="explanation">
+    *********************************************************************
+    <br><br>
+    Vinstagram is a portfolio project by a web developer
+    <br><br>
+    it has no affiliation with Instagram or Facebook
+    <br><br>
+    It is not intended for any profit or sale
+    <br><br>
+    **********************************************************************
+  </section>
+
+  <script type="text/javascript">
+    $('.explanation').modal();
+  </script>
 
   <%= yield %>
 
