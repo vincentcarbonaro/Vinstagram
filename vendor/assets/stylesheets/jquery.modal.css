@@ -1,12 +1,8 @@
 .modal {
-  top: 100px;
-  display: absolute;
-  margin-top: 500px;
-  padding-top: 200px;
   display: none;
   width: 450px;
   background: #fff;
-  padding: 15px 30px;
+  padding: 250px 30px 15px 30px;
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
   -o-border-radius: 8px;
