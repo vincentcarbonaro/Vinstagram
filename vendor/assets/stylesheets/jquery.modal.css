@@ -2,7 +2,7 @@
   display: none;
   width: 450px;
   background: #fff;
-  padding: 250px 30px 15px 30px;
+  padding: 15px 30px 15px 30px;
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
   -o-border-radius: 8px;
@@ -13,6 +13,10 @@
   -o-box-shadow: 0 0 10px #000;
   -ms-box-shadow: 0 0 10px #000;
   box-shadow: 0 0 10px #000;
+}
+
+.guest-modal {
+  padding-top: 250px;
 }
 
 .modal a.close-modal {
