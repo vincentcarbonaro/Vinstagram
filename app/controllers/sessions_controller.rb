@@ -29,7 +29,7 @@ class SessionsController < ApplicationController
               comment.delete
             end
           end
-          
+
         end
 
         ##reset bio

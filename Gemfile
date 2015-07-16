@@ -35,7 +35,7 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'byebug'
   gem 'web-console', '~> 2.0'
-  gem 'spring'
+  gem 'spring', "~> 1.3.6"
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'pry-rails'

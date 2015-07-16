@@ -15,7 +15,7 @@
 
 .feed {
    margin: auto;
-   width: 578px;
+   max-width: 578px;
    border-left: 2px solid #cacaca;
    border-right: 2px solid #cacaca;
    border-bottom: 2px solid #cacaca;
@@ -29,7 +29,7 @@
 .feed li {
   color: #1c5380;
    margin: auto;
-   width: 510px;
+   max-width: 510px;
    border-radius: 3px;
    border: 1px solid #cacaca;
    margin-bottom: 35px;
@@ -42,7 +42,7 @@
   padding: 10px;
   border-bottom: 1px solid #cacaca;
 }
-
+//
 .feed-item-user-img{
   float: left;
   height: 40px;
@@ -72,17 +72,17 @@
  }
 
 .feed-item-image {
-   height: 510px;
-   width: 510px;
-   display: block;
-   overflow: false;
-   position: relative;
+//    height: 510px;
+//    width: 510px;
+//    display: block;
+//    overflow: false;
+//    position: relative;
 }
 
 .feed-item-image img {
-  max-height: 510px;
-  max-width: 510px;
-  display: block;
+//   max-height: 510px;
+  // max-width: 510px;
+//   display: block;
 }
 
 .delete-post {
@@ -160,13 +160,15 @@
 }
 
 .comment-form {
-  padding: 10px;
+  margin: auto;
   background: white;
   border-top: 1px solid #cacaca;
+  text-align: center;
 }
 
 .comment-form input {
-  width: 465px;
+  margin: 10px;
+  width: calc(100% - 50px);
   height: 15px;
   font-size: 15px;
   padding: 10px;
@@ -183,7 +185,7 @@
 }
 
 .comment {
-  width: 500px;
+   max-width: 500px;
 }
 
 .delete-x {
