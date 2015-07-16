@@ -28,10 +28,11 @@ Vinstagram is a picture sharing social media site inspired by [Instagram](www.in
 - Delete/Signout Confirmations
 - Private Accounts
 - Search for tags
-- Media Queries
 - DM's
 - Notifications
 - Comments as Replies
 - Edit Comments
 - Allow Change Username
 - Fix Splash
+- Responsive Design
+- Fix favicon
