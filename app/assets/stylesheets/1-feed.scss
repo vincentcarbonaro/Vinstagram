@@ -65,21 +65,19 @@
  }
 
 .feed-item-time {
-  line-height: 40px;
-  padding-right: 15px;
+   line-height: 40px;
+   padding-right: 15px;
    float: right;
    font-size: 16px;
  }
 
 .feed-item-image {
-  //  display: block;
-  //  overflow: false;
-   position: relative;
+  max-height: 510px;
+  position: relative;
 }
 
 .feed-item-image img {
   width: 100%;
-  // display: block;
 }
 
 .delete-post {
@@ -96,7 +94,6 @@
 }
 
 .like-bar {
-  border-top: 1px solid #cacaca;
   background: white;
   height: 40px;
 }
