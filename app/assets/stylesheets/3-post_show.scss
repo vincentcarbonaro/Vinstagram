@@ -1,7 +1,7 @@
 .indy-post-show-backdrop {
   margin: auto;
   padding: 25px 0 35px 0 ;
-  width: 578px;
+  max-width: 578px;
   border-left: 2px solid #cacaca;
   border-right: 2px solid #cacaca;
   border-bottom: 2px solid #cacaca;
@@ -18,7 +18,7 @@
   color: #1c5380;
   border-radius: 3px;
   margin: auto;
-  width: 510px;
+  max-width: 510px;
   border: 1px solid #cacaca;
 }
 
@@ -54,8 +54,8 @@
 }
 
 .post-show-image {
-   height: 510px;
-   width: 510px;
+//    height: 510px;
+   max-width: 510px;
    margin: auto;
 }
 

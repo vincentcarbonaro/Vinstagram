@@ -72,17 +72,14 @@
  }
 
 .feed-item-image {
-//    height: 510px;
-//    width: 510px;
-//    display: block;
-//    overflow: false;
-//    position: relative;
+  //  display: block;
+  //  overflow: false;
+   position: relative;
 }
 
 .feed-item-image img {
-//   max-height: 510px;
-  // max-width: 510px;
-//   display: block;
+  width: 100%;
+  // display: block;
 }
 
 .delete-post {
