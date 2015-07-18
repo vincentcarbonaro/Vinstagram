@@ -70,12 +70,12 @@ a > .fa-cog {
 }
 
 .header-nav .header-logo {
-  // width: 156px;
-  // display: inline;
-  // line-height: 41px;
-  // height: 51px;
-  // font-size: 30px;
-  // letter-spacing: 2px;
+  width: 156px;
+  display: inline;
+  line-height: 41px;
+  height: 51px;
+  font-size: 30px;
+  letter-spacing: 2px;
   display: inline-block;
   margin:0 auto;
   width:100px;
@@ -83,12 +83,11 @@ a > .fa-cog {
   background: #00ff00;
 }
 
-// .header-logo a {
-//   font-family: 'SweetheartScript-limited';
-//   padding: 10px 5px;
-//   border-radius: 5px;
-//   background: red;
-// }
+.header-logo a {
+  font-family: 'SweetheartScript-limited';
+  padding: 10px 5px;
+  border-radius: 5px;
+}
 
 .header-right {
   height: 40px;
