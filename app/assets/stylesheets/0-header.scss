@@ -70,20 +70,25 @@ a > .fa-cog {
 }
 
 .header-nav .header-logo {
-  border: none;
-  width: 156px;
-  margin: auto;
-  line-height: 41px;
-  height: 51px;
-  font-size: 30px;
-  letter-spacing: 2px;
+  // width: 156px;
+  // display: inline;
+  // line-height: 41px;
+  // height: 51px;
+  // font-size: 30px;
+  // letter-spacing: 2px;
+  display: inline-block;
+  margin:0 auto;
+  width:100px;
+  height: 20px;
+  background: #00ff00;
 }
 
-.header-logo a {
-  font-family: 'SweetheartScript-limited';
-  padding: 10px 5px;
-  border-radius: 5px;
-}
+// .header-logo a {
+//   font-family: 'SweetheartScript-limited';
+//   padding: 10px 5px;
+//   border-radius: 5px;
+//   background: red;
+// }
 
 .header-right {
   height: 40px;

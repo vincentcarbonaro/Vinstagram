@@ -10,10 +10,13 @@
       <li><a href="#upload"><i class="fa fa-camera-retro fa-lg"></i></a></li>
     </ul>
 
-    <section class="header-right-list group">
+    <div class="header-logo">
+      Center me!
+      <!-- <a href="#">Vinstagram</a> -->
+    </div>
+
 
         <a href="#user/<%= current_user.id %>" class="header-right">
-
           <div class="header-name">
             <%= current_user.username %>
           </div>
@@ -24,12 +27,7 @@
           <li><a href="#settings">Settings</a></li>
           <li><%= link_to "Sign out", session_url, :method => :delete %></li>
         </ul>
-
     </section>
-
-    <div class="header-logo">
-      <a href="#">Vinstagram</a>
-    </div>
 
   </nav>
 </header>
