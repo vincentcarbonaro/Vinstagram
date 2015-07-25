@@ -2,9 +2,9 @@ Vinstagram.Views.UserShow = Backbone.View.extend({
 
   template: JST['users/user_show'],
 
-  tagName: "section",
+  tagName: "section group",
 
-  className: "user-show-backdrop",
+  id: "user-show",
 
   initialize: function () {
     this.listenTo(this.model, 'sync', this.render)
@@ -22,16 +22,17 @@ Vinstagram.Views.UserShow = Backbone.View.extend({
         var view = new Vinstagram.Views.UserShowItem({
           model: post
         });
-        this.$el.find('.user-show-bottom').append(view.render().$el)
+        this.$el.find('.bottom ul').append(view.render().$el)
       }.bind(this))
     }
 
     //if user is NOT current user, display follow/unfollow button
     if (!this.model.get('is_current_user')) {
+
       var view = new Vinstagram.Views.FollowButton({
         model: this.model
       });
-      this.$el.find('.user-show-follow-button').append(view.render().$el);
+      this.$el.find('follow-button').append(view.render().$el);
     }
 
     return this;

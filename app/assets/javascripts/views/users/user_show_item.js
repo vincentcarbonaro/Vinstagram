@@ -2,7 +2,7 @@ Vinstagram.Views.UserShowItem = Backbone.View.extend({
 
   tagName: 'li',
 
-  className: 'user-show-item',
+  className: 'item',
 
   template: JST['users/user_show_item'],
 

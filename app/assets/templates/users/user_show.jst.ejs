@@ -1,20 +1,20 @@
-<section class="user-show group">
+<title><%= user.escape('username') %>s' Profile</title>
 
-  <title><%= user.escape('username') %>s' Profile</title>
+<div class="backdrop">
 
-  <section class="user-show-top group">
+  <section class="top group">
 
-    <section class="user-show-middle group">
+    <section class="middle group">
 
-      <section class="user-show-pic">
-        <img src="<%= user.attributes.picture_url %>" alt="error"/>
+      <section class="user-pic">
+        <img src="<%= user.attributes.picture_url %> " alt="error"/>
       </section>
 
-      <div class="user-show-username">
+      <div class="username">
         <%= user.escape('username') %>
       </div>
 
-      <section class="user-show-follow-button">
+      <section class="follow-button" id="follow-button">
       </section>
 
       <table class="user-show-text">
@@ -30,17 +30,20 @@
         </tr>
       </table>
 
-      <section class="user-show-bio">
-        <section class="text-area-trigger">
+      <section class="bio group">
+        <section class="text-area-trigger group">
           <textarea disabled class="text-area" name="post[text]" rows="3" cols="38" value=""><%= user.escape('bio') %></textarea>
         </section>
       </section>
 
     </section>
 
+    <div class="bottom group">
+      <ul class="group">
+      </ul>
+    </div>
+
+
   </section>
 
-  <ul class='user-show-bottom group'>
-  </ul>
-
-</section>
+</div>

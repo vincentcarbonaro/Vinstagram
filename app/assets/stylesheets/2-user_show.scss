@@ -1,30 +1,23 @@
-.user-show-backdrop{
+#user-show .backdrop {
   margin: auto;
-  width: 1000px;
-  border-left: 2px solid #cacaca;
-  border-right: 2px solid #cacaca;
+  max-width: 1000px;
   border-bottom: 2px solid #cacaca;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
+  padding-bottom: 10px;
   background: #ddd;
 }
 
-.user-show {
+#user-show .top {
   background: white;
-  width: 870px;
+  max-width: 980px;
   margin: auto;
   border-left: 1px solid #cacaca;
   border-right: 1px solid #cacaca;
   border-bottom: 1px solid #cacaca;
-  margin-bottom: 30px;
 }
 
-.user-show-top {
-  margin-top: 1px;
-}
-
-.user-show-middle {
-  display: block;
+#user-show .middle {
   border-left: 1px solid #cacaca;
   border-right: 1px solid #cacaca;
   max-width: 500px;
@@ -32,24 +25,54 @@
   margin: auto;
 }
 
-.user-show-pic{
+#user-show .bottom {
+  border-top: 1px solid #cacaca;
+  background: white;
+  background: #cacaca;
+  width: 100%;
+  margin: auto;
+}
+
+#user-show .bottom ul {
+  max-width: 870px;
+  margin: auto;
+  padding-bottom: 15px;
+}
+
+@media (max-width: 880px) {
+  #user-show .bottom ul {
+    max-width: 720px;
+  }
+}
+
+@media (max-width: 720px) {
+  #user-show .bottom ul {
+    max-width: 540px;
+  }
+}
+
+@media (max-width: 553px) {
+  #user-show .bottom ul {
+    max-width: 362px;
+  }
+}
+
+#user-show .item {
   float: left;
-  max-width:156px;
-  max-height:156px;
-  width: auto;
-  height: auto;
+  margin-left: 15px;
+  margin-top: 15px;
   height: 156px;
   width: 156px;
 }
 
-.user-show-username {
-  font-weight: bold;
+#user-show .item img {
+  border: 3px solid white
+}
+
+#user-show .user-pic {
+  width: 100%;
+  margin: auto;
   text-align: center;
-  width: 175px;
-  float: left;
-  margin-left: 25px;
-  font-size: 16px;
-  overflow: hidden;
 }
 
 #follow-button:hover {
@@ -72,12 +95,33 @@
   font-size: 14px;
 }
 
-.user-show-bio{
-  float: left;
-  width: 300px;
-  word-wrap: break-word;
-  margin-left: 25px;
-  margin-top: 15px;
+#user-show .username {
+  font-weight: bold;
+}
+
+#user-show .user-pic img{
+    max-width:156px;
+    max-height:156px;
+}
+
+#user-show .username {
+    font-weight: bold;
+    text-align: center;
+    // width: 175px;
+    width: 100%;
+    // float: left;
+    // margin-left: 25px;
+    font-size: 16px;
+    overflow: hidden;
+  }
+
+// .user-show-bio{
+//   float: left;
+//   width: 300px;
+//   word-wrap: break-word;
+//   margin-left: 25px;
+//   margin-top: 15px;
+
   textarea {
     border: none;
     resize: none;
@@ -85,14 +129,25 @@
     font-color: black;
     height: 51px;
     width: 300px;
+    // display: block;
+    //  margin-left: auto;
+    //  margin-right: auto;
   }
+
+#user-show .bio {
+  background: red;
+  // margin: auto;
+  text-align: center;
+  // height: 500px;
+  // margin: auto;
+  // text-align: center;
 }
 
-.user-show-text {
-  float: left;
-  margin-left: 25px;
-  margin-top: 10px;
-}
+// .user-show-text {
+//   float: left;
+//   margin-left: 25px;
+//   margin-top: 10px;
+// }
 
 table {
   margin-top:5px;
@@ -100,6 +155,7 @@ table {
   width: 300px;
   border: 1px solid black;
   font-size: 14px;
+  margin: auto;
 }
 
 th{
@@ -112,32 +168,4 @@ td{
 
 tr {
   text-align: center;
-}
-
-
-.user-show-bottom {
-  border-top: 1px solid #cacaca;
-  background: white;
-  padding-bottom: 15px;
-  background: #cacaca;
-}
-
-.user-show img {
-  display: block;
-  height: 156px; //added this on ferry
-  width: 156px; //added this on ferry
-  max-width:156px;
-  max-height:156px;
-  // width: auto;
-  // height: auto;
-  border: 3px solid white;
-}
-
-.user-show-item {
-  float: left;
-  display: block;
-  height: 156px;
-  width: 156px;
-  margin-left: 15px;
-  margin-top: 15px;
 }
