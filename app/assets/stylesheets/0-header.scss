@@ -70,7 +70,8 @@ a > .fa-cog {
 }
 
 .header-nav .header-logo {
-  width: 156px;
+  // width: 15px;
+  // background: red;
   text-align: center;
   position: absolute;
   left:0;
@@ -86,6 +87,12 @@ a > .fa-cog {
   padding: 10px 5px;
   border-radius: 5px;
   font-size: 30px;
+}
+
+@media (max-width: 760px) {
+  .header-logo a {
+    display: none;
+  }
 }
 
 .header-right {
