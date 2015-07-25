@@ -33,6 +33,9 @@ Vinstagram is a picture sharing social media site inspired by [Instagram](www.in
 - Comments as Replies
 - Edit Comments
 - Allow Change Username
-- Fix Splash
-- Responsive Design
+- Responsive Design on
+ - search
+ - user show Page
+ - post show page
 - Fix favicon
+- Fix Splash

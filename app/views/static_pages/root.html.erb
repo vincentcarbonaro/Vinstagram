@@ -11,22 +11,18 @@
     </ul>
 
     <div class="header-logo">
-      <!-- Center me! -->
       <a href="#">Vinstagram</a>
     </div>
 
+    <div class="header-right">
+      <a href="#user/<%= current_user.id %>" class="header-right"><%= current_user.username %></a><br>
+      <ul class="dropdown">
+        <li><a href="#user/<%= current_user.id %>">My Profile</a></li>
+        <li><a href="#settings">Settings</a></li>
+        <li><%= link_to "Sign out", session_url, :method => :delete %></li>
+      </ul>
+    </div>
 
-        <a href="#user/<%= current_user.id %>" class="header-right">
-          <div class="header-name">
-            <%= current_user.username %>
-          </div>
-        </a>
-
-        <ul class="dropdown">
-          <li><a href="#user/<%= current_user.id %>">My Profile</a></li>
-          <li><a href="#settings">Settings</a></li>
-          <li><%= link_to "Sign out", session_url, :method => :delete %></li>
-        </ul>
     </section>
 
   </nav>

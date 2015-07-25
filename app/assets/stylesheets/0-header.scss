@@ -95,63 +95,44 @@ a > .fa-cog {
   }
 }
 
-.header-right {
-  height: 40px;
-  padding: 5px 10px;
-  float: right;
-  border-left: 1px solid #cacaca;
-  cursor: pointer;
-  cursor: hand;
-  display: block;
-}
+/*********************/
 
-.header-right-list {
+.header-right {
   float: right;
   border-right: 1px solid #cacaca;
+  height: 50px;
+  line-height: 50px;
 }
 
-.header-right img {
-  float: left;
-  height: 100%;
-  width: auto;
+.header-right a {
+  border-right: none;
+  padding: 0 10px;
+  border-left: 1px solid #cacaca;
 }
 
-.header-name {
-  float: left;
-  height: 40px;
-  line-height: 40px;
-  padding: 0 5px;
-}
-
-////////////////////////
-
-.dropdown > li {
-  float: left;
-  width: 100%;
+.dropdown {
+  position: relative;
+  background: #517fa4;
+  text-align: right;
+  padding: 0;
+  margin: 0;
   display: none;
 }
 
-.dropdown {
-  position: absolute;
-  top: 50px;
-}
-
-.header-right:hover  {
-  display: block;
-}
-
-.header-right-list:hover li {
-  display: block;
+.dropdown li {
+  height: 30px;
+  line-height: 30px;
+  border-left: 0;
   background: #517fa4;
 }
 
-.dropdown {
-  width: 107px;
+.dropdown  a {
+  display: block;
+  border-top: 1px solid #cacaca;
+  border-left: 0;
+  text-align: center;
 }
 
-.dropdown a {
-  border: none;
-  padding: 5px 10px;
+.header-right:hover .dropdown {
   display: block;
-  text-align: center;
 }
