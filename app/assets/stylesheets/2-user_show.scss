@@ -21,7 +21,7 @@
   border-left: 1px solid #cacaca;
   border-right: 1px solid #cacaca;
   max-width: 500px;
-  padding: 25px;
+  padding: 15px;
   margin: auto;
 }
 
@@ -75,24 +75,32 @@
   text-align: center;
 }
 
+#follow-button {
+  height: 24px;
+  line-height: 12px;
+  margin: auto;
+  text-align: center;
+  padding: 5px;
+}
+
 #follow-button:hover {
-  opacity: .4;
+  opacity: .6;
 }
 
 .unfollow-button {
+  width: 100px;
   color: white;
   letter-spacing: 1px;
-  width: 100px;
   font-size: 12px;
   background: green;
 }
 
 .follow-button{
   width: 100px;
-  border: 1px solid blue;
-  background: white;
   color: blue;
+  border: 1px solid blue;
   font-size: 14px;
+  background: white;
 }
 
 #user-show .username {
@@ -107,50 +115,36 @@
 #user-show .username {
     font-weight: bold;
     text-align: center;
-    // width: 175px;
     width: 100%;
-    // float: left;
-    // margin-left: 25px;
     font-size: 16px;
     overflow: hidden;
   }
 
-// .user-show-bio{
-//   float: left;
-//   width: 300px;
-//   word-wrap: break-word;
-//   margin-left: 25px;
-//   margin-top: 15px;
-
-  textarea {
-    border: none;
-    resize: none;
-    font-size: 14px;
-    font-color: black;
-    height: 51px;
-    width: 300px;
-    // display: block;
-    //  margin-left: auto;
-    //  margin-right: auto;
-  }
-
-#user-show .bio {
-  background: red;
-  // margin: auto;
-  text-align: center;
-  // height: 500px;
-  // margin: auto;
-  // text-align: center;
+#user-show .bio{
+  width: 300px;
+  word-wrap: break-word;
+  margin: auto;
 }
 
-// .user-show-text {
-//   float: left;
-//   margin-left: 25px;
-//   margin-top: 10px;
-// }
+textarea {
+  border: none;
+  resize: none;
+  font-size: 14px;
+  font-color: black;
+  width: 300px;
+}
+
+#user-show .bio {
+  margin-top: 5px;
+  background: red;
+  text-align: center;
+}
+
+#user-show .text {
+  margin-top: 5px;
+}
 
 table {
-  margin-top:5px;
   border-collapse: separate;
   width: 300px;
   border: 1px solid black;
